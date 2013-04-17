@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CookItNow.xcscheme</key>
+		<key>MainHotIdeasKeeper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8CF97369168B00A100E733A3</key>
+		<key>8CAC93E2171EB9F7006D3621</key>
 		<dict>
 			<key>primary</key>
 			<true/>

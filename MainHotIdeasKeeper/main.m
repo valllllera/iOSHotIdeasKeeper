@@ -1,9 +1,9 @@
 //
 //  main.m
-//  CookItNow
+//  MainHotIdeasKeeper
 //
-//  Created by Valeriy Zinchenko on 26.12.12.
-//  Copyright (c) 2012 vexadev. All rights reserved.
+//  Created by Valeriy Zinchenko on 17.04.13.
+//  Copyright (c) 2013 vexadev. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

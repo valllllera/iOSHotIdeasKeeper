@@ -1,34 +1,29 @@
 //
 //  AppDelegate.m
-//  CookItNow
+//  HotIdeasKeeper
 //
-//  Created by Valeriy Zinchenko on 26.12.12.
-//  Copyright (c) 2012 vexadev. All rights reserved.
+//  Created by iOS - Evgeniy Lipskiy on 16.04.13.
+//  Copyright (c) 2013 iOS - Eugene Lipskiy. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MainScreenViewController.h"
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [_viewController release];
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil] autorelease];
-    } else {
-        self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil] autorelease];
-    }
-    self.window.rootViewController = self.viewController;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
+    
+    UINavigationController *mainNavigationController = [[UINavigationController alloc]initWithRootViewController:mainScreenViewController];
+    self.window.rootViewController = mainNavigationController;
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
