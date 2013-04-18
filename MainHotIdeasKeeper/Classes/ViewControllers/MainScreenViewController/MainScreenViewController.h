@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainScreenViewController : UIViewController
+@interface MainScreenViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (IBAction)showCameraController:(id)sender;
 - (IBAction)addNoteButtonPressed:(id)sender;

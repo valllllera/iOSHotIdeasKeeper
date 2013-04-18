@@ -40,6 +40,16 @@
     [self presentModalViewController:picker animated:YES];
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *pickedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    [self.images addObject:pickedImage];
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
