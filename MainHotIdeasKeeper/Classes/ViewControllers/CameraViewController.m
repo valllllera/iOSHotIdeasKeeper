@@ -36,7 +36,6 @@
     UIImagePickerController *cameraView = [[UIImagePickerController alloc] init];
     cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
     cameraView.showsCameraControls = YES;
-    cameraView.
     [self presentModalViewController:cameraView animated:YES];
     
     [cameraView viewWillAppear:YES];
