@@ -27,9 +27,17 @@
 {
     [super viewDidLoad];
     
+    self.images = [NSMutableArray array];
     
     UIBarButtonItem *photoItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePhoto)];
     self.navigationItem.rightBarButtonItem = photoItem;
+}
+
+- (void)takePhoto {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentModalViewController:picker animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

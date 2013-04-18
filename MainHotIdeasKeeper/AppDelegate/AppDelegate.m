@@ -12,6 +12,7 @@
 #import "NotesScreenViewController.h"
 #import "NVSlideMenuController.h"
 #import "ViewNotesViewController.h"
+#import "AboutScreenViewController.h"
 
 @implementation AppDelegate
 
@@ -24,6 +25,7 @@
     MenuScreenViewController *menuScreenViewController = [[MenuScreenViewController alloc]init];
     NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]init];
     ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
+    AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
     
     UINavigationController *mainNavigationController = [[UINavigationController alloc]initWithRootViewController:mainScreenViewController];
     self.window.rootViewController = mainNavigationController;
@@ -33,6 +35,9 @@
     
     UINavigationController *viewNotesNavigationController = [[UINavigationController alloc]initWithRootViewController:viewNotesViewController];
     self.window.rootViewController = viewNotesNavigationController;
+    
+    UINavigationController *aboutScreenNavigationController = [[UINavigationController alloc]initWithRootViewController:aboutScreenViewController];
+    self.window.rootViewController = aboutScreenNavigationController;
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
     

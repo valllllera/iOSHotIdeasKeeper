@@ -18,5 +18,6 @@
 
 - (IBAction)notesButtonPressed:(id)sender;
 - (IBAction)mainButtonPressed:(id)sender;
+- (IBAction)aboutUsButtonPressed:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 #import "ViewNotesViewController.h"
 #import "MainScreenViewController.h"
 #import "NVSlideMenuController.h"
+#import "AboutScreenViewController.h"
 
 @interface MenuScreenViewController ()
 
@@ -55,5 +56,11 @@
 {
     MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
     [self.slideMenuController setContentViewController:[[UINavigationController alloc]initWithRootViewController:mainScreenViewController] animated:YES completion:nil];
+}
+
+- (IBAction)aboutUsButtonPressed:(id)sender
+{
+    AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
+    [self.slideMenuController setContentViewController:[[UINavigationController alloc]initWithRootViewController:aboutScreenViewController] animated:YES completion:nil];
 }
 @end
