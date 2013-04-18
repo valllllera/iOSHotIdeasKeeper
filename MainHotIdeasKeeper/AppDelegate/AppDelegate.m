@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuScreenViewController.h"
 #import "MainScreenViewController.h"
+#import "NotesScreenViewController.h"
+#import "NVSlideMenuController.h"
+#import "ViewNotesViewController.h"
 
 @implementation AppDelegate
 
@@ -17,11 +21,25 @@
     
     
     MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
+    MenuScreenViewController *menuScreenViewController = [[MenuScreenViewController alloc]init];
+    NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]init];
+    ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
     
     UINavigationController *mainNavigationController = [[UINavigationController alloc]initWithRootViewController:mainScreenViewController];
     self.window.rootViewController = mainNavigationController;
     
+    UINavigationController *notesScreenNavigationController = [[UINavigationController alloc]initWithRootViewController:notesScreenViewController];
+    self.window.rootViewController = notesScreenNavigationController;
+    
+    UINavigationController *viewNotesNavigationController = [[UINavigationController alloc]initWithRootViewController:viewNotesViewController];
+    self.window.rootViewController = viewNotesNavigationController;
+    
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    NVSlideMenuController *slideMenuViewController = [[NVSlideMenuController alloc] initWithMenuViewController:menuScreenViewController andContentViewController:mainNavigationController];
+    self.window.rootViewController = slideMenuViewController;
+
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -7,6 +7,9 @@
 //
 
 #import "MainScreenViewController.h"
+#import "CameraViewController.h"
+#import "NotesScreenViewController.h"
+#import "NVSlideMenuController.h"
 
 @interface MainScreenViewController ()
 
@@ -31,6 +34,7 @@
     
     UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
+    [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
 }
 
@@ -40,4 +44,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
+- (IBAction)showCameraController:(id)sender
+{
+    CameraViewController *cameraView = [[CameraViewController alloc]init];
+    [self.navigationController pushViewController:cameraView animated:YES];
+}
+
+- (IBAction)addNoteButtonPressed:(id)sender
+{
+    NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]init];
+    [self.navigationController pushViewController:notesScreenViewController animated:YES];
+}
 @end
