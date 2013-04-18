@@ -418,7 +418,6 @@
 				8CAC9402171EB9F7006D3621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
