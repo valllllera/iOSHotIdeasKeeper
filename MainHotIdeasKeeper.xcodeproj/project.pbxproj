@@ -43,6 +43,8 @@
 		1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
 		1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */; };
+		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
+		1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -112,6 +114,9 @@
 		1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutScreenViewController.h; sourceTree = "<group>"; };
 		1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScreenViewController.m; sourceTree = "<group>"; };
 		1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutScreenViewController.xib; sourceTree = "<group>"; };
+		1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceOnMapViewController.h; sourceTree = "<group>"; };
+		1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceOnMapViewController.m; sourceTree = "<group>"; };
+		1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -263,6 +268,16 @@
 			name = AboutScreenViewController;
 			sourceTree = "<group>";
 		};
+		1AEA616C1720229D00CF3CD2 /* AddPlaceOnMapScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */,
+				1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */,
+				1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */,
+			);
+			name = AddPlaceOnMapScreenViewController;
+			sourceTree = "<group>";
+		};
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +394,7 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AEA616C1720229D00CF3CD2 /* AddPlaceOnMapScreenViewController */,
 				1AEA615E1720164900CF3CD2 /* AboutScreenViewController */,
 				1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */,
 				1A052C5E171F356C007A0ACD /* NotesScreenViewController */,
@@ -523,6 +539,7 @@
 				1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */,
 				1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */,
 				0814F94417216EE700D7C3CC /* notesTableDB.sqlite in Resources */,
+				1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +563,7 @@
 				1A052C8F171F7A12007A0ACD /* NotesCell.m in Sources */,
 				1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */,
 				1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */,
+				1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

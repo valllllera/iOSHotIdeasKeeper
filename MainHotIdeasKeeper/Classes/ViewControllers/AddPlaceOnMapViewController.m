@@ -1,24 +1,24 @@
 //
-//  CameraScreenViewController.m
+//  AddPlaceOnMapViewController.m
 //  MainHotIdeasKeeper
 //
 //  Created by iOS - Evgeniy Lipskiy on 18.04.13.
 //  Copyright (c) 2013 vexadev. All rights reserved.
 //
 
-#import "CameraScreenViewController.h"
+#import "AddPlaceOnMapViewController.h"
 
-@interface CameraScreenViewController ()
+@interface AddPlaceOnMapViewController ()
 
 @end
 
-@implementation CameraScreenViewController
+@implementation AddPlaceOnMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _images = [[NSMutableArray alloc]init];
+        // Custom initialization
     }
     return self;
 }
@@ -26,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.images = [NSMutableArray array];
-
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

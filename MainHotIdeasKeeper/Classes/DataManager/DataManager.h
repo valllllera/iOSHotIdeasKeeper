@@ -20,7 +20,7 @@
                   failture:(void (^)(NSError *error))failture;
 
 +(void)saveNewRemember:(Note*)note;
-+(void)updateNewRemember:(NSString *)noteText idx:(NSString*)idx;
++(void)updateNewRemember:(NSString *)noteText;
 
 
 @end

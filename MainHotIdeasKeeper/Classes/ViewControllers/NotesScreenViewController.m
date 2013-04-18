@@ -77,7 +77,7 @@
     }
     else
     {
-        [DataManager updateNewRemember:self.notesTextView.text idx:_activeNote.id];
+        [DataManager updateNewRemember:self.notesTextView.text];
     }
 }
 

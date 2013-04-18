@@ -10,6 +10,7 @@
 #import "CameraScreenViewController.h"
 #import "NotesScreenViewController.h"
 #import "NVSlideMenuController.h"
+#import "AddPlaceOnMapViewController.h"
 
 @interface MainScreenViewController ()
 
@@ -59,5 +60,11 @@
 {
     NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]init];
     [self.navigationController pushViewController:notesScreenViewController animated:YES];
+}
+
+- (IBAction)addPlaceButtonPressed:(id)sender
+{
+    AddPlaceOnMapViewController *addPlaceOnMapViewController = [[AddPlaceOnMapViewController alloc]init];
+    [self. navigationController pushViewController:addPlaceOnMapViewController animated:YES];
 }
 @end

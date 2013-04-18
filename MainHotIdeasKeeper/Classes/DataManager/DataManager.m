@@ -77,9 +77,9 @@ static DataManager *sharedInstance = nil;
     [alertView show];
 }
 
-+(void)updateNewRemember:(NSString *)noteText idx:(NSString*)idx
++(void)updateNewRemember:(NSString *)noteText 
 {
-    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = '%@' ",noteText,idx];
+    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@'",noteText];
     [SQLiteAccess updateWithSQL:query];
 }
 @end

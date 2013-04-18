@@ -12,5 +12,6 @@
 
 - (IBAction)showCameraController:(id)sender;
 - (IBAction)addNoteButtonPressed:(id)sender;
+- (IBAction)addPlaceButtonPressed:(id)sender;
 
 @end

@@ -13,6 +13,7 @@
 #import "NVSlideMenuController.h"
 #import "ViewNotesViewController.h"
 #import "AboutScreenViewController.h"
+#import "AddPlaceOnMapViewController.h"
 
 @implementation AppDelegate
 
@@ -26,6 +27,7 @@
     NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]init];
     ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
     AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
+    AddPlaceOnMapViewController *addPlaceONMapViewController = [[AddPlaceOnMapViewController alloc]init];
     
     UINavigationController *mainNavigationController = [[UINavigationController alloc]initWithRootViewController:mainScreenViewController];
     self.window.rootViewController = mainNavigationController;
@@ -38,6 +40,9 @@
     
     UINavigationController *aboutScreenNavigationController = [[UINavigationController alloc]initWithRootViewController:aboutScreenViewController];
     self.window.rootViewController = aboutScreenNavigationController;
+    
+    UINavigationController *addPlaceOnMapNavigationController = [[UINavigationController alloc]initWithRootViewController:addPlaceONMapViewController];
+    self.window.rootViewController = addPlaceOnMapNavigationController;
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
     
