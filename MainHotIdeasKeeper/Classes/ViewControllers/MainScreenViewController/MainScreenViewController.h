@@ -10,4 +10,6 @@
 
 @interface MainScreenViewController : UIViewController
 
+- (IBAction)showCameraController:(id)sender;
+
 @end

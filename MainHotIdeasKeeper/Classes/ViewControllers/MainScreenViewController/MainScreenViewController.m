@@ -7,6 +7,7 @@
 //
 
 #import "MainScreenViewController.h"
+#import "CameraViewController.h"
 
 @interface MainScreenViewController ()
 
@@ -40,4 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
+- (IBAction)showCameraController:(id)sender
+{
+    CameraViewController *cameraView = [[CameraViewController alloc]init];
+    [self.navigationController pushViewController:cameraView animated:YES];
+}
 @end

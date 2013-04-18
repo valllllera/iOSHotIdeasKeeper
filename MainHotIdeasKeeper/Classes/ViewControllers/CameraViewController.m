@@ -7,12 +7,16 @@
 //
 
 #import "CameraViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface CameraViewController ()
 
 @end
 
 @implementation CameraViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,13 +30,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    isPhotoActive = YES;
+    
+    UIImagePickerController *cameraView = [[UIImagePickerController alloc] init];
+    cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
+    cameraView.showsCameraControls = NO;
+    //[self.cameraScreenView addSubview:cameraView.view];
+    [self presentModalViewController:cameraView animated:YES];
+    
+    [cameraView viewWillAppear:YES];
+    [cameraView viewDidAppear:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
+
+- (void)viewDidUnload {
+    [self setCameraScreenView:nil];
+    [self setModeButton:nil];
+    [super viewDidUnload];
+}
+
+#pragma mark - Actions
+- (IBAction)changeMode:(id)sender
+{
+    isPhotoActive = !isPhotoActive;
+
+    if (isPhotoActive)
+        [_modeButton setBackgroundImage:[UIImage imageNamed:@"camera_photo_button.png"] forState:UIControlStateNormal];
+    else
+        [_modeButton setBackgroundImage:[UIImage imageNamed:@"camera_video_button.png"] forState:UIControlStateNormal];
+}
+
 
 @end

@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F90217202C6C00D7C3CC /* CameraViewController.m */; };
 		0814F90517202C6C00D7C3CC /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0814F90317202C6C00D7C3CC /* CameraViewController.xib */; };
+		0814F9331720544F00D7C3CC /* camera_photo_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0814F92F1720544F00D7C3CC /* camera_photo_button.png */; };
+		0814F9341720544F00D7C3CC /* camera_photo_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0814F9301720544F00D7C3CC /* camera_photo_button@2x.png */; };
+		0814F9351720544F00D7C3CC /* camera_video_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0814F9311720544F00D7C3CC /* camera_video_button.png */; };
+		0814F9361720544F00D7C3CC /* camera_video_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0814F9321720544F00D7C3CC /* camera_video_button@2x.png */; };
+		0814F9381720590200D7C3CC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0814F9371720590200D7C3CC /* MobileCoreServices.framework */; };
+		0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0814F9391720590F00D7C3CC /* MediaPlayer.framework */; };
+		0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0814F93B1720591900D7C3CC /* AssetsLibrary.framework */; };
+		0814F93F17205E8200D7C3CC /* CameraWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F93E17205E8200D7C3CC /* CameraWindowViewController.m */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -35,6 +43,15 @@
 		0814F90117202C6C00D7C3CC /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		0814F90217202C6C00D7C3CC /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		0814F90317202C6C00D7C3CC /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		0814F92F1720544F00D7C3CC /* camera_photo_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_photo_button.png; sourceTree = "<group>"; };
+		0814F9301720544F00D7C3CC /* camera_photo_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_photo_button@2x.png"; sourceTree = "<group>"; };
+		0814F9311720544F00D7C3CC /* camera_video_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_video_button.png; sourceTree = "<group>"; };
+		0814F9321720544F00D7C3CC /* camera_video_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_video_button@2x.png"; sourceTree = "<group>"; };
+		0814F9371720590200D7C3CC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0814F9391720590F00D7C3CC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0814F93B1720591900D7C3CC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0814F93D17205E8200D7C3CC /* CameraWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraWindowViewController.h; sourceTree = "<group>"; };
+		0814F93E17205E8200D7C3CC /* CameraWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraWindowViewController.m; sourceTree = "<group>"; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */,
+				0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */,
+				0814F9381720590200D7C3CC /* MobileCoreServices.framework in Frameworks */,
 				8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */,
 				8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */,
 				8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */,
@@ -85,6 +105,17 @@
 				0814F90317202C6C00D7C3CC /* CameraViewController.xib */,
 			);
 			name = CameraViewController;
+			sourceTree = "<group>";
+		};
+		0814F92E1720544F00D7C3CC /* CameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0814F92F1720544F00D7C3CC /* camera_photo_button.png */,
+				0814F9301720544F00D7C3CC /* camera_photo_button@2x.png */,
+				0814F9311720544F00D7C3CC /* camera_video_button.png */,
+				0814F9321720544F00D7C3CC /* camera_video_button@2x.png */,
+			);
+			path = CameraViewController;
 			sourceTree = "<group>";
 		};
 		8CAC93DA171EB9F7006D3621 = {
@@ -107,6 +138,9 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0814F93B1720591900D7C3CC /* AssetsLibrary.framework */,
+				0814F9391720590F00D7C3CC /* MediaPlayer.framework */,
+				0814F9371720590200D7C3CC /* MobileCoreServices.framework */,
 				8CAC93E6171EB9F7006D3621 /* UIKit.framework */,
 				8CAC93E8171EB9F7006D3621 /* Foundation.framework */,
 				8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */,
@@ -196,6 +230,8 @@
 			children = (
 				0814F90017202C4900D7C3CC /* CameraViewController */,
 				8CAC940E171EBA1C006D3621 /* MainScreenViewController */,
+				0814F93D17205E8200D7C3CC /* CameraWindowViewController.h */,
+				0814F93E17205E8200D7C3CC /* CameraWindowViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +256,7 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0814F92E1720544F00D7C3CC /* CameraViewController */,
 				8CAC9414171EBA1C006D3621 /* MainScreenViewController */,
 			);
 			path = Resources;
@@ -305,6 +342,10 @@
 				8CAC9427171EBA1C006D3621 /* navigation_bar_background.png in Resources */,
 				8CAC9428171EBA1C006D3621 /* navigation_bar_background@2x.png in Resources */,
 				0814F90517202C6C00D7C3CC /* CameraViewController.xib in Resources */,
+				0814F9331720544F00D7C3CC /* camera_photo_button.png in Resources */,
+				0814F9341720544F00D7C3CC /* camera_photo_button@2x.png in Resources */,
+				0814F9351720544F00D7C3CC /* camera_video_button.png in Resources */,
+				0814F9361720544F00D7C3CC /* camera_video_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +361,7 @@
 				8CAC941E171EBA1C006D3621 /* NVSlideMenuController.m in Sources */,
 				8CAC941F171EBA1C006D3621 /* MainScreenViewController.m in Sources */,
 				0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */,
+				0814F93F17205E8200D7C3CC /* CameraWindowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface CameraViewController : UIViewController
+{
+    BOOL isPhotoActive;
+}
+@property (weak, nonatomic) IBOutlet UIView *cameraScreenView;
+@property (weak, nonatomic) IBOutlet UIButton *modeButton;
+
+
+- (IBAction)changeMode:(id)sender;
 
 @end
