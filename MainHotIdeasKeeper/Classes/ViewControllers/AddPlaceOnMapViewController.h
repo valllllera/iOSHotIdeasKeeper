@@ -8,19 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-//#import "Annotation.h"
+#import "Annotation.h"
 
-@interface AddPlaceOnMapViewController : UIViewController
+@interface AddPlaceOnMapViewController : UIViewController <MKAnnotation>
 {
-    //Annotation *mapAnnotation;
+    Annotation *mapAnnotation;
 }
-@property (weak, nonatomic) IBOutlet MKMapView *map;
+
+@property (nonatomic, retain) IBOutlet MKMapView *map;
+
 - (IBAction)mapButtonPressed:(id)sender;
 - (IBAction)satelliteButtonPressed:(id)sender;
 - (IBAction)hybridButtonPressed:(id)sender;
-- (IBAction)saveButtonPressed:(id)sender;
+- (IBAction)mapTapped:(UITapGestureRecognizer *)recognizer;
+- (IBAction)savePlaceButtonPressed:(id)sender;
 
 +(float)GetX;
 +(float)GetY;
-
 @end

@@ -14,13 +14,11 @@
 
 @implementation AddPlaceOnMapViewController
 
-@synthesize map;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"";
     }
     return self;
 }
@@ -30,59 +28,93 @@ static float y;
 
 +(float)GetX
 {
-    NSLog(@"%f", x);
     return x;
 }
 
 +(float)GetY
 {
-    NSLog(@"%f", y);
     return y;
+}
+
+- (void)dealloc
+{
+    self.map = nil;
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    self.map = nil;
 }
 
 - (void)viewDidLoad
 {
-    map.showsUserLocation = YES;
-    [map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     [super viewDidLoad];
+    
+	_map.showsUserLocation = YES;
+    [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (annotation == mapView.userLocation) {
+        return nil;
+    }
+    
+    
+    
+    static NSString* annotationIdentifier = @"annotationIdentifier";
+    MKPinAnnotationView* annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+    
+    if (!annotationView) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+        if([[annotation title] isEqualToString:@"Annotation1"]) {
+            [annotationView setPinColor:MKPinAnnotationColorRed];
+        } else {
+            [annotationView setPinColor:MKPinAnnotationColorGreen];
+            annotationView.animatesDrop = YES;
+            annotationView.canShowCallout = YES;
+        }
+    }
+    
+    return annotationView;
+}
+
+- (IBAction)mapButtonPressed:(id)sender {
+    _map.mapType = MKMapTypeStandard;
+}
+
+- (IBAction)satelliteButtonPressed:(id)sender {
+    _map.mapType = MKMapTypeSatellite;
+}
+
+- (IBAction)hybridButtonPressed:(id)sender {
+    _map.mapType = MKMapTypeHybrid;
 }
 
 - (void)mapTapped:(UITapGestureRecognizer *)recognizer
 {
-    CGPoint point = [recognizer locationInView:map];
+    CGPoint point = [recognizer locationInView:_map];
     
-    CLLocationCoordinate2D coorditate = [map convertPoint:point toCoordinateFromView:map];
+    CLLocationCoordinate2D coorditate = [_map convertPoint:point toCoordinateFromView:_map];
     
     NSLog(@"long: %f, lat: %f", coorditate.longitude, coorditate.latitude);
     
     x = coorditate.latitude;
     y = coorditate.longitude;
     
+    if(mapAnnotation)
+    {
+        [_map removeAnnotation:mapAnnotation];
+    }
+    mapAnnotation = [Annotation new];
+    mapAnnotation.title = @"Место";
+    mapAnnotation.subtitle = @"Здесь вы должны быть";
+    mapAnnotation.coordinate = coorditate;
+    [_map addAnnotation:mapAnnotation];
 }
 
-- (void)viewDidUnload {
-    [self setMap:nil];
-    [super viewDidUnload];
-}
-- (IBAction)mapButtonPressed:(id)sender {
-    map.mapType = MKMapTypeStandard;
+- (IBAction)savePlaceButtonPressed:(id)sender {
 }
 
-- (IBAction)satelliteButtonPressed:(id)sender {
-    map.mapType = MKMapTypeSatellite;
-}
-
-- (IBAction)hybridButtonPressed:(id)sender {
-    map.mapType = MKMapTypeHybrid;
-}
-
-- (IBAction)saveButtonPressed:(id)sender {
-    
-}
 @end
