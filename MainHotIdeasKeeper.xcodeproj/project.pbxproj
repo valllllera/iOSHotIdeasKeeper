@@ -46,6 +46,7 @@
 		1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */; };
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
 		1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */; };
+		7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEA1720257E00BD06BA /* MapKit.framework */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -120,6 +121,7 @@
 		1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceOnMapViewController.h; sourceTree = "<group>"; };
 		1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceOnMapViewController.m; sourceTree = "<group>"; };
 		1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
+		7E17CBEA1720257E00BD06BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */,
 				1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */,
 				0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */,
 				0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */,
@@ -312,6 +315,7 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E17CBEA1720257E00BD06BA /* MapKit.framework */,
 				0814F93B1720591900D7C3CC /* AssetsLibrary.framework */,
 				0814F9391720590F00D7C3CC /* MediaPlayer.framework */,
 				0814F9371720590200D7C3CC /* MobileCoreServices.framework */,
