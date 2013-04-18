@@ -37,6 +37,7 @@
 		8CAC9426171EBA1C006D3621 /* menu_button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941A171EBA1C006D3621 /* menu_button_background@2x.png */; };
 		8CAC9427171EBA1C006D3621 /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941B171EBA1C006D3621 /* navigation_bar_background.png */; };
 		8CAC9428171EBA1C006D3621 /* navigation_bar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */; };
+		8CAC942E171FE1F0006D3621 /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAC942D171FE1F0006D3621 /* MDCParallaxView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		8CAC941A171EBA1C006D3621 /* menu_button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_button_background@2x.png"; sourceTree = "<group>"; };
 		8CAC941B171EBA1C006D3621 /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
 		8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_bar_background@2x.png"; sourceTree = "<group>"; };
+		8CAC942C171FE1F0006D3621 /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCParallaxView.h; sourceTree = "<group>"; };
+		8CAC942D171FE1F0006D3621 /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCParallaxView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,7 @@
 		8CAC9409171EBA1C006D3621 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				8CAC942B171FE1F0006D3621 /* MDCParallaxView */,
 				8CAC940A171EBA1C006D3621 /* NVSlideMenuController */,
 			);
 			path = Libs;
@@ -275,6 +279,15 @@
 				8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */,
 			);
 			path = MainScreenViewController;
+			sourceTree = "<group>";
+		};
+		8CAC942B171FE1F0006D3621 /* MDCParallaxView */ = {
+			isa = PBXGroup;
+			children = (
+				8CAC942C171FE1F0006D3621 /* MDCParallaxView.h */,
+				8CAC942D171FE1F0006D3621 /* MDCParallaxView.m */,
+			);
+			path = MDCParallaxView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +375,7 @@
 				8CAC941F171EBA1C006D3621 /* MainScreenViewController.m in Sources */,
 				0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */,
 				0814F93F17205E8200D7C3CC /* CameraWindowViewController.m in Sources */,
+				8CAC942E171FE1F0006D3621 /* MDCParallaxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,7 @@
     {
         self.title = @"Hot Ideas Keeper";
     
+        [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
     }
     return self;
 }
