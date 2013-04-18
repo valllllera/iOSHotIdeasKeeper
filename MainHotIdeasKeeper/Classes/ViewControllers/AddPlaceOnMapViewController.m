@@ -14,6 +14,9 @@
 
 @implementation AddPlaceOnMapViewController
 
+@synthesize locationManager;
+@synthesize geoCoder;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,13 +41,21 @@ static float y;
 
 - (void)dealloc
 {
+    [self setLocationManager:nil];
+    [self setGeoCoder:nil];
     self.map = nil;
 }
 
 - (void)viewDidUnload
 {
+    [self setLocationManager:nil];
+    [self setGeoCoder:nil];
+    [self setLocationManager:nil];
+    [self setLocationManager:nil];
     [super viewDidUnload];
     self.map = nil;
+    locationManager.delegate=self;
+    [locationManager startUpdatingLocation];
 }
 
 - (void)viewDidLoad
@@ -55,14 +66,21 @@ static float y;
     [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
+}
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if (annotation == mapView.userLocation) {
         return nil;
     }
-    
-    
-    
+
     static NSString* annotationIdentifier = @"annotationIdentifier";
     MKPinAnnotationView* annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
     
@@ -95,7 +113,7 @@ static float y;
 - (void)mapTapped:(UITapGestureRecognizer *)recognizer
 {
     CGPoint point = [recognizer locationInView:_map];
-    
+        
     CLLocationCoordinate2D coorditate = [_map convertPoint:point toCoordinateFromView:_map];
     
     NSLog(@"long: %f, lat: %f", coorditate.longitude, coorditate.latitude);
@@ -114,7 +132,19 @@ static float y;
     [_map addAnnotation:mapAnnotation];
 }
 
-- (IBAction)savePlaceButtonPressed:(id)sender {
+- (IBAction)savePlaceButtonPressed:(id)sender
+{
+    
+    [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+         NSLog(@"I am currently at %@",locatedAt);
+     }];
+    
+    
+    
 }
 
 @end

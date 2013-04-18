@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "Annotation.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface AddPlaceOnMapViewController : UIViewController <MKAnnotation>
+@interface AddPlaceOnMapViewController : UIViewController <MKAnnotation, CLLocationManagerDelegate>
 {
     Annotation *mapAnnotation;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *map;
+@property (strong, nonatomic) IBOutlet CLGeocoder *geoCoder;
+@property (strong, nonatomic) IBOutlet CLLocationManager *locationManager;
 
 - (IBAction)mapButtonPressed:(id)sender;
 - (IBAction)satelliteButtonPressed:(id)sender;

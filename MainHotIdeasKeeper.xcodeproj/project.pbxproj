@@ -50,6 +50,7 @@
 		1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */; };
 		7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEA1720257E00BD06BA /* MapKit.framework */; };
 		7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17CBED1720343D00BD06BA /* Annotation.m */; };
+		7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEF1720549000BD06BA /* CoreLocation.framework */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -131,6 +132,7 @@
 		7E17CBEA1720257E00BD06BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E17CBEC1720343D00BD06BA /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annotation.h; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.h; sourceTree = SOURCE_ROOT; };
 		7E17CBED1720343D00BD06BA /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annotation.m; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.m; sourceTree = SOURCE_ROOT; };
+		7E17CBEF1720549000BD06BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */,
 				1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */,
 				0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */,
@@ -335,6 +338,7 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E17CBEF1720549000BD06BA /* CoreLocation.framework */,
 				7E17CBEA1720257E00BD06BA /* MapKit.framework */,
 				0814F93B1720591900D7C3CC /* AssetsLibrary.framework */,
 				0814F9391720590F00D7C3CC /* MediaPlayer.framework */,
