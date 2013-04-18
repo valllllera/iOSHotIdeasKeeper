@@ -47,6 +47,7 @@
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
 		1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */; };
 		7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEA1720257E00BD06BA /* MapKit.framework */; };
+		7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17CBED1720343D00BD06BA /* Annotation.m */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -122,6 +123,8 @@
 		1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceOnMapViewController.m; sourceTree = "<group>"; };
 		1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
 		7E17CBEA1720257E00BD06BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7E17CBEC1720343D00BD06BA /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annotation.h; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.h; sourceTree = SOURCE_ROOT; };
+		7E17CBED1720343D00BD06BA /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annotation.m; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.m; sourceTree = SOURCE_ROOT; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -385,6 +388,8 @@
 		8CAC9408171EBA1C006D3621 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E17CBEC1720343D00BD06BA /* Annotation.h */,
+				7E17CBED1720343D00BD06BA /* Annotation.m */,
 				1A052C6D171F5282007A0ACD /* Note.h */,
 				1A052C6E171F5282007A0ACD /* Note.m */,
 			);
@@ -583,6 +588,7 @@
 				1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */,
 				0814F948172178E300D7C3CC /* NotesCell.m in Sources */,
 				0814F94E1721795000D7C3CC /* Messages.m in Sources */,
+				7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
