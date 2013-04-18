@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F90217202C6C00D7C3CC /* CameraViewController.m */; };
+		0814F90517202C6C00D7C3CC /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0814F90317202C6C00D7C3CC /* CameraViewController.xib */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0814F90117202C6C00D7C3CC /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		0814F90217202C6C00D7C3CC /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		0814F90317202C6C00D7C3CC /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0814F90017202C4900D7C3CC /* CameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0814F90117202C6C00D7C3CC /* CameraViewController.h */,
+				0814F90217202C6C00D7C3CC /* CameraViewController.m */,
+				0814F90317202C6C00D7C3CC /* CameraViewController.xib */,
+			);
+			name = CameraViewController;
+			sourceTree = "<group>";
+		};
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +194,7 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0814F90017202C4900D7C3CC /* CameraViewController */,
 				8CAC940E171EBA1C006D3621 /* MainScreenViewController */,
 			);
 			path = ViewControllers;
@@ -288,6 +304,7 @@
 				8CAC9426171EBA1C006D3621 /* menu_button_background@2x.png in Resources */,
 				8CAC9427171EBA1C006D3621 /* navigation_bar_background.png in Resources */,
 				8CAC9428171EBA1C006D3621 /* navigation_bar_background@2x.png in Resources */,
+				0814F90517202C6C00D7C3CC /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +319,7 @@
 				8CAC941D171EBA1C006D3621 /* AppDelegate.m in Sources */,
 				8CAC941E171EBA1C006D3621 /* NVSlideMenuController.m in Sources */,
 				8CAC941F171EBA1C006D3621 /* MainScreenViewController.m in Sources */,
+				0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,7 @@
 				8CAC9402171EB9F7006D3621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
