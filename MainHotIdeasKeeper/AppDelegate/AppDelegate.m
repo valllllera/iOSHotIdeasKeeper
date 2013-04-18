@@ -14,6 +14,7 @@
 #import "ViewNotesViewController.h"
 #import "AboutScreenViewController.h"
 #import "AddPlaceOnMapViewController.h"
+#import "CameraScreenViewController.h"
 
 @implementation AppDelegate
 
@@ -28,6 +29,8 @@
     ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
     AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
     AddPlaceOnMapViewController *addPlaceONMapViewController = [[AddPlaceOnMapViewController alloc]init];
+    CameraScreenViewController *cameraScreenViewController = [[CameraScreenViewController alloc]init];
+    
     
     UINavigationController *mainNavigationController = [[UINavigationController alloc]initWithRootViewController:mainScreenViewController];
     self.window.rootViewController = mainNavigationController;
@@ -43,6 +46,9 @@
     
     UINavigationController *addPlaceOnMapNavigationController = [[UINavigationController alloc]initWithRootViewController:addPlaceONMapViewController];
     self.window.rootViewController = addPlaceOnMapNavigationController;
+    
+    UINavigationController *cameraScreenNavigationController = [[UINavigationController alloc]initWithRootViewController:cameraScreenViewController];
+    self.window.rootViewController = cameraScreenNavigationController;
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
     

@@ -50,10 +50,8 @@
 }
 - (IBAction)showCameraController:(id)sender
 {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentModalViewController:picker animated:YES];
+    CameraScreenViewController *cameraScreenViewController = [[CameraScreenViewController alloc]init];
+    [self.navigationController pushViewController:cameraScreenViewController animated:YES];
 }
 
 - (IBAction)addNoteButtonPressed:(id)sender
