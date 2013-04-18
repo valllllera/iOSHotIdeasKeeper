@@ -11,11 +11,12 @@
 
 @interface ViewNotesViewController : UIViewController<UITableViewDataSource, UITabBarDelegate>
 {
-
+    
 }
 
 @property(nonatomic, retain) NSMutableArray *notesArray;
 @property (nonatomic, retain) IBOutlet UITableView *mainNotesTable;
 @property (nonatomic, retain) Note *note;
+
 
 @end

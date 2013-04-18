@@ -12,4 +12,6 @@
 
 @property(nonatomic, copy) NSString *noteText;
 
+-(NSDictionary *)note;
+
 @end

@@ -88,20 +88,21 @@
     return 44;
 }
 
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellidentifier = @"NotesCell";
+    static NSString *CellIdentifier = @"Cell";
     
-    NotesCell *cell = [_mainNotesTable dequeueReusableCellWithIdentifier:cellidentifier];
-    if (!cell)
-    {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"NotesCell" owner:nil options:nil] objectAtIndex:0];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CellIdentifier];
     }
+    Note *note = [[Note alloc]init];
     
-    Note *note=[_notesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = note;
     
-    cell.noteLabel.text = note.noteText;
-    return  cell;
+    return cell;
 }
 
 @end
