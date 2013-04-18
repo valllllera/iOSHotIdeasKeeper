@@ -7,7 +7,7 @@
 //
 
 #import "MainScreenViewController.h"
-#import "CameraViewController.h"
+#import "CameraScreenViewController.h"
 #import "NotesScreenViewController.h"
 #import "NVSlideMenuController.h"
 
@@ -49,8 +49,8 @@
 }
 - (IBAction)showCameraController:(id)sender
 {
-    CameraViewController *cameraView = [[CameraViewController alloc]init];
-    [self.navigationController pushViewController:cameraView animated:YES];
+    CameraScreenViewController *cameraScreenViewController = [[CameraScreenViewController alloc]init];
+    [self.navigationController pushViewController:cameraScreenViewController animated:YES];
 }
 
 - (IBAction)addNoteButtonPressed:(id)sender

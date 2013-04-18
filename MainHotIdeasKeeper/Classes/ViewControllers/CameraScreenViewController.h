@@ -13,4 +13,6 @@
 
 @interface CameraScreenViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *images;
+
 @end

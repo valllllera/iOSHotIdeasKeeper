@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        images = [[NSMutableArray alloc]init];
+        _images = [[NSMutableArray alloc]init];
     }
     return self;
 }
