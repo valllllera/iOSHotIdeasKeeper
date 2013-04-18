@@ -17,6 +17,31 @@
 		0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0814F9391720590F00D7C3CC /* MediaPlayer.framework */; };
 		0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0814F93B1720591900D7C3CC /* AssetsLibrary.framework */; };
 		0814F93F17205E8200D7C3CC /* CameraWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F93E17205E8200D7C3CC /* CameraWindowViewController.m */; };
+		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
+		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
+		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
+		1A052C4D171F2021007A0ACD /* menu_item_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C49171F2021007A0ACD /* menu_item_bg@2x.png */; };
+		1A052C4E171F2021007A0ACD /* menu_selected_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C4A171F2021007A0ACD /* menu_selected_item_bg.png */; };
+		1A052C4F171F2021007A0ACD /* menu_selected_item_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C4B171F2021007A0ACD /* menu_selected_item_bg@2x.png */; };
+		1A052C52171F20E3007A0ACD /* menu_separator.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C50171F20E3007A0ACD /* menu_separator.png */; };
+		1A052C53171F20E3007A0ACD /* menu_separator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C51171F20E3007A0ACD /* menu_separator@2x.png */; };
+		1A052C5A171F33F9007A0ACD /* second_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C58171F33F8007A0ACD /* second_shadow@2x.png */; };
+		1A052C5D171F3494007A0ACD /* buttons_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C5C171F3494007A0ACD /* buttons_shadow@2x.png */; };
+		1A052C62171F3591007A0ACD /* NotesScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C60171F3591007A0ACD /* NotesScreenViewController.m */; };
+		1A052C63171F3591007A0ACD /* NotesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */; };
+		1A052C67171F3852007A0ACD /* note_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C65171F3852007A0ACD /* note_bg.png */; };
+		1A052C68171F3852007A0ACD /* note_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C66171F3852007A0ACD /* note_bg@2x.png */; };
+		1A052C6B171F4D61007A0ACD /* label_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C69171F4D61007A0ACD /* label_background.png */; };
+		1A052C6C171F4D61007A0ACD /* label_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C6A171F4D61007A0ACD /* label_background@2x.png */; };
+		1A052C6F171F5282007A0ACD /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C6E171F5282007A0ACD /* Note.m */; };
+		1A052C72171F5390007A0ACD /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C71171F5390007A0ACD /* DataManager.m */; };
+		1A052C76171F5424007A0ACD /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C75171F5424007A0ACD /* SQLiteAccess.m */; };
+		1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */; };
+		1A052C84171F5C25007A0ACD /* ViewNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */; };
+		1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */; };
+		1A052C8F171F7A12007A0ACD /* NotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C8E171F7A12007A0ACD /* NotesCell.m */; };
+		1A052C91171F7A2B007A0ACD /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C90171F7A2B007A0ACD /* NotesCell.xib */; };
+		1A052C95171FF8B8007A0ACD /* dataBaseNotes.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C94171FF8B7007A0ACD /* dataBaseNotes.sqlite */; };
 		8CAC93E7171EB9F7006D3621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E6171EB9F7006D3621 /* UIKit.framework */; };
 		8CAC93E9171EB9F7006D3621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93E8171EB9F7006D3621 /* Foundation.framework */; };
 		8CAC93EB171EB9F7006D3621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC93EA171EB9F7006D3621 /* CoreGraphics.framework */; };
@@ -52,6 +77,38 @@
 		0814F93B1720591900D7C3CC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0814F93D17205E8200D7C3CC /* CameraWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraWindowViewController.h; sourceTree = "<group>"; };
 		0814F93E17205E8200D7C3CC /* CameraWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraWindowViewController.m; sourceTree = "<group>"; };
+		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
+		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
+		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
+		1A052C48171F2021007A0ACD /* menu_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_item_bg.png; sourceTree = "<group>"; };
+		1A052C49171F2021007A0ACD /* menu_item_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_bg@2x.png"; sourceTree = "<group>"; };
+		1A052C4A171F2021007A0ACD /* menu_selected_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_selected_item_bg.png; sourceTree = "<group>"; };
+		1A052C4B171F2021007A0ACD /* menu_selected_item_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_selected_item_bg@2x.png"; sourceTree = "<group>"; };
+		1A052C50171F20E3007A0ACD /* menu_separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_separator.png; sourceTree = "<group>"; };
+		1A052C51171F20E3007A0ACD /* menu_separator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_separator@2x.png"; sourceTree = "<group>"; };
+		1A052C58171F33F8007A0ACD /* second_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second_shadow@2x.png"; sourceTree = "<group>"; };
+		1A052C5C171F3494007A0ACD /* buttons_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons_shadow@2x.png"; sourceTree = "<group>"; };
+		1A052C5F171F3591007A0ACD /* NotesScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesScreenViewController.h; sourceTree = "<group>"; };
+		1A052C60171F3591007A0ACD /* NotesScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesScreenViewController.m; sourceTree = "<group>"; };
+		1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesScreenViewController.xib; sourceTree = "<group>"; };
+		1A052C65171F3852007A0ACD /* note_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_bg.png; sourceTree = "<group>"; };
+		1A052C66171F3852007A0ACD /* note_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_bg@2x.png"; sourceTree = "<group>"; };
+		1A052C69171F4D61007A0ACD /* label_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = label_background.png; sourceTree = "<group>"; };
+		1A052C6A171F4D61007A0ACD /* label_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "label_background@2x.png"; sourceTree = "<group>"; };
+		1A052C6D171F5282007A0ACD /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = MainHotIdeasKeeper/Classes/DataManager/Model/Note.h; sourceTree = SOURCE_ROOT; };
+		1A052C6E171F5282007A0ACD /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = MainHotIdeasKeeper/Classes/DataManager/Model/Note.m; sourceTree = SOURCE_ROOT; };
+		1A052C70171F5390007A0ACD /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		1A052C71171F5390007A0ACD /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		1A052C74171F5424007A0ACD /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
+		1A052C75171F5424007A0ACD /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
+		1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		1A052C81171F5C25007A0ACD /* ViewNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewNotesViewController.h; sourceTree = "<group>"; };
+		1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewNotesViewController.m; sourceTree = "<group>"; };
+		1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNotesViewController.xib; sourceTree = "<group>"; };
+		1A052C8D171F7A12007A0ACD /* NotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesCell.h; path = MainHotIdeasKeeper/Classes/NotesCell.h; sourceTree = SOURCE_ROOT; };
+		1A052C8E171F7A12007A0ACD /* NotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesCell.m; path = MainHotIdeasKeeper/Classes/NotesCell.m; sourceTree = SOURCE_ROOT; };
+		1A052C90171F7A2B007A0ACD /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = SOURCE_ROOT; };
+		1A052C94171FF8B7007A0ACD /* dataBaseNotes.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dataBaseNotes.sqlite; sourceTree = "<group>"; };
 		8CAC93E3171EB9F7006D3621 /* MainHotIdeasKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainHotIdeasKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAC93E6171EB9F7006D3621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAC93E8171EB9F7006D3621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */,
 				0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */,
 				0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */,
 				0814F9381720590200D7C3CC /* MobileCoreServices.framework in Frameworks */,
@@ -118,9 +176,83 @@
 			path = CameraViewController;
 			sourceTree = "<group>";
 		};
+		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */,
+				1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */,
+				1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */,
+			);
+			name = MenuScreenViewController;
+			sourceTree = "<group>";
+		};
+		1A052C47171F2021007A0ACD /* MenuScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C50171F20E3007A0ACD /* menu_separator.png */,
+				1A052C51171F20E3007A0ACD /* menu_separator@2x.png */,
+				1A052C48171F2021007A0ACD /* menu_item_bg.png */,
+				1A052C49171F2021007A0ACD /* menu_item_bg@2x.png */,
+				1A052C4A171F2021007A0ACD /* menu_selected_item_bg.png */,
+				1A052C4B171F2021007A0ACD /* menu_selected_item_bg@2x.png */,
+			);
+			path = MenuScreenViewController;
+			sourceTree = "<group>";
+		};
+		1A052C5E171F356C007A0ACD /* NotesScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C5F171F3591007A0ACD /* NotesScreenViewController.h */,
+				1A052C60171F3591007A0ACD /* NotesScreenViewController.m */,
+				1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */,
+			);
+			name = NotesScreenViewController;
+			sourceTree = "<group>";
+		};
+		1A052C64171F3852007A0ACD /* NotesScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C69171F4D61007A0ACD /* label_background.png */,
+				1A052C6A171F4D61007A0ACD /* label_background@2x.png */,
+				1A052C65171F3852007A0ACD /* note_bg.png */,
+				1A052C66171F3852007A0ACD /* note_bg@2x.png */,
+			);
+			path = NotesScreenViewController;
+			sourceTree = "<group>";
+		};
+		1A052C73171F5424007A0ACD /* SQLiteAccess */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C74171F5424007A0ACD /* SQLiteAccess.h */,
+				1A052C75171F5424007A0ACD /* SQLiteAccess.m */,
+			);
+			path = SQLiteAccess;
+			sourceTree = "<group>";
+		};
+		1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C81171F5C25007A0ACD /* ViewNotesViewController.h */,
+				1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */,
+				1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */,
+			);
+			name = ViewNotesViewController;
+			sourceTree = "<group>";
+		};
+		1A052C86171F798D007A0ACD /* NotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A052C8D171F7A12007A0ACD /* NotesCell.h */,
+				1A052C8E171F7A12007A0ACD /* NotesCell.m */,
+				1A052C90171F7A2B007A0ACD /* NotesCell.xib */,
+			);
+			name = NotesCell;
+			sourceTree = "<group>";
+		};
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
+				1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */,
 				8CAC93EC171EB9F7006D3621 /* MainHotIdeasKeeper */,
 				8CAC93E5171EB9F7006D3621 /* Frameworks */,
 				8CAC93E4171EB9F7006D3621 /* Products */,
@@ -197,6 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				8CAC9408171EBA1C006D3621 /* Models */,
+				1A052C70171F5390007A0ACD /* DataManager.h */,
+				1A052C71171F5390007A0ACD /* DataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -204,6 +338,8 @@
 		8CAC9408171EBA1C006D3621 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C6D171F5282007A0ACD /* Note.h */,
+				1A052C6E171F5282007A0ACD /* Note.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +347,7 @@
 		8CAC9409171EBA1C006D3621 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C73171F5424007A0ACD /* SQLiteAccess */,
 				8CAC940A171EBA1C006D3621 /* NVSlideMenuController */,
 			);
 			path = Libs;
@@ -228,6 +365,9 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */,
+				1A052C5E171F356C007A0ACD /* NotesScreenViewController */,
+				1A052C41171F1ED3007A0ACD /* MenuScreenViewController */,
 				0814F90017202C4900D7C3CC /* CameraViewController */,
 				8CAC940E171EBA1C006D3621 /* MainScreenViewController */,
 				0814F93D17205E8200D7C3CC /* CameraWindowViewController.h */,
@@ -249,6 +389,7 @@
 		8CAC9412171EBA1C006D3621 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C86171F798D007A0ACD /* NotesCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +397,9 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C94171FF8B7007A0ACD /* dataBaseNotes.sqlite */,
+				1A052C64171F3852007A0ACD /* NotesScreenViewController */,
+				1A052C47171F2021007A0ACD /* MenuScreenViewController */,
 				0814F92E1720544F00D7C3CC /* CameraViewController */,
 				8CAC9414171EBA1C006D3621 /* MainScreenViewController */,
 			);
@@ -265,6 +409,8 @@
 		8CAC9414171EBA1C006D3621 /* MainScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A052C5C171F3494007A0ACD /* buttons_shadow@2x.png */,
+				1A052C58171F33F8007A0ACD /* second_shadow@2x.png */,
 				8CAC9415171EBA1C006D3621 /* backgrond.png */,
 				8CAC9416171EBA1C006D3621 /* background@2x.png */,
 				8CAC9417171EBA1C006D3621 /* button_background.png */,
@@ -346,6 +492,23 @@
 				0814F9341720544F00D7C3CC /* camera_photo_button@2x.png in Resources */,
 				0814F9351720544F00D7C3CC /* camera_video_button.png in Resources */,
 				0814F9361720544F00D7C3CC /* camera_video_button@2x.png in Resources */,
+				1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */,
+				1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */,
+				1A052C4D171F2021007A0ACD /* menu_item_bg@2x.png in Resources */,
+				1A052C4E171F2021007A0ACD /* menu_selected_item_bg.png in Resources */,
+				1A052C4F171F2021007A0ACD /* menu_selected_item_bg@2x.png in Resources */,
+				1A052C52171F20E3007A0ACD /* menu_separator.png in Resources */,
+				1A052C53171F20E3007A0ACD /* menu_separator@2x.png in Resources */,
+				1A052C5A171F33F9007A0ACD /* second_shadow@2x.png in Resources */,
+				1A052C5D171F3494007A0ACD /* buttons_shadow@2x.png in Resources */,
+				1A052C63171F3591007A0ACD /* NotesScreenViewController.xib in Resources */,
+				1A052C67171F3852007A0ACD /* note_bg.png in Resources */,
+				1A052C68171F3852007A0ACD /* note_bg@2x.png in Resources */,
+				1A052C6B171F4D61007A0ACD /* label_background.png in Resources */,
+				1A052C6C171F4D61007A0ACD /* label_background@2x.png in Resources */,
+				1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */,
+				1A052C91171F7A2B007A0ACD /* NotesCell.xib in Resources */,
+				1A052C95171FF8B8007A0ACD /* dataBaseNotes.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +525,13 @@
 				8CAC941F171EBA1C006D3621 /* MainScreenViewController.m in Sources */,
 				0814F90417202C6C00D7C3CC /* CameraViewController.m in Sources */,
 				0814F93F17205E8200D7C3CC /* CameraWindowViewController.m in Sources */,
+				1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */,
+				1A052C62171F3591007A0ACD /* NotesScreenViewController.m in Sources */,
+				1A052C6F171F5282007A0ACD /* Note.m in Sources */,
+				1A052C72171F5390007A0ACD /* DataManager.m in Sources */,
+				1A052C76171F5424007A0ACD /* SQLiteAccess.m in Sources */,
+				1A052C84171F5C25007A0ACD /* ViewNotesViewController.m in Sources */,
+				1A052C8F171F7A12007A0ACD /* NotesCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

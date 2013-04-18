@@ -11,5 +11,6 @@
 @interface MainScreenViewController : UIViewController
 
 - (IBAction)showCameraController:(id)sender;
+- (IBAction)addNoteButtonPressed:(id)sender;
 
 @end

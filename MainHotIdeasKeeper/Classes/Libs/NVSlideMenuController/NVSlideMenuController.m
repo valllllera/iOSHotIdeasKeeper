@@ -78,7 +78,7 @@
 		self.contentViewController = contentViewController;
 		self.panGestureEnabled = YES;
         self.slideDirection = NVSlideMenuControllerSlideFromLeftToRight;
-		self.contentViewWidthWhenMenuIsOpen = 44.f;
+		self.contentViewWidthWhenMenuIsOpen = 85.f;
 	}
 	
 	return self;
