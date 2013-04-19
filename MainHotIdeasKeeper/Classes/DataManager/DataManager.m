@@ -55,7 +55,7 @@ static DataManager *sharedInstance = nil;
             
             note.noteText = [noteDict objectForKey:@"note"];
             note.idx = [noteDict objectForKey:@"id"];
-            note.date = [noteDict objectForKey:@"date"];
+            note.date = [[noteDict objectForKey:@"date"] dateDB];
 
 
             [notes addObject:note];
@@ -78,7 +78,7 @@ static DataManager *sharedInstance = nil;
 +(void)saveNewRemember:(Note*)note
 {
     NSDate *date = [NSDate date];
-    
+
     NSString *query = [NSString stringWithFormat:@"insert into noteTable (note , date) values ('%@',%@ )",note.noteText, [date saveStringToDb]];
     
     [SQLiteAccess insertWithSQL:query];

@@ -20,4 +20,14 @@
     return @"Заметка не сохранена";
 }
 
++(NSString *)noteSuccssesfullChanged
+{
+    return @"Заметка успешно изменена";
+}
+
++(NSString *)noteIsNotChanged
+{
+    return @"Заметка не изменена";
+}
+
 @end

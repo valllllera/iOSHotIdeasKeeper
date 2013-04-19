@@ -99,15 +99,13 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"NotesCell" owner:nil options:nil]objectAtIndex:0];
     }
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
-    noteInArray.idx = [NSNumber numberWithInteger: indexPath.row +1];
-    NSLog(@"%@", noteInArray.date );
+
     
 
     cell.noteTextLabel.text = noteInArray.noteText;
+
+    cell.dateLabel.text = [noteInArray.date formatStringFromDb];
     
-    NSDate *date =noteInArray.date;
-    
-    cell.dateLabel.text = [date formatStringFromDb];
     return cell;
 }
 

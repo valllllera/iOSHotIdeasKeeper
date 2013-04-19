@@ -11,4 +11,6 @@
 @interface Messages : NSObject
 +(NSString *)noteSuccssesfullSaved;
 +(NSString *)noteIsNotSaved;
++(NSString *)noteSuccssesfullChanged;
++(NSString *)noteIsNotChanged;
 @end

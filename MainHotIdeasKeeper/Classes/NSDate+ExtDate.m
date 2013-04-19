@@ -13,7 +13,7 @@
 -(NSString*)formatStringFromDb
 {
     NSDateFormatter *dateFromatterThird = [[NSDateFormatter alloc] init];
-    [dateFromatterThird setDateFormat:@"yyyy.MM.dd HH:mm"];
+    [dateFromatterThird setDateFormat:@"yyyy.MM.dd   HH:mm"];
     return [dateFromatterThird stringFromDate:self];
 }
 
