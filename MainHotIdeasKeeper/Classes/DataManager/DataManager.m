@@ -59,6 +59,7 @@ static DataManager *sharedInstance = nil;
              note.hour = [noteDict objectForKey:@"hour"];
              note.min = [noteDict objectForKey:@"min"];
 
+
             [notes addObject:note];
         }
         
@@ -73,6 +74,8 @@ static DataManager *sharedInstance = nil;
         }
     });
 }
+
+#pragma mark - Work with note in DB
 
 +(void)saveNewRemember:(Note*)note
 {
@@ -89,7 +92,13 @@ static DataManager *sharedInstance = nil;
 
 +(void)updateNewRemember:(Note *)note
 {
-    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = '%@'",note.noteText ,note.idx];
+
+    NSLog(@"%@",
+          note.idx);
+    
+    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = %@",note.noteText ,note.idx];
     [SQLiteAccess updateWithSQL:query];
+    
+
 }
 @end

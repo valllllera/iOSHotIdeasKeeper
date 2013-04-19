@@ -61,8 +61,7 @@
      {
          
          self.notesArray = notes;
-         
-         NSLog(@"%lu", (unsigned long)notes.count);
+
          
          [_mainNotesTable reloadData];
          
@@ -98,7 +97,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"NotesCell" owner:nil options:nil]objectAtIndex:0];
     }
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
-    NSLog(@"%@",noteInArray.noteText);
+    noteInArray.idx = [NSNumber numberWithInteger: indexPath.row +1];
     
 
     cell.noteTextLabel.text = noteInArray.noteText;
@@ -128,7 +127,7 @@
     else
         month = [NSString stringWithFormat:@"%d",[noteInArray.min intValue]];
         
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@.%@.%@ %@:%@",noteInArray.year ,month,day,hour,min];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@.%@.%@     %@:%@",noteInArray.year ,month,day,hour,min];
     
     
     return cell;
