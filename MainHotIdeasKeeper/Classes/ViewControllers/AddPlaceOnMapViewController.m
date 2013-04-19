@@ -50,8 +50,6 @@ static float y;
 {
     [self setLocationManager:nil];
     [self setGeoCoder:nil];
-    [self setLocationManager:nil];
-    [self setLocationManager:nil];
     [super viewDidUnload];
     self.map = nil;
     locationManager.delegate=self;
@@ -61,19 +59,10 @@ static float y;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 	_map.showsUserLocation = YES;
     [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
@@ -134,17 +123,15 @@ static float y;
 
 - (IBAction)savePlaceButtonPressed:(id)sender
 {
-    
+    NSLog(@"1");
     [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
-     ^(NSArray *placemarks, NSError *error) {
-         
+     ^(NSArray *placemarks, NSError *error)
+    {
+        NSLog(@"2");
          CLPlacemark *placemark = [placemarks objectAtIndex:0];
          NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
          NSLog(@"I am currently at %@",locatedAt);
      }];
-    
-    
-    
 }
 
 @end
