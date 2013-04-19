@@ -21,6 +21,8 @@
 
 -(id)initWithNote:(Note *)note;
 
+@property(strong,nonatomic) Note *activeNote;
+
 @property (assign,nonatomic) BOOL flagView;
 
 @end

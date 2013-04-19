@@ -52,6 +52,7 @@ static DataManager *sharedInstance = nil;
             Note *note = [[Note alloc] init];
             
             note.noteText = [noteDict objectForKey:@"note"];
+            note.idx = [noteDict objectForKey:@"id"];
             
             [notes addObject:note];
         }
@@ -76,7 +77,7 @@ static DataManager *sharedInstance = nil;
     [alertView show];
 }
 
-+(void)updateNewRemember:(NSString *)noteText idx:(NSString*)idx;
++(void)updateNewRemember:(NSString *)noteText idx:(NSString*)idx
 {
     NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = '%@' ",noteText,idx];
     [SQLiteAccess updateWithSQL:query];

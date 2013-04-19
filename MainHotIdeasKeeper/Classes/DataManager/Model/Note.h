@@ -11,7 +11,8 @@
 @interface Note : NSObject
 
 @property(nonatomic, copy) NSString *noteText;
+@property (weak , nonatomic) NSNumber *idx;
 
--(NSDictionary *)note;
+
 
 @end

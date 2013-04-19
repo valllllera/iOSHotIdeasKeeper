@@ -33,7 +33,7 @@
     self = [super init];
     if (self)
     {
-        
+        _activeNote = note;
     }
     return  self;
 }
@@ -45,6 +45,12 @@
      self.flagView = NO;
     
     self.notesTextView.delegate = self;
+    
+    if (_activeNote)
+    {
+        _flagView = YES;
+        self.notesTextView.text = _activeNote.noteText;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +77,7 @@
     }
     else
     {
-        [DataManager updateNewRemember:self.notesTextView.text];
+        [DataManager updateNewRemember:self.notesTextView.text idx:_activeNote.id];
     }
 }
 
