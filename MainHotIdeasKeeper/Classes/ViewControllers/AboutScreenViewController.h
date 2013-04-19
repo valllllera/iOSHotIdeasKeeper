@@ -10,4 +10,10 @@
 
 @interface AboutScreenViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *siteLinkBtn;
+- (IBAction)siteLinkBtnClicked:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *writeUsBtn;
+- (IBAction)writeUsBtnClicked:(id)sender;
+
 @end

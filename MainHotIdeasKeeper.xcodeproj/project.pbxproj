@@ -71,6 +71,9 @@
 		8CAC9426171EBA1C006D3621 /* menu_button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941A171EBA1C006D3621 /* menu_button_background@2x.png */; };
 		8CAC9427171EBA1C006D3621 /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941B171EBA1C006D3621 /* navigation_bar_background.png */; };
 		8CAC9428171EBA1C006D3621 /* navigation_bar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */; };
+		8CAC944617212E79006D3621 /* vexadev.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC943C17212E79006D3621 /* vexadev.png */; };
+		8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC943D17212E79006D3621 /* vexadev@2x.png */; };
+		8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC944C172131A9006D3621 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +162,9 @@
 		8CAC941A171EBA1C006D3621 /* menu_button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_button_background@2x.png"; sourceTree = "<group>"; };
 		8CAC941B171EBA1C006D3621 /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
 		8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_bar_background@2x.png"; sourceTree = "<group>"; };
+		8CAC943C17212E79006D3621 /* vexadev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vexadev.png; sourceTree = "<group>"; };
+		8CAC943D17212E79006D3621 /* vexadev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vexadev@2x.png"; sourceTree = "<group>"; };
+		8CAC944C172131A9006D3621 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */,
 				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */,
 				1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */,
@@ -320,6 +327,7 @@
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
+				8CAC944C172131A9006D3621 /* MessageUI.framework */,
 				0814F94317216EE700D7C3CC /* notesTableDB.sqlite */,
 				8CAC93EC171EB9F7006D3621 /* MainHotIdeasKeeper */,
 				8CAC93E5171EB9F7006D3621 /* Frameworks */,
@@ -471,6 +479,7 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CAC943717212E79006D3621 /* AboutViewController */,
 				0814F94217216E5B00D7C3CC /* dataBaseNotes.sqlite */,
 				1A052C64171F3852007A0ACD /* NotesScreenViewController */,
 				1A052C47171F2021007A0ACD /* MenuScreenViewController */,
@@ -495,6 +504,15 @@
 				8CAC941C171EBA1C006D3621 /* navigation_bar_background@2x.png */,
 			);
 			path = MainScreenViewController;
+			sourceTree = "<group>";
+		};
+		8CAC943717212E79006D3621 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CAC943C17212E79006D3621 /* vexadev.png */,
+				8CAC943D17212E79006D3621 /* vexadev@2x.png */,
+			);
+			path = AboutViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,6 +603,8 @@
 				0814F94417216EE700D7C3CC /* notesTableDB.sqlite in Resources */,
 				1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */,
 				088B45D117218F39002719C2 /* NotesCell.xib in Resources */,
+				8CAC944617212E79006D3621 /* vexadev.png in Resources */,
+				8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
