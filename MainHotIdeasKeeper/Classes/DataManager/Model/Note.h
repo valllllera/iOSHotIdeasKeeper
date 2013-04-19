@@ -12,6 +12,12 @@
 
 @property(nonatomic, copy) NSString *noteText;
 @property (weak , nonatomic) NSNumber *idx;
+@property (weak , nonatomic) NSNumber *year;
+@property (weak , nonatomic) NSNumber *month;
+@property (weak , nonatomic) NSNumber *day;
+@property (weak , nonatomic) NSNumber *hour;
+@property (weak , nonatomic) NSNumber *min;
+
 
 
 

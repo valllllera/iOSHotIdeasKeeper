@@ -100,8 +100,35 @@
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
     NSLog(@"%@",noteInArray.noteText);
     
-   // cell.textLabel.text = noteInArray.noteText;
+
     cell.noteTextLabel.text = noteInArray.noteText;
+    
+    
+    NSString *month ;
+    if ([noteInArray.month intValue] < 10 )
+        month = [NSString stringWithFormat:@"0%d",[noteInArray.month intValue]];
+    else
+         month = [NSString stringWithFormat:@"%d",[noteInArray.month intValue]];
+    
+    NSString *day ;
+    if ([noteInArray.day intValue] < 10 )
+        month = [NSString stringWithFormat:@"0%d",[noteInArray.day intValue]];
+    else
+        month = [NSString stringWithFormat:@"%d",[noteInArray.day intValue]];
+    
+    NSString *hour ;
+    if ([noteInArray.hour intValue] < 10 )
+        month = [NSString stringWithFormat:@"0%d",[noteInArray.hour intValue]];
+    else
+        month = [NSString stringWithFormat:@"%d",[noteInArray.hour intValue]];
+    
+    NSString *min ;
+    if ([noteInArray.min intValue] < 10 )
+        month = [NSString stringWithFormat:@"0%d",[noteInArray.min intValue]];
+    else
+        month = [NSString stringWithFormat:@"%d",[noteInArray.min intValue]];
+        
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@.%@.%@ %@:%@",noteInArray.year ,month,day,hour,min];
     
     
     return cell;
