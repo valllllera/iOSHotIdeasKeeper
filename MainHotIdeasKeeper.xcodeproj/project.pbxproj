@@ -18,6 +18,8 @@
 		0814F948172178E300D7C3CC /* NotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F947172178E300D7C3CC /* NotesCell.m */; };
 		0814F94A172178FA00D7C3CC /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0814F949172178FA00D7C3CC /* NotesCell.xib */; };
 		0814F94E1721795000D7C3CC /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F94D1721795000D7C3CC /* Messages.m */; };
+		0814F95E17218D4100D7C3CC /* NotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F95D17218D4100D7C3CC /* NotesCell.m */; };
+		0814F96017218D7000D7C3CC /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0814F95F17218D7000D7C3CC /* NotesCell.xib */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -85,6 +87,9 @@
 		0814F949172178FA00D7C3CC /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		0814F94C1721795000D7C3CC /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
 		0814F94D1721795000D7C3CC /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
+		0814F95C17218D4100D7C3CC /* NotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesCell.h; sourceTree = "<group>"; };
+		0814F95D17218D4100D7C3CC /* NotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesCell.m; sourceTree = "<group>"; };
+		0814F95F17218D7000D7C3CC /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +216,16 @@
 				0814F94D1721795000D7C3CC /* Messages.m */,
 			);
 			name = Messages;
+			sourceTree = "<group>";
+		};
+		0814F95B17218D0300D7C3CC /* NotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				0814F95C17218D4100D7C3CC /* NotesCell.h */,
+				0814F95D17218D4100D7C3CC /* NotesCell.m */,
+				0814F95F17218D7000D7C3CC /* NotesCell.xib */,
+			);
+			name = NotesCell;
 			sourceTree = "<group>";
 		};
 		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
@@ -417,6 +432,7 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0814F95B17218D0300D7C3CC /* NotesCell */,
 				1AEA616C1720229D00CF3CD2 /* AddPlaceOnMapScreenViewController */,
 				1AEA615E1720164900CF3CD2 /* AboutScreenViewController */,
 				1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */,
@@ -563,6 +579,7 @@
 				0814F94417216EE700D7C3CC /* notesTableDB.sqlite in Resources */,
 				1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */,
 				0814F94A172178FA00D7C3CC /* NotesCell.xib in Resources */,
+				0814F96017218D7000D7C3CC /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +606,7 @@
 				0814F948172178E300D7C3CC /* NotesCell.m in Sources */,
 				0814F94E1721795000D7C3CC /* Messages.m in Sources */,
 				7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */,
+				0814F95E17218D4100D7C3CC /* NotesCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

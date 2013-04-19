@@ -10,4 +10,14 @@
 
 @implementation Messages
 
++(NSString *)noteSuccssesfullSaved
+{
+        return @"Заметка успешно сохранена";
+ }
+
++(NSString *)noteIsNotSaved
+{
+    return @"Заметка не сохранена";
+}
+
 @end
