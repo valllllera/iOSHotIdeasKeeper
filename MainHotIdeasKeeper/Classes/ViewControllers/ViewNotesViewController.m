@@ -85,23 +85,24 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 44;
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"NotesCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NotesCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"NotesCell" owner:nil options:nil]objectAtIndex:0];
     }
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
     NSLog(@"%@",noteInArray.noteText);
     
-    cell.textLabel.text = noteInArray.noteText;
+   // cell.textLabel.text = noteInArray.noteText;
+    cell.noteTextLabel.text = noteInArray.noteText;
+    
     
     return cell;
 }
