@@ -18,5 +18,10 @@
 - (IBAction)showCameraVideoController:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *addLabel;
+@property (weak, nonatomic) IBOutlet UIButton *photoButton;
+@property (weak, nonatomic) IBOutlet UIButton *notesButton;
+@property (weak, nonatomic) IBOutlet UIButton *videoButton;
+@property (weak, nonatomic) IBOutlet UIButton *mapButton;
+
 
 @end

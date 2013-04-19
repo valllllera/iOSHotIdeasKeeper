@@ -32,6 +32,21 @@
     [super viewDidLoad];
   
     _scrollView.contentSize = CGSizeMake(240, 470);
+    
+    UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 40, 40)];
+    titleLabel.text = self.navigationItem.title;
+    [titleLabel setBackgroundColor:[UIColor clearColor]];
+    titleLabel.textColor = [UIColor whiteColor];
+    [titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:25]];
+    self.navigationItem.titleView = titleLabel;
+    
+    [_aboutButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_mainButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_notesButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_mediaLibraryButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_musicButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_geoButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_libraryLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:13]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +59,13 @@
     [self setScrollView:nil];
     notesButton = nil;
     mainButton = nil;
+    [self setLibraryLabel:nil];
+    [self setMainButton:nil];
+    [self setNotesButton:nil];
+    [self setMediaLibraryButton:nil];
+    [self setMusicButton:nil];
+    [self setGeoButton:nil];
+    [self setAboutButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)notesButtonPressed:(id)sender

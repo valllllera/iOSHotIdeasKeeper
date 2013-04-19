@@ -127,7 +127,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{160, 45}, {160, 158}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="67766277"/>
+						<reference key="NSNextKeyView" ref="693102774"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -210,7 +210,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBADAdType">0</int>
 					</object>
-					<object class="IBUIButton" id="67766277">
+					<object class="IBUIButton" id="693102774">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 203}, {160, 158}}</string>
@@ -284,6 +284,46 @@
 					<int key="connectionID">27</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">photoButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="349644251"/>
+					</object>
+					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">notesButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="118497529"/>
+					</object>
+					<int key="connectionID">29</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">videoButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="693102774"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">MapButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="383717403"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">mapButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="383717403"/>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showCameraPhotoController:</string>
 						<reference key="source" ref="349644251"/>
@@ -313,7 +353,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showCameraVideoController:</string>
-						<reference key="source" ref="67766277"/>
+						<reference key="source" ref="693102774"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -341,7 +381,7 @@
 							<reference ref="426214843"/>
 							<reference ref="215060481"/>
 							<reference ref="349644251"/>
-							<reference ref="67766277"/>
+							<reference ref="693102774"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -403,7 +443,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="67766277"/>
+						<reference key="object" ref="693102774"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -429,7 +469,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">27</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

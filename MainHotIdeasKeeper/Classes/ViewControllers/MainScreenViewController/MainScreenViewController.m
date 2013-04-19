@@ -46,6 +46,11 @@
     self.navigationItem.titleView = titleLabel;
     
     [_addLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:25]];
+    [_photoButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_notesButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_videoButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    [_mapButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
+    
 
 }
 
@@ -57,6 +62,11 @@
 
 - (void)viewDidUnload {
     [self setAddLabel:nil];
+    [self setPhotoButton:nil];
+    [self setNotesButton:nil];
+    [self setVideoButton:nil];
+    [self setMapButton:nil];
+    [self setMapButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)showCameraPhotoController:(id)sender

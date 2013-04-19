@@ -22,5 +22,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *siteLinkBtn;
 - (IBAction)siteLinkBtnClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
+@property (weak, nonatomic) IBOutlet UILabel *libraryLabel;
+@property (weak, nonatomic) IBOutlet UIButton *mainButton;
+@property (weak, nonatomic) IBOutlet UIButton *notesButton;
+@property (weak, nonatomic) IBOutlet UIButton *mediaLibraryButton;
+@property (weak, nonatomic) IBOutlet UIButton *musicButton;
+@property (weak, nonatomic) IBOutlet UIButton *geoButton;
 
 @end
