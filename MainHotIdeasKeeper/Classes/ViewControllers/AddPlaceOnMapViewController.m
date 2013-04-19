@@ -65,7 +65,7 @@ static float y;
     }
 
     static NSString* annotationIdentifier = @"annotationIdentifier";
-    MKPinAnnotationView* annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+    MKPinAnnotationView * annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
     
     if (!annotationView)
     {
@@ -100,7 +100,6 @@ static float y;
 - (void)mapTapped:(UITapGestureRecognizer *)recognizer
 {
     CGPoint point = [recognizer locationInView:_map];
-        
     CLLocationCoordinate2D coorditate = [_map convertPoint:point toCoordinateFromView:_map];
     
     NSLog(@"long: %f, lat: %f", coorditate.longitude, coorditate.latitude);
@@ -121,10 +120,11 @@ static float y;
 
 - (IBAction)savePlaceButtonPressed:(id)sender
 {
+    
     [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
     ^(NSArray *placemarks, NSError *error)
     {
-        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        CLPlacemark *placemark = [placemarks initWithObjects:_view.tag, nil];
         NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
         NSLog(@"I am currently at %@",locatedAt);
     }];
