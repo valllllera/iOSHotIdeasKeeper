@@ -19,6 +19,7 @@
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet CLGeocoder *geoCoder;
 @property (strong, nonatomic) IBOutlet CLLocationManager *locationManager;
+@property (strong, nonatomic) MKPinAnnotationView *annotationView;
 
 - (IBAction)mapButtonPressed:(id)sender;
 - (IBAction)satelliteButtonPressed:(id)sender;

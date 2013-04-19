@@ -65,24 +65,24 @@ static float y;
     }
 
     static NSString* annotationIdentifier = @"annotationIdentifier";
-    MKPinAnnotationView * annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+    _annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
     
-    if (!annotationView)
+    if (!_annotationView)
     {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+        _annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
         
         if([[annotation title] isEqualToString:@"Annotation1"]) {
-            [annotationView setPinColor:MKPinAnnotationColorRed];
+            [_annotationView setPinColor:MKPinAnnotationColorRed];
         }
         else
         {
-            [annotationView setPinColor:MKPinAnnotationColorGreen];
-            annotationView.animatesDrop = YES;
-            annotationView.canShowCallout = YES;
+            [_annotationView setPinColor:MKPinAnnotationColorGreen];
+            _annotationView.animatesDrop = YES;
+            _annotationView.canShowCallout = YES;
         }
     }
     
-    return annotationView;
+    return _annotationView;
 }
 
 - (IBAction)mapButtonPressed:(id)sender {
@@ -124,7 +124,7 @@ static float y;
     [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
     ^(NSArray *placemarks, NSError *error)
     {
-        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        CLPlacemark *placemark = [[CLPlacemark alloc] initWith];
         NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
         NSLog(@"I am currently at %@",locatedAt);
     }];
