@@ -10,9 +10,17 @@
 
 @implementation NSDate (ExtDate)
 
-+(NSString*)getStringFromDate:(NSDate *)date
+-(NSString*)formatStringFromDb
 {
-    return @"";
+    NSDateFormatter *dateFromatterThird = [[NSDateFormatter alloc] init];
+    [dateFromatterThird setDateFormat:@"yyyy.MM.dd HH:mm"];
+    return [dateFromatterThird stringFromDate:self];
 }
 
+-(NSString *)saveStringToDb
+{
+    NSDateFormatter *dateFromatterThird = [[NSDateFormatter alloc] init];
+    [dateFromatterThird setDateFormat:@"yyyyMMddHHmm"];
+    return [dateFromatterThird stringFromDate:self];
+}
 @end

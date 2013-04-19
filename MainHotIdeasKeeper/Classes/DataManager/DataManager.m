@@ -9,6 +9,8 @@
 #import "DataManager.h"
 #import "SQLiteAccess.h"
 #import "Note.h"
+#import "NSString+ExtString.h"
+#import "NSDate+ExtDate.h"
 
 @implementation DataManager
 
@@ -53,12 +55,7 @@ static DataManager *sharedInstance = nil;
             
             note.noteText = [noteDict objectForKey:@"note"];
             note.idx = [noteDict objectForKey:@"id"];
-             note.year = [noteDict objectForKey:@"year"];
-             note.month = [noteDict objectForKey:@"month"];
-             note.day = [noteDict objectForKey:@"day"];
-             note.hour = [noteDict objectForKey:@"hour"];
-             note.min = [noteDict objectForKey:@"min"];
-            NSLog(@"%@",note.min);
+            note.date = [noteDict objectForKey:@"date"];
 
 
             [notes addObject:note];
@@ -81,39 +78,18 @@ static DataManager *sharedInstance = nil;
 +(void)saveNewRemember:(Note*)note
 {
     NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyyMMddHHmm"];
     
-    NSString *string = [dateFormatter stringFromDate:date];
+    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note , date) values ('%@',%@ )",note.noteText, [date saveStringToDb]];
     
-    ////////
-    NSDateFormatter *dateFromatterTwo = [[NSDateFormatter alloc] init];
-    [dateFromatterTwo setDateFormat:@"yyyyMMddHHmm"];
+    [SQLiteAccess insertWithSQL:query];
     
-    NSDate *dateFromDB = [dateFromatterTwo dateFromString:string];
-    
-    NSDateFormatter *dateFromatterThird = [[NSDateFormatter alloc] init];
-    [dateFromatterThird setDateFormat:@"yyyy.MM.dd HH:mm"];
-    
-    NSLog(@"%@", [dateFromatterThird stringFromDate:dateFromDB]);
-    
-    /*NSString *query = [NSString stringWithFormat:@"insert into noteTable (note ,year , month , day , hour , min) values ('%@',%d , %d,%d,%d,%d )",note.noteText, [components year],[components month],[components day],[components hour],[components minute]];
-    
-    [SQLiteAccess insertWithSQL:query];*/
-    
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
-    [alertView show];
+   
 }
 
 +(void)updateNewRemember:(Note *)note
-{
-
-    NSLog(@"%@",
-          note.idx);
-    
+{    
     NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = %@",note.noteText ,note.idx];
     [SQLiteAccess updateWithSQL:query];
     
-
 }
 @end

@@ -73,7 +73,12 @@
         note.noteText = self.notesTextView.text;
         [DataManager saveNewRemember:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
-        [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+      
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
+        [alertView show];
+        
+          [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
     }
     else
     {

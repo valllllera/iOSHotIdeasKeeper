@@ -10,4 +10,7 @@
 
 @interface NSString (ExtString)
 
+- (NSDate *)dateDB;
+
+
 @end

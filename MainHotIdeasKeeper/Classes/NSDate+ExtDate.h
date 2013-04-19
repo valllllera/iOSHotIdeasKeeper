@@ -10,6 +10,6 @@
 
 @interface NSDate (ExtDate)
 
-+(NSString*)getStringFromDate:(NSDate *)date;
-
+-(NSString*)formatStringFromDb;
+-(NSString *)saveStringToDb;
 @end

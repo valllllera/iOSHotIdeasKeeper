@@ -10,6 +10,8 @@
 #import "NotesScreenViewController.h"
 #import "DataManager.h"
 #import "NotesCell.h"
+#import "NSString+ExtString.h"
+#import "NSDate+ExtDate.h"
 
 @interface ViewNotesViewController ()
 
@@ -98,39 +100,14 @@
     }
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
     noteInArray.idx = [NSNumber numberWithInteger: indexPath.row +1];
+    NSLog(@"%@", noteInArray.date );
     
 
     cell.noteTextLabel.text = noteInArray.noteText;
     
+    NSDate *date =noteInArray.date;
     
-    NSString *month ;
-    NSLog(@"%@",noteInArray.month);
-    if ([noteInArray.month intValue] < 10 )
-        month = [NSString stringWithFormat:@"0%d",[noteInArray.month intValue]];
-    else
-         month = [NSString stringWithFormat:@"%d",[noteInArray.month intValue]];
-    
-    NSString *day ;
-    if ([noteInArray.day intValue] < 10 )
-        month = [NSString stringWithFormat:@"0%d",[noteInArray.day intValue]];
-    else
-        month = [NSString stringWithFormat:@"%d",[noteInArray.day intValue]];
-    
-    NSString *hour ;
-    if ([noteInArray.hour intValue] < 10 )
-        month = [NSString stringWithFormat:@"0%d",[noteInArray.hour intValue]];
-    else
-        month = [NSString stringWithFormat:@"%d",[noteInArray.hour intValue]];
-    
-    NSString *min ;
-    if ([noteInArray.min intValue] < 10 )
-        month = [NSString stringWithFormat:@"0%d",[noteInArray.min intValue]];
-    else
-        month = [NSString stringWithFormat:@"%d",[noteInArray.min intValue]];
-        
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@.%@.%@     %@:%@",noteInArray.year ,month,day,hour,min];
-    
-    
+    cell.dateLabel.text = [date formatStringFromDb];
     return cell;
 }
 

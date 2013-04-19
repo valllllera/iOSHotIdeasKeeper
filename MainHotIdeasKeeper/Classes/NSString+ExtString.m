@@ -10,4 +10,13 @@
 
 @implementation NSString (ExtString)
 
+- (NSDate *)dateDB
+{
+    NSDateFormatter *dateFromatterTwo = [[NSDateFormatter alloc] init];
+    [dateFromatterTwo setDateFormat:@"yyyyMMddHHmm"];
+    
+    return [dateFromatterTwo dateFromString:self];
+}
+
+
 @end
