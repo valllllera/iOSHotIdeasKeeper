@@ -10,8 +10,13 @@
 
 @interface MainScreenViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-- (IBAction)showCameraController:(id)sender;
+@property (strong, nonatomic) UIImage *image;
+
+- (IBAction)showCameraPhotoController:(id)sender;
 - (IBAction)addNoteButtonPressed:(id)sender;
 - (IBAction)addPlaceButtonPressed:(id)sender;
+- (IBAction)showCameraVideoController:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *addLabel;
 
 @end

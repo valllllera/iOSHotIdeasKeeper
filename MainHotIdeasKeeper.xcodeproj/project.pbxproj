@@ -44,6 +44,7 @@
 		1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */; };
 		1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */; };
 		1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */; };
+		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
 		1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */; };
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
@@ -126,6 +127,7 @@
 		1A052C9C17200F9D007A0ACD /* CameraScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraScreenViewController.h; sourceTree = "<group>"; };
 		1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraScreenViewController.m; sourceTree = "<group>"; };
 		1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutScreenViewController.h; sourceTree = "<group>"; };
 		1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScreenViewController.m; sourceTree = "<group>"; };
 		1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutScreenViewController.xib; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 			name = Messages;
 			sourceTree = "<group>";
 		};
-		088B45D21721A40D002719C2 /* Catigories */ = {
+		088B45D21721A40D002719C2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				088B45D41721A49C002719C2 /* NSDate+ExtDate.h */,
@@ -239,7 +241,7 @@
 				088B45D71721A4FC002719C2 /* NSString+ExtString.h */,
 				088B45D81721A4FC002719C2 /* NSString+ExtString.m */,
 			);
-			name = Catigories;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
@@ -398,7 +400,7 @@
 		8CAC9406171EBA1C006D3621 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				088B45D21721A40D002719C2 /* Catigories */,
+				088B45D21721A40D002719C2 /* Categories */,
 				0814F94B1721793800D7C3CC /* Messages */,
 				8CAC9407171EBA1C006D3621 /* DataManager */,
 				8CAC9409171EBA1C006D3621 /* Libs */,
@@ -482,6 +484,7 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */,
 				8CAC943717212E79006D3621 /* AboutViewController */,
 				1A052C64171F3852007A0ACD /* NotesScreenViewController */,
 				1A052C47171F2021007A0ACD /* MenuScreenViewController */,
@@ -607,6 +610,7 @@
 				088B45D117218F39002719C2 /* NotesCell.xib in Resources */,
 				8CAC944617212E79006D3621 /* vexadev.png in Resources */,
 				8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */,
+				1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

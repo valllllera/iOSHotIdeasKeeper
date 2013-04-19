@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Note.h"
 
-@interface NotesScreenViewController : UIViewController <UITextFieldDelegate>
+@interface NotesScreenViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate>
 {
 
     __weak IBOutlet UIButton *saveButton;
+    UIImage *image;
     
 }
 

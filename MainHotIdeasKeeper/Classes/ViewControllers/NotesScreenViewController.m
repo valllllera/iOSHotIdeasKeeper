@@ -23,7 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-
+        self.title = @"Заметки";
     }
     return self;
 }
@@ -51,6 +51,9 @@
         _flagView = YES;
         self.notesTextView.text = _activeNote.noteText;
     }
+    
+    UIBarButtonItem *addImageButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImageButton:)];
+    self.navigationItem.rightBarButtonItem = addImageButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,5 +99,12 @@
         return NO;
 }
     return YES;
+}
+
+-(IBAction)addImageButton:(id)sender
+{
+    NSDictionary *info = [[NSDictionary alloc]init];
+    image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end
