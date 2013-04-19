@@ -124,7 +124,7 @@ static float y;
     [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
     ^(NSArray *placemarks, NSError *error)
     {
-        CLPlacemark *placemark = [placemarks initWithObjects:_view.tag, nil];
+        CLPlacemark *placemark = [placemarks objectAtIndex:0];
         NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
         NSLog(@"I am currently at %@",locatedAt);
     }];

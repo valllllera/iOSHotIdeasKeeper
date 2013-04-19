@@ -42,13 +42,12 @@
 		1A052C6C171F4D61007A0ACD /* label_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C6A171F4D61007A0ACD /* label_background@2x.png */; };
 		1A052C6F171F5282007A0ACD /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C6E171F5282007A0ACD /* Note.m */; };
 		1A052C72171F5390007A0ACD /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C71171F5390007A0ACD /* DataManager.m */; };
-		1A052C76171F5424007A0ACD /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C75171F5424007A0ACD /* SQLiteAccess.m */; };
-		1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */; };
 		1A052C84171F5C25007A0ACD /* ViewNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */; };
 		1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */; };
 		1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */; };
 		1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */; };
 		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
+		1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED9B917219A55004DE58D /* SQLiteAccess.m */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
 		1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */; };
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
@@ -127,9 +126,6 @@
 		1A052C6E171F5282007A0ACD /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = MainHotIdeasKeeper/Classes/DataManager/Model/Note.m; sourceTree = SOURCE_ROOT; };
 		1A052C70171F5390007A0ACD /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		1A052C71171F5390007A0ACD /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		1A052C74171F5424007A0ACD /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
-		1A052C75171F5424007A0ACD /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
-		1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1A052C81171F5C25007A0ACD /* ViewNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewNotesViewController.h; sourceTree = "<group>"; };
 		1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewNotesViewController.m; sourceTree = "<group>"; };
 		1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNotesViewController.xib; sourceTree = "<group>"; };
@@ -137,6 +133,8 @@
 		1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraScreenViewController.m; sourceTree = "<group>"; };
 		1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraScreenViewController.xib; sourceTree = "<group>"; };
 		1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		1A8ED9B817219A55004DE58D /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
+		1A8ED9B917219A55004DE58D /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
 		1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutScreenViewController.h; sourceTree = "<group>"; };
 		1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScreenViewController.m; sourceTree = "<group>"; };
 		1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutScreenViewController.xib; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */,
 				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */,
-				1A052C7A171F584E007A0ACD /* libsqlite3.0.dylib in Frameworks */,
 				0814F93C1720591900D7C3CC /* AssetsLibrary.framework in Frameworks */,
 				0814F93A1720590F00D7C3CC /* MediaPlayer.framework in Frameworks */,
 				0814F9381720590200D7C3CC /* MobileCoreServices.framework in Frameworks */,
@@ -310,16 +307,6 @@
 			path = NotesScreenViewController;
 			sourceTree = "<group>";
 		};
-		1A052C73171F5424007A0ACD /* SQLiteAccess */ = {
-			isa = PBXGroup;
-			children = (
-				1A052C74171F5424007A0ACD /* SQLiteAccess.h */,
-				1A052C79171F584D007A0ACD /* libsqlite3.0.dylib */,
-				1A052C75171F5424007A0ACD /* SQLiteAccess.m */,
-			);
-			path = SQLiteAccess;
-			sourceTree = "<group>";
-		};
 		1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +315,15 @@
 				1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */,
 			);
 			name = ViewNotesViewController;
+			sourceTree = "<group>";
+		};
+		1A8ED9B717219A55004DE58D /* SQLiteAccess */ = {
+			isa = PBXGroup;
+			children = (
+				1A8ED9B817219A55004DE58D /* SQLiteAccess.h */,
+				1A8ED9B917219A55004DE58D /* SQLiteAccess.m */,
+			);
+			path = SQLiteAccess;
 			sourceTree = "<group>";
 		};
 		1AEA615E1720164900CF3CD2 /* AboutScreenViewController */ = {
@@ -455,7 +451,7 @@
 		8CAC9409171EBA1C006D3621 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				1A052C73171F5424007A0ACD /* SQLiteAccess */,
+				1A8ED9B717219A55004DE58D /* SQLiteAccess */,
 				8CAC940A171EBA1C006D3621 /* NVSlideMenuController */,
 			);
 			path = Libs;
@@ -654,7 +650,6 @@
 				1A052C62171F3591007A0ACD /* NotesScreenViewController.m in Sources */,
 				1A052C6F171F5282007A0ACD /* Note.m in Sources */,
 				1A052C72171F5390007A0ACD /* DataManager.m in Sources */,
-				1A052C76171F5424007A0ACD /* SQLiteAccess.m in Sources */,
 				1A052C84171F5C25007A0ACD /* ViewNotesViewController.m in Sources */,
 				1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */,
 				1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */,
@@ -665,6 +660,7 @@
 				088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */,
 				088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */,
 				088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */,
+				1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +741,11 @@
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -757,6 +758,11 @@
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
