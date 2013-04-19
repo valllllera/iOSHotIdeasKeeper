@@ -12,6 +12,7 @@
 #import "NotesCell.h"
 #import "NSString+ExtString.h"
 #import "NSDate+ExtDate.h"
+#import "NVSlideMenuController.h"
 
 @interface ViewNotesViewController ()
 
@@ -31,6 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
+    [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
 }
 
 - (void)didReceiveMemoryWarning

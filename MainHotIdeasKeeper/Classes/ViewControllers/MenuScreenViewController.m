@@ -63,4 +63,19 @@
     AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
     [self.slideMenuController setContentViewController:[[UINavigationController alloc]initWithRootViewController:aboutScreenViewController] animated:YES completion:nil];
 }
+
+- (IBAction)siteLinkBtnClicked:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://vexadev.com"];
+    
+    if (![[UIApplication sharedApplication] openURL:url])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to open url"
+                                                        message:[url description]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
 @end

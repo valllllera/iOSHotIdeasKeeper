@@ -10,7 +10,6 @@
 
 @interface MenuScreenViewController : UIViewController
 {
-
     __weak IBOutlet UIButton *notesButton;
     __weak IBOutlet UIButton *mainButton;
 }
@@ -20,5 +19,8 @@
 - (IBAction)mainButtonPressed:(id)sender;
 - (IBAction)aboutUsButtonPressed:(id)sender;
 - (IBAction)mediaButtonPressed:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *siteLinkBtn;
+- (IBAction)siteLinkBtnClicked:(id)sender;
 
 @end

@@ -74,6 +74,7 @@
 		8CAC944617212E79006D3621 /* vexadev.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC943C17212E79006D3621 /* vexadev.png */; };
 		8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC943D17212E79006D3621 /* vexadev@2x.png */; };
 		8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC944C172131A9006D3621 /* MessageUI.framework */; };
+		8CAC944F172135E6006D3621 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC944E172135E5006D3621 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,8 +85,7 @@
 		0814F9371720590200D7C3CC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0814F9391720590F00D7C3CC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0814F93B1720591900D7C3CC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		0814F94217216E5B00D7C3CC /* dataBaseNotes.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = dataBaseNotes.sqlite; path = ../../../../.Trash/dataBaseNotes.sqlite; sourceTree = "<group>"; };
-		0814F94317216EE700D7C3CC /* notesTableDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = notesTableDB.sqlite; path = MainHotIdeasKeeper/Resources/notesTableDB.sqlite; sourceTree = "<group>"; };
+		0814F94317216EE700D7C3CC /* notesTableDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = notesTableDB.sqlite; path = ../notesTableDB.sqlite; sourceTree = "<group>"; };
 		0814F94C1721795000D7C3CC /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
 		0814F94D1721795000D7C3CC /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
 		088B45CD17218F39002719C2 /* NotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesCell.h; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.h; sourceTree = SOURCE_ROOT; };
@@ -165,6 +165,7 @@
 		8CAC943C17212E79006D3621 /* vexadev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vexadev.png; sourceTree = "<group>"; };
 		8CAC943D17212E79006D3621 /* vexadev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vexadev@2x.png"; sourceTree = "<group>"; };
 		8CAC944C172131A9006D3621 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8CAC944E172135E5006D3621 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAC944F172135E6006D3621 /* iAd.framework in Frameworks */,
 				8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */,
 				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */,
@@ -276,6 +278,7 @@
 		1A052C64171F3852007A0ACD /* NotesScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0814F94317216EE700D7C3CC /* notesTableDB.sqlite */,
 				1A052C69171F4D61007A0ACD /* label_background.png */,
 				1A052C6A171F4D61007A0ACD /* label_background@2x.png */,
 				1A052C65171F3852007A0ACD /* note_bg.png */,
@@ -327,8 +330,6 @@
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
-				8CAC944C172131A9006D3621 /* MessageUI.framework */,
-				0814F94317216EE700D7C3CC /* notesTableDB.sqlite */,
 				8CAC93EC171EB9F7006D3621 /* MainHotIdeasKeeper */,
 				8CAC93E5171EB9F7006D3621 /* Frameworks */,
 				8CAC93E4171EB9F7006D3621 /* Products */,
@@ -346,6 +347,8 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CAC944E172135E5006D3621 /* iAd.framework */,
+				8CAC944C172131A9006D3621 /* MessageUI.framework */,
 				7E17CBEF1720549000BD06BA /* CoreLocation.framework */,
 				7E17CBEA1720257E00BD06BA /* MapKit.framework */,
 				0814F93B1720591900D7C3CC /* AssetsLibrary.framework */,
@@ -480,7 +483,6 @@
 			isa = PBXGroup;
 			children = (
 				8CAC943717212E79006D3621 /* AboutViewController */,
-				0814F94217216E5B00D7C3CC /* dataBaseNotes.sqlite */,
 				1A052C64171F3852007A0ACD /* NotesScreenViewController */,
 				1A052C47171F2021007A0ACD /* MenuScreenViewController */,
 				0814F92E1720544F00D7C3CC /* CameraViewController */,
