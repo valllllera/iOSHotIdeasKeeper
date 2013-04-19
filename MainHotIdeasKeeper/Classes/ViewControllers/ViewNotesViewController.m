@@ -98,9 +98,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CellIdentifier];
     }
-    Note *note = [[Note alloc]init];
+    Note *note = [_notesArray objectAtIndex:indexPath.row];
+    NSLog(@"%@",note.noteText);
     
-    cell.textLabel.text = note;
+    cell.textLabel.text = note.noteText;
     
     return cell;
 }

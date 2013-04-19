@@ -29,7 +29,7 @@ static int multipleRowCallback(void *queryValuesVP, int columnCount, char **valu
 + (NSString *)pathToDB {
     NSString *originalDBPath = [[NSBundle mainBundle] pathForResource:dbName ofType:@"sqlite"];
     NSString *path = nil;
-    NSString *DOCUMENTS = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *DOCUMENTS = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *dbNameDir = [NSString stringWithFormat:@"%@/Recipes", DOCUMENTS];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDir = NO;

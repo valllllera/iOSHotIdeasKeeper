@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Note.h"
 
 @interface DataManager : NSObject
 
@@ -18,7 +19,7 @@
 - (void)getNotesWithSucces:(void (^)(NSArray *notes))success
                   failture:(void (^)(NSError *error))failture;
 
-+(void)saveNewRemember:(NSString*)noteText ;
++(void)saveNewRemember:(Note*)note;
 +(void)updateNewRemember:(NSString *)noteText;
 
 

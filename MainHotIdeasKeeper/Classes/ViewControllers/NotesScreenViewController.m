@@ -63,7 +63,9 @@
 {
     if (self.flagView == NO)
     {
-        [DataManager saveNewRemember:self.notesTextView.text];
+        Note *note = [[Note alloc]init];
+        note.noteText = self.notesTextView.text;
+        [DataManager saveNewRemember:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
         [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
     }

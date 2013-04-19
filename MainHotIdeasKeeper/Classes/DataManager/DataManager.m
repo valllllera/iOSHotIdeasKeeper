@@ -43,7 +43,7 @@ static DataManager *sharedInstance = nil;
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray *notesArray;
-            notesArray = [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM noteTable ORDER BY note DESC"];
+            notesArray = [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM noteTable "];
 
         NSMutableArray *notes = [NSMutableArray array];
         
@@ -51,7 +51,7 @@ static DataManager *sharedInstance = nil;
         {
             Note *note = [[Note alloc] init];
             
-            note.noteText = [noteDict objectForKey:@"noteText"];
+            note.noteText = [noteDict objectForKey:@"note"];
             
             [notes addObject:note];
         }
@@ -68,9 +68,9 @@ static DataManager *sharedInstance = nil;
     });
 }
 
-+(void)saveNewRemember:(NSString*)noteText
++(void)saveNewRemember:(Note*)note
 {
-    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note) values ('%@')",noteText];
+    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note) values ('%@')",note.noteText];
     [SQLiteAccess insertWithSQL:query];
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
     [alertView show];
