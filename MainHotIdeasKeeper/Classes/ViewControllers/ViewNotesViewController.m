@@ -104,6 +104,7 @@
     
     
     NSString *month ;
+    NSLog(@"%@",noteInArray.month);
     if ([noteInArray.month intValue] < 10 )
         month = [NSString stringWithFormat:@"0%d",[noteInArray.month intValue]];
     else

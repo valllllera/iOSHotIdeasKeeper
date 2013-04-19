@@ -18,6 +18,8 @@
 		0814F94E1721795000D7C3CC /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F94D1721795000D7C3CC /* Messages.m */; };
 		088B45D017218F39002719C2 /* NotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45CE17218F39002719C2 /* NotesCell.m */; };
 		088B45D117218F39002719C2 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45CF17218F39002719C2 /* NotesCell.xib */; };
+		088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D51721A49C002719C2 /* NSDate+ExtDate.m */; };
+		088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D81721A4FC002719C2 /* NSString+ExtString.m */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -85,6 +87,10 @@
 		088B45CD17218F39002719C2 /* NotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesCell.h; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.h; sourceTree = SOURCE_ROOT; };
 		088B45CE17218F39002719C2 /* NotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesCell.m; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.m; sourceTree = SOURCE_ROOT; };
 		088B45CF17218F39002719C2 /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesCell.xib; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.xib; sourceTree = SOURCE_ROOT; };
+		088B45D41721A49C002719C2 /* NSDate+ExtDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ExtDate.h"; sourceTree = "<group>"; };
+		088B45D51721A49C002719C2 /* NSDate+ExtDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ExtDate.m"; sourceTree = "<group>"; };
+		088B45D71721A4FC002719C2 /* NSString+ExtString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtString.h"; sourceTree = "<group>"; };
+		088B45D81721A4FC002719C2 /* NSString+ExtString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtString.m"; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +217,17 @@
 				0814F94D1721795000D7C3CC /* Messages.m */,
 			);
 			name = Messages;
+			sourceTree = "<group>";
+		};
+		088B45D21721A40D002719C2 /* Catigories */ = {
+			isa = PBXGroup;
+			children = (
+				088B45D41721A49C002719C2 /* NSDate+ExtDate.h */,
+				088B45D51721A49C002719C2 /* NSDate+ExtDate.m */,
+				088B45D71721A4FC002719C2 /* NSString+ExtString.h */,
+				088B45D81721A4FC002719C2 /* NSString+ExtString.m */,
+			);
+			name = Catigories;
 			sourceTree = "<group>";
 		};
 		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
@@ -366,6 +383,7 @@
 		8CAC9406171EBA1C006D3621 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				088B45D21721A40D002719C2 /* Catigories */,
 				0814F94B1721793800D7C3CC /* Messages */,
 				8CAC9407171EBA1C006D3621 /* DataManager */,
 				8CAC9409171EBA1C006D3621 /* Libs */,
@@ -589,6 +607,8 @@
 				0814F94E1721795000D7C3CC /* Messages.m in Sources */,
 				7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */,
 				088B45D017218F39002719C2 /* NotesCell.m in Sources */,
+				088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */,
+				088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

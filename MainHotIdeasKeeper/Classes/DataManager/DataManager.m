@@ -58,6 +58,7 @@ static DataManager *sharedInstance = nil;
              note.day = [noteDict objectForKey:@"day"];
              note.hour = [noteDict objectForKey:@"hour"];
              note.min = [noteDict objectForKey:@"min"];
+            NSLog(@"%@",note.min);
 
 
             [notes addObject:note];
@@ -79,12 +80,26 @@ static DataManager *sharedInstance = nil;
 
 +(void)saveNewRemember:(Note*)note
 {
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit |NSMinuteCalendarUnit | NSHourCalendarUnit fromDate:[NSDate date]];
-
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMddHHmm"];
     
-    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note ,year , month , day , hour , min) values ('%@',%d , %d,%d,%d,%d )",note.noteText, [components year],[components month],[components day],[components hour],[components minute]];
+    NSString *string = [dateFormatter stringFromDate:date];
     
-    [SQLiteAccess insertWithSQL:query];
+    ////////
+    NSDateFormatter *dateFromatterTwo = [[NSDateFormatter alloc] init];
+    [dateFromatterTwo setDateFormat:@"yyyyMMddHHmm"];
+    
+    NSDate *dateFromDB = [dateFromatterTwo dateFromString:string];
+    
+    NSDateFormatter *dateFromatterThird = [[NSDateFormatter alloc] init];
+    [dateFromatterThird setDateFormat:@"yyyy.MM.dd HH:mm"];
+    
+    NSLog(@"%@", [dateFromatterThird stringFromDate:dateFromDB]);
+    
+    /*NSString *query = [NSString stringWithFormat:@"insert into noteTable (note ,year , month , day , hour , min) values ('%@',%d , %d,%d,%d,%d )",note.noteText, [components year],[components month],[components day],[components hour],[components minute]];
+    
+    [SQLiteAccess insertWithSQL:query];*/
     
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
     [alertView show];
