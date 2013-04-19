@@ -77,7 +77,9 @@
     }
     else
     {
-        [DataManager updateNewRemember:self.notesTextView.text];
+        _activeNote.noteText = self.notesTextView.text;
+        [DataManager updateNewRemember:_activeNote];
+        
     }
 }
 
