@@ -323,6 +323,7 @@
 		1A8ED9B717219A55004DE58D /* SQLiteAccess */ = {
 			isa = PBXGroup;
 			children = (
+				088B45ED1722ED76002719C2 /* libsqlite3.dylib */,
 				1A8ED9B817219A55004DE58D /* SQLiteAccess.h */,
 				1A8ED9B917219A55004DE58D /* SQLiteAccess.m */,
 			);
@@ -352,7 +353,6 @@
 		8CAC93DA171EB9F7006D3621 = {
 			isa = PBXGroup;
 			children = (
-				088B45ED1722ED76002719C2 /* libsqlite3.dylib */,
 				8CAC93EC171EB9F7006D3621 /* MainHotIdeasKeeper */,
 				8CAC93E5171EB9F7006D3621 /* Frameworks */,
 				8CAC93E4171EB9F7006D3621 /* Products */,
