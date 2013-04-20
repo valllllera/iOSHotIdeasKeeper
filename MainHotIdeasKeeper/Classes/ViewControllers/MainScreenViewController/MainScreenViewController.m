@@ -81,7 +81,7 @@
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    if (UIImagePickerControllerCameraCaptureModePhoto) {
+    if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto) {
         
 
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];

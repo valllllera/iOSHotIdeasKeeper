@@ -43,8 +43,6 @@
     [_aboutButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     [_mainButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     [_notesButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
-    [_mediaLibraryButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
-    [_musicButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     [_geoButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     [_libraryLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:13]];
 }
@@ -62,8 +60,6 @@
     [self setLibraryLabel:nil];
     [self setMainButton:nil];
     [self setNotesButton:nil];
-    [self setMediaLibraryButton:nil];
-    [self setMusicButton:nil];
     [self setGeoButton:nil];
     [self setAboutButton:nil];
     [super viewDidUnload];
