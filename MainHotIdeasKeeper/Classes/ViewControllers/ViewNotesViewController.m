@@ -113,6 +113,18 @@
 
     cell.dateLabel.text = [noteInArray.date formatStringFromDb];
     
+    if ([noteInArray.imageUrlPath isEqualToString:@"nil"])
+    {
+        cell.imageForNote.image = [UIImage imageNamed:@"v_icon.png"];
+    }
+    else
+    {
+        NSURL *imageUrl = [NSURL URLWithString:noteInArray.imageUrlPath];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
+        cell.imageForNote.image = [UIImage imageWithData:imageData];
+    }
+    
+    
     return cell;
 }
 

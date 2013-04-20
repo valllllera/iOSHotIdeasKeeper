@@ -22,6 +22,8 @@
 		088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D81721A4FC002719C2 /* NSString+ExtString.m */; };
 		088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */; };
 		088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */; };
+		088B45EB1722E798002719C2 /* v_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E91722E798002719C2 /* v_icon.png */; };
+		088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45EA1722E798002719C2 /* v_icon@2x.png */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -101,6 +103,8 @@
 		088B45E41722DE37002719C2 /* AddNoteWithPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteWithPhotoViewController.h; sourceTree = "<group>"; };
 		088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteWithPhotoViewController.m; sourceTree = "<group>"; };
 		088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
+		088B45E91722E798002719C2 /* v_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v_icon.png; sourceTree = "<group>"; };
+		088B45EA1722E798002719C2 /* v_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "v_icon@2x.png"; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 		1A052C64171F3852007A0ACD /* NotesScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
+				088B45E91722E798002719C2 /* v_icon.png */,
+				088B45EA1722E798002719C2 /* v_icon@2x.png */,
 				0814F94317216EE700D7C3CC /* notesTableDB.sqlite */,
 				1A052C69171F4D61007A0ACD /* label_background.png */,
 				1A052C6A171F4D61007A0ACD /* label_background@2x.png */,
@@ -628,6 +634,8 @@
 				8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */,
 				1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */,
 				088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */,
+				088B45EB1722E798002719C2 /* v_icon.png in Resources */,
+				088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

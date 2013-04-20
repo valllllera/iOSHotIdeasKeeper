@@ -80,7 +80,7 @@ static DataManager *sharedInstance = nil;
 {
     NSDate *date = [NSDate date];
 
-    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note , date) values ('%@',%@ )",note.noteText, [date saveStringToDb]];
+    NSString *query = [NSString stringWithFormat:@"insert into noteTable (note , date , imageUrlPath) values ('%@',%@  , '%@')",note.noteText, [date saveStringToDb] , note.imageUrlPath];
     
     [SQLiteAccess insertWithSQL:query];
     

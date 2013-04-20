@@ -74,6 +74,7 @@
     {
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
+        note.imageUrlPath = @"nil";
         [DataManager saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
       

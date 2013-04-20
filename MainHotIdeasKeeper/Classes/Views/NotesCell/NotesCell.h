@@ -11,5 +11,6 @@
 @interface NotesCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noteTextLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageForNote;
 
 @end
