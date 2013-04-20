@@ -20,6 +20,8 @@
 		088B45D117218F39002719C2 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45CF17218F39002719C2 /* NotesCell.xib */; };
 		088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D51721A49C002719C2 /* NSDate+ExtDate.m */; };
 		088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D81721A4FC002719C2 /* NSString+ExtString.m */; };
+		088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */; };
+		088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -96,6 +98,9 @@
 		088B45D51721A49C002719C2 /* NSDate+ExtDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ExtDate.m"; sourceTree = "<group>"; };
 		088B45D71721A4FC002719C2 /* NSString+ExtString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtString.h"; sourceTree = "<group>"; };
 		088B45D81721A4FC002719C2 /* NSString+ExtString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtString.m"; sourceTree = "<group>"; };
+		088B45E41722DE37002719C2 /* AddNoteWithPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteWithPhotoViewController.h; sourceTree = "<group>"; };
+		088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteWithPhotoViewController.m; sourceTree = "<group>"; };
+		088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -242,6 +247,16 @@
 				088B45D81721A4FC002719C2 /* NSString+ExtString.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		088B45E31722DE1D002719C2 /* AddNoteWithPhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				088B45E41722DE37002719C2 /* AddNoteWithPhotoViewController.h */,
+				088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */,
+				088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */,
+			);
+			name = AddNoteWithPhotoViewController;
 			sourceTree = "<group>";
 		};
 		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
@@ -452,6 +467,7 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				088B45E31722DE1D002719C2 /* AddNoteWithPhotoViewController */,
 				1AEA616C1720229D00CF3CD2 /* AddPlaceOnMapScreenViewController */,
 				1AEA615E1720164900CF3CD2 /* AboutScreenViewController */,
 				1A052C7D171F5BCF007A0ACD /* ViewNotesViewController */,
@@ -611,6 +627,7 @@
 				8CAC944617212E79006D3621 /* vexadev.png in Resources */,
 				8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */,
 				1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */,
+				088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +656,7 @@
 				088B45D017218F39002719C2 /* NotesCell.m in Sources */,
 				088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */,
 				088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */,
+				088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
