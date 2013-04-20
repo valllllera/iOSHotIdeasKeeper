@@ -47,6 +47,10 @@
 		1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */; };
 		1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */; };
 		1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */; };
+		1A401BD61722C5BD00FEF66A /* button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD41722C5BD00FEF66A /* button_background.png */; };
+		1A401BD71722C5BD00FEF66A /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD51722C5BD00FEF66A /* button_background@2x.png */; };
+		1A401BDB1722CE7B00FEF66A /* notes_cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD91722CE7B00FEF66A /* notes_cell_bg.png */; };
+		1A401BDC1722CE7B00FEF66A /* notes_cell_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BDA1722CE7B00FEF66A /* notes_cell_bg@2x.png */; };
 		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
 		1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED9B917219A55004DE58D /* SQLiteAccess.m */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
@@ -134,6 +138,10 @@
 		1A052C9C17200F9D007A0ACD /* CameraScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraScreenViewController.h; sourceTree = "<group>"; };
 		1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraScreenViewController.m; sourceTree = "<group>"; };
 		1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1A401BD41722C5BD00FEF66A /* button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_background.png; sourceTree = "<group>"; };
+		1A401BD51722C5BD00FEF66A /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
+		1A401BD91722CE7B00FEF66A /* notes_cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notes_cell_bg.png; sourceTree = "<group>"; };
+		1A401BDA1722CE7B00FEF66A /* notes_cell_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notes_cell_bg@2x.png"; sourceTree = "<group>"; };
 		1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		1A8ED9B817219A55004DE58D /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
 		1A8ED9B917219A55004DE58D /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
@@ -318,6 +326,24 @@
 				1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */,
 			);
 			name = ViewNotesViewController;
+			sourceTree = "<group>";
+		};
+		1A401BD31722C5BD00FEF66A /* AddPlaceOnMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A401BD41722C5BD00FEF66A /* button_background.png */,
+				1A401BD51722C5BD00FEF66A /* button_background@2x.png */,
+			);
+			path = AddPlaceOnMapViewController;
+			sourceTree = "<group>";
+		};
+		1A401BD81722CE7B00FEF66A /* NotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A401BD91722CE7B00FEF66A /* notes_cell_bg.png */,
+				1A401BDA1722CE7B00FEF66A /* notes_cell_bg@2x.png */,
+			);
+			path = NotesCell;
 			sourceTree = "<group>";
 		};
 		1A8ED9B717219A55004DE58D /* SQLiteAccess */ = {
@@ -506,6 +532,8 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A401BD81722CE7B00FEF66A /* NotesCell */,
+				1A401BD31722C5BD00FEF66A /* AddPlaceOnMapViewController */,
 				1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */,
 				8CAC943717212E79006D3621 /* AboutViewController */,
 				1A052C64171F3852007A0ACD /* NotesScreenViewController */,
@@ -636,6 +664,10 @@
 				088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */,
 				088B45EB1722E798002719C2 /* v_icon.png in Resources */,
 				088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */,
+				1A401BD61722C5BD00FEF66A /* button_background.png in Resources */,
+				1A401BD71722C5BD00FEF66A /* button_background@2x.png in Resources */,
+				1A401BDB1722CE7B00FEF66A /* notes_cell_bg.png in Resources */,
+				1A401BDC1722CE7B00FEF66A /* notes_cell_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
