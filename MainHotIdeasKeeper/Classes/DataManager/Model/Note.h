@@ -13,6 +13,7 @@
 @property(nonatomic, copy) NSString *noteText;
 @property (strong , nonatomic) NSNumber *idx;
 @property (strong , nonatomic) NSDate *date;
+@property (strong , nonatomic) NSString *imageUrlPath;
 
 
 

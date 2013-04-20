@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
 - (IBAction)saveButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *photoForNote;
 
 -(id)initWithNote:(Note *)note;
 

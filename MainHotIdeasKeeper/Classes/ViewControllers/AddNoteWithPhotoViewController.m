@@ -11,6 +11,7 @@
 #import "NVSlideMenuController.h"
 #import "Note.h"
 #import "ViewNotesViewController.h"
+#import "Messages.h"
 
 @interface AddNoteWithPhotoViewController ()
 
@@ -66,6 +67,7 @@
     [self setNotesTextView:nil];
     saveButton = nil;
     saveButton = nil;
+    [self setPhotoForNote:nil];
     [super viewDidUnload];
 }
 - (IBAction)saveButtonPressed:(id)sender
@@ -74,11 +76,11 @@
     {
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
-        [DataManager saveNewRemember:note];
+        [DataManager saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
         
         
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:[Messages noteSuccssesfullSaved] delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
         [alertView show];
         
         [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
@@ -86,7 +88,7 @@
     else
     {
         _activeNote.noteText = self.notesTextView.text;
-        [DataManager updateNewRemember:_activeNote];
+        [DataManager updateNewNote:_activeNote];
         
     }
 }

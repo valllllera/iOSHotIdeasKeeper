@@ -74,7 +74,7 @@
     {
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
-        [DataManager saveNewRemember:note];
+        [DataManager saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
       
         
@@ -86,7 +86,7 @@
     else
     {
         _activeNote.noteText = self.notesTextView.text;
-        [DataManager updateNewRemember:_activeNote];
+        [DataManager updateNewNote:_activeNote];
         
     }
 }

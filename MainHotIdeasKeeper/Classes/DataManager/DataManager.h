@@ -19,8 +19,8 @@
 - (void)getNotesWithSucces:(void (^)(NSArray *notes))success
                   failture:(void (^)(NSError *error))failture;
 
-+(void)saveNewRemember:(Note*)note;
-+(void)updateNewRemember:(Note *)note;
++(void)saveNewNote:(Note*)note;
++(void)updateNewNote:(Note *)note;
 
 
 @end

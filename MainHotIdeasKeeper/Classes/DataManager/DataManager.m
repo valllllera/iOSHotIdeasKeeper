@@ -56,6 +56,7 @@ static DataManager *sharedInstance = nil;
             note.noteText = [noteDict objectForKey:@"note"];
             note.idx = [noteDict objectForKey:@"id"];
             note.date = [[noteDict objectForKey:@"date"] dateDB];
+            note.imageUrlPath = [noteDict objectForKey:@"imageUrlPath"];
 
 
             [notes addObject:note];
@@ -75,7 +76,7 @@ static DataManager *sharedInstance = nil;
 
 #pragma mark - Work with note in DB
 
-+(void)saveNewRemember:(Note*)note
++(void)saveNewNote:(Note*)note
 {
     NSDate *date = [NSDate date];
 
@@ -86,7 +87,7 @@ static DataManager *sharedInstance = nil;
    
 }
 
-+(void)updateNewRemember:(Note *)note
++(void)updateNewNote:(Note *)note
 {    
     NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = %@",note.noteText ,note.idx];
     [SQLiteAccess updateWithSQL:query];
