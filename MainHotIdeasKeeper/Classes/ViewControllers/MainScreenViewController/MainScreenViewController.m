@@ -11,6 +11,7 @@
 #import "NotesScreenViewController.h"
 #import "NVSlideMenuController.h"
 #import "AddPlaceOnMapViewController.h"
+#import "AddNoteWithPhotoViewController.h"
 
 @interface MainScreenViewController ()
 
@@ -80,8 +81,17 @@
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library writeImageToSavedPhotosAlbum:((UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage]).CGImage
+                                 metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
+                          completionBlock:^(NSURL *assetURL, NSError *error) {
+                              NSLog(@"assetURL %@", assetURL);
+                              _imageUrl = assetURL;
+                              
+                          }];
     _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil); 
+    UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    NSLog(@"%@",_image);
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -92,8 +102,13 @@
         alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                            message:@"Unable to save image to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     else
+    {
         alert = [[UIAlertView alloc] initWithTitle:@"Succes"
                                            message:@"Image saved to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        AddNoteWithPhotoViewController *addNoteWithPhoto = [[AddNoteWithPhotoViewController alloc]initWithImageUrl:_imageUrl];
+        [self.navigationController pushViewController:addNoteWithPhoto animated:YES];
+        
+    }
     [alert show];
 }
 

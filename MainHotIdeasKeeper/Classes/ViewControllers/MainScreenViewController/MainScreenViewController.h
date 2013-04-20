@@ -11,6 +11,7 @@
 @interface MainScreenViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIImage *image;
+@property (copy,nonatomic) NSURL *imageUrl;
 
 - (IBAction)showCameraPhotoController:(id)sender;
 - (IBAction)addNoteButtonPressed:(id)sender;

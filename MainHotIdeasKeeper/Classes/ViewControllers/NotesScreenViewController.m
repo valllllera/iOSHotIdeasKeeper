@@ -89,6 +89,9 @@
         _activeNote.noteText = self.notesTextView.text;
         [DataManager updateNewNote:_activeNote];
         
+        ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
+         [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+        
     }
 }
 

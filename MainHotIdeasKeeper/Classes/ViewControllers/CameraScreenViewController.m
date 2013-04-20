@@ -53,6 +53,7 @@
     UIImage *pickedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if (pickedImage) {
         [self.images addObject:pickedImage];
+        NSLog(@"hmm");
     }
     
     NSURL *videoURL = [info objectForKey:@"UIImagePickerControllerMediaURL"];
@@ -98,6 +99,7 @@
     
     id item = [self.images objectAtIndex:indexPath.row];
     if ([item isKindOfClass:[UIImage class]]) {
+        
         UIImageWriteToSavedPhotosAlbum(item, nil, nil, nil);
     } else {
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:item];
@@ -121,6 +123,7 @@
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     UISegmentedControl *contentPiacker = (UISegmentedControl*)self.navigationItem.titleView;
+    NSLog(@"hmmm11");
     if (contentPiacker.selectedSegmentIndex) {
         picker.mediaTypes = @[(NSString *)kUTTypeMovie];
     }

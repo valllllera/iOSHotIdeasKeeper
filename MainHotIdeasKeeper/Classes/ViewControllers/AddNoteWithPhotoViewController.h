@@ -20,8 +20,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
 - (IBAction)saveButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *photoForNote;
+@property (copy,nonatomic) NSURL* imageUrl;
 
 -(id)initWithNote:(Note *)note;
+-(id)initWithImageUrl:(NSURL *)imageUrl;
 
 @property(strong,nonatomic) Note *activeNote;
 

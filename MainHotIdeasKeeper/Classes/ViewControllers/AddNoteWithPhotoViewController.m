@@ -39,6 +39,16 @@
     return  self;
 }
 
+-(id)initWithImageUrl:(NSURL *)imageUrl
+{
+    self = [super init];
+    if (self)
+    {
+        self.imageUrl = imageUrl;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,12 +56,17 @@
     self.flagView = NO;
     
     self.notesTextView.delegate = self;
+
+    NSData *imageDate = [NSData dataWithContentsOfURL:_imageUrl];
+    self.photoForNote.image = [UIImage imageWithData:imageDate];
     
     if (_activeNote)
     {
         _flagView = YES;
         self.notesTextView.text = _activeNote.noteText;
     }
+    
+
     
     UIBarButtonItem *addImageButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImageButton:)];
     self.navigationItem.rightBarButtonItem = addImageButton;
@@ -76,6 +91,7 @@
     {
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
+    
         [DataManager saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
         
