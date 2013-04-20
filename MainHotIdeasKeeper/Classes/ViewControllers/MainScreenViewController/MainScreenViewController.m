@@ -81,6 +81,9 @@
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    if (UIImagePickerControllerCameraCaptureModePhoto) {
+        
+
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library writeImageToSavedPhotosAlbum:((UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage]).CGImage
                                  metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
@@ -95,7 +98,18 @@
     _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     NSLog(@"imgage%@",_image);
+    
     [self dismissModalViewControllerAnimated:YES];
+    }
+    else
+    {
+        NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+        if([mediaType isEqualToString:(NSString *)kUTTypeMovie])
+        {
+            NSURL *movieUrl = [info objectForKey:UIImagePickerControllerMediaURL];
+            UISaveVideoAtPathToSavedPhotosAlbum([movieUrl relativePath], self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+        }
+    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextinfo
@@ -128,6 +142,14 @@
     [self. navigationController pushViewController:addPlaceOnMapViewController animated:YES];
 }
 
-- (IBAction)showCameraVideoController:(id)sender {
+- (IBAction)showCameraVideoController:(id)sender
+{
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.mediaTypes = @[(NSString *)kUTTypeMovie];
+    
+        [self presentModalViewController:picker animated:YES];
 }
+
 @end
