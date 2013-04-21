@@ -12,7 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Note.h"
 
-@interface AddPlaceOnMapViewController : UIViewController <MKAnnotation, CLLocationManagerDelegate>
+@interface AddPlaceOnMapViewController : UIViewController <MKAnnotation, CLLocationManagerDelegate, UITextViewDelegate>
 {
     Annotation *mapAnnotation;
     CLGeocoder *geocoder;
@@ -20,6 +20,7 @@
     CLLocation *newLocation;
 }
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet CLGeocoder *geoCoder;
 @property (strong, nonatomic) IBOutlet CLLocationManager *locationManager;

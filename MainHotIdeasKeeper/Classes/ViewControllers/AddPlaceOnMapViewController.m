@@ -54,6 +54,7 @@ static float y;
 - (void)viewDidUnload
 {
     [self setNoteTextView:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
     self.map = nil;
 }
@@ -71,12 +72,41 @@ static float y;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [locationManager startUpdatingLocation];
-    
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    _scrollView.contentSize = CGSizeMake(320, 408);
+
+    }
+
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, _noteTextView.frame.origin) )
+    {
+        CGPoint scrollPoint = CGPointMake(0.0, _noteTextView.frame.origin.y - (keyboardSize.height-15));
+        [_scrollView setContentOffset:scrollPoint animated:YES];
+    }
 }
 
-
-
+- (void) keyboardWillHide:(NSNotification *)notification {
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+}
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
@@ -197,5 +227,6 @@ static float y;
         }
     }];
 }
+
 
 @end
