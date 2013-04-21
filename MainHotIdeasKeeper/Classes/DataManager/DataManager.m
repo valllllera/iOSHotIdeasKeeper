@@ -40,6 +40,8 @@ static DataManager *sharedInstance = nil;
     return self;
 }
 
+#pragma mark - Work with note in DB
+
 - (void)getNotesWithSucces:(void (^)(NSArray *notes))success
                       failture:(void (^)(NSError *error))failture
 {
@@ -74,7 +76,6 @@ static DataManager *sharedInstance = nil;
     });
 }
 
-#pragma mark - Work with note in DB
 
 +(void)saveNewNote:(Note*)note
 {

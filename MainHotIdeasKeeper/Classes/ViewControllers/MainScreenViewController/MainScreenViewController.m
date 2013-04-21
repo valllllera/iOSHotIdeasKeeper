@@ -86,12 +86,15 @@
                                  metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
                           completionBlock:^(NSURL *assetURL, NSError *error) {
                               NSLog(@"assetURL %@", assetURL);
-                              _imageUrl = assetURL;
+                              self.imageUrl = assetURL;
+                               NSLog(@"assetURL %@", _imageUrl);
+                               AddNoteWithPhotoViewController *addNoteWithPhoto = [[AddNoteWithPhotoViewController alloc]initWithImageUrl:_imageUrl];
+                              [self.navigationController pushViewController:addNoteWithPhoto animated:YES];
                               
                           }];
     _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    NSLog(@"%@",_image);
+    NSLog(@"imgage%@",_image);
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -105,8 +108,9 @@
     {
         alert = [[UIAlertView alloc] initWithTitle:@"Succes"
                                            message:@"Image saved to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        AddNoteWithPhotoViewController *addNoteWithPhoto = [[AddNoteWithPhotoViewController alloc]initWithImageUrl:_imageUrl];
-        [self.navigationController pushViewController:addNoteWithPhoto animated:YES];
+        NSLog(@"%@",_imageUrl);
+       
+        
         
     }
     [alert show];

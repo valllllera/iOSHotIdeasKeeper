@@ -56,9 +56,13 @@
     self.flagView = NO;
     
     self.notesTextView.delegate = self;
-
-    NSData *imageDate = [NSData dataWithContentsOfURL:_imageUrl];
-    self.photoForNote.image = [UIImage imageWithData:imageDate];
+    
+    if (_imageUrl)
+    {
+        NSData *imageDate = [NSData dataWithContentsOfURL:_imageUrl];
+        self.photoForNote.image = [UIImage imageWithData:imageDate];
+        NSLog(@"asd");
+    }
     
     if (_activeNote)
     {

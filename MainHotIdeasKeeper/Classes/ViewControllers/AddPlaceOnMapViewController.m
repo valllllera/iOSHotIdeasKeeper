@@ -163,36 +163,6 @@ static float y;
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
-    /*CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil) {
-        NSLog(@"%@", [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]);
-        NSLog(@"%@",[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude]);
-    }
-    
-    // Reverse Geocoding
-    NSLog(@"Resolving the Address");
-    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
-        if (error == nil && [placemarks count] > 0) {
-            placemark = [placemarks lastObject];
-            _locationString = [NSString stringWithFormat:@"%@ %@\n %@\n%@\n%@",
-                                 placemark.subThoroughfare, placemark.thoroughfare,
-                                  placemark.locality,
-                                 placemark.administrativeArea,
-                                 placemark.country];
-            [locationManager stopUpdatingLocation];
-        } else {
-            NSLog(@"%@", error.debugDescription);
-        }
-    } ];*/
-    
-   // if(newLocation.coordinate.latitude == mapAnnotation.coordinate.latitude && newLocation.coordinate.longitude == mapAnnotation.coordinate.longitude)
-  //  {
-   // newLocation.coordinate.latitude  = mapAnnotation.coordinate.latitude;
-   
-    
-    //}
 }
 
 - (void)getPlacemakerAdress:(CLLocation *)location
