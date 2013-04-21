@@ -22,6 +22,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"";
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [locationManager startUpdatingLocation];
     }
     return self;
 }
@@ -33,6 +38,7 @@ static float y;
 {
     return x;
 }
+
 
 +(float)GetY
 {
@@ -55,7 +61,19 @@ static float y;
     [super viewDidLoad];
 	_map.showsUserLocation = YES;
     [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    geocoder = [[CLGeocoder alloc] init];
+    
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [locationManager startUpdatingLocation];
+    
+
 }
+
+
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -112,21 +130,93 @@ static float y;
         [_map removeAnnotation:mapAnnotation];
     }
     mapAnnotation = [Annotation new];
-    mapAnnotation.title = @"Место";
-    mapAnnotation.subtitle = @"Здесь вы должны быть";
+    mapAnnotation.title = @"Точка";
+    NSLog(@"%@", _locationString);
     mapAnnotation.coordinate = coorditate;
     [_map addAnnotation:mapAnnotation];
+    NSLog(@"%f %f",mapAnnotation.coordinate.longitude , mapAnnotation.coordinate.latitude);
+     CLLocation *newwLocation = [[CLLocation alloc]initWithLatitude:mapAnnotation.coordinate.latitude longitude:mapAnnotation.coordinate.longitude];
+    [self getPlacemakerAdress:newwLocation withSuccess:^(NSString *adress) {
+        
+        NSLog(@"adress %@", adress);
+        mapAnnotation.subtitle = adress;
+    }];
+
+     [_map addAnnotation:mapAnnotation];
 }
 
 - (IBAction)savePlaceButtonPressed:(id)sender
 {
+   
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    /*CLLocation *currentLocation = newLocation;
     
-    [self.geoCoder reverseGeocodeLocation: locationManager.location completionHandler:
-    ^(NSArray *placemarks, NSError *error)
-    {
-        CLPlacemark *placemark = [placemarks objectAtIndex:0];
-        NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-        NSLog(@"I am currently at %@",locatedAt);
+    if (currentLocation != nil) {
+        NSLog(@"%@", [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]);
+        NSLog(@"%@",[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude]);
+    }
+    
+    // Reverse Geocoding
+    NSLog(@"Resolving the Address");
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+            _locationString = [NSString stringWithFormat:@"%@ %@\n %@\n%@\n%@",
+                                 placemark.subThoroughfare, placemark.thoroughfare,
+                                  placemark.locality,
+                                 placemark.administrativeArea,
+                                 placemark.country];
+            [locationManager stopUpdatingLocation];
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    } ];*/
+    
+   // if(newLocation.coordinate.latitude == mapAnnotation.coordinate.latitude && newLocation.coordinate.longitude == mapAnnotation.coordinate.longitude)
+  //  {
+   // newLocation.coordinate.latitude  = mapAnnotation.coordinate.latitude;
+   
+    
+    //}
+}
+
+- (void)getPlacemakerAdress:(CLLocation *)location
+             withSuccess:(void (^)(NSString *adress))success
+{
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+            NSString *adress = [NSString stringWithFormat:@"%@ %@\n %@\n%@\n%@",
+                               placemark.subThoroughfare, placemark.thoroughfare,
+                               placemark.locality,
+                               placemark.administrativeArea,
+                               placemark.country];
+            if(success)
+            {
+                success(adress);
+            }
+        } else {
+            NSLog(@"%@", error.debugDescription);
+            if(success)
+            {
+                success(nil);
+            }
+        }
     }];
 }
 

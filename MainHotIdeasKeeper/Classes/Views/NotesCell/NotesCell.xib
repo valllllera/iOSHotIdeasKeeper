@@ -97,10 +97,10 @@
 								<reference key="IBUIFont" ref="962349738"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUIImageView" id="377030573">
+							<object class="IBUIImageView" id="128519050">
 								<reference key="NSNextResponder" ref="684130586"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{6, 5}, {65, 65}}</string>
+								<string key="NSFrame">{{6, 8}, {65, 65}}</string>
 								<reference key="NSSuperview" ref="684130586"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="785068230"/>
@@ -112,7 +112,7 @@
 						<string key="NSFrameSize">{320, 81}</string>
 						<reference key="NSSuperview" ref="680617427"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="377030573"/>
+						<reference key="NSNextKeyView" ref="128519050"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -157,7 +157,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">imageForNote</string>
 						<reference key="source" ref="680617427"/>
-						<reference key="destination" ref="377030573"/>
+						<reference key="destination" ref="128519050"/>
 					</object>
 					<int key="connectionID">18</int>
 				</object>
@@ -187,7 +187,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="785068230"/>
 							<reference ref="514567005"/>
-							<reference ref="377030573"/>
+							<reference ref="128519050"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -203,7 +203,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="377030573"/>
+						<reference key="object" ref="128519050"/>
 						<reference key="parent" ref="680617427"/>
 					</object>
 				</array>
