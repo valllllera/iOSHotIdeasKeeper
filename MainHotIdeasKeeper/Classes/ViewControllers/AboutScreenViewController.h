@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
 
 @interface AboutScreenViewController : UIViewController
 
@@ -16,4 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *writeUsBtn;
 - (IBAction)writeUsBtnClicked:(id)sender;
 
+- (IBAction)twitButton:(id)sender;
+- (IBAction)facebookButton:(id)sender;
+
 @end
+ 

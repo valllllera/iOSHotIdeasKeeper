@@ -73,6 +73,7 @@
 		1A401BFF1722FC3800FEF66A /* photo_menu_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BF71722FC3800FEF66A /* photo_menu_bg@2x.png */; };
 		1A401C001722FC3800FEF66A /* video_menu_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BF81722FC3800FEF66A /* video_menu_bg.png */; };
 		1A401C011722FC3800FEF66A /* video_menu_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BF91722FC3800FEF66A /* video_menu_bg@2x.png */; };
+		1A401C261724408C00FEF66A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A401C251724408C00FEF66A /* Twitter.framework */; };
 		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
 		1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED9B917219A55004DE58D /* SQLiteAccess.m */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
@@ -187,6 +188,7 @@
 		1A401BF71722FC3800FEF66A /* photo_menu_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_menu_bg@2x.png"; sourceTree = "<group>"; };
 		1A401BF81722FC3800FEF66A /* video_menu_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_menu_bg.png; sourceTree = "<group>"; };
 		1A401BF91722FC3800FEF66A /* video_menu_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_menu_bg@2x.png"; sourceTree = "<group>"; };
+		1A401C251724408C00FEF66A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		1A8ED9B817219A55004DE58D /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
 		1A8ED9B917219A55004DE58D /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A401C261724408C00FEF66A /* Twitter.framework in Frameworks */,
 				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				088B45EE1722ED76002719C2 /* libsqlite3.dylib in Frameworks */,
 				8CAC944F172135E6006D3621 /* iAd.framework in Frameworks */,
@@ -471,6 +474,7 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A401C251724408C00FEF66A /* Twitter.framework */,
 				8CAC944E172135E5006D3621 /* iAd.framework */,
 				8CAC944C172131A9006D3621 /* MessageUI.framework */,
 				7E17CBEF1720549000BD06BA /* CoreLocation.framework */,

@@ -86,6 +86,33 @@
     }
 }
 
+- (IBAction)twitButton:(id)sender
+{
+    if ([TWTweetComposeViewController canSendTweet])
+    {
+        TWTweetComposeViewController *vc = [[TWTweetComposeViewController alloc] init];
+        [vc setInitialText:@"Тут сообщение о том, насколько приложение офигенно, бла-бла-бла."];
+        UIImage *image = [UIImage imageNamed:@"v_icon.png"];
+        [vc addImage:image];
+        NSURL *url = [NSURL URLWithString:@"http://vexadev.com"];
+        [vc addURL:url];
+        [vc setCompletionHandler:^(TWTweetComposeViewControllerResult result)
+        {
+            [self dismissModalViewControllerAnimated:YES];
+        }];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else
+    {
+        NSString *message = @"The application cannot send a tweet at the moment. This is because it cannot reach Twitter or you don't have a Twitter account associated with this device.";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)facebookButton:(id)sender {
+}
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     switch (result)
