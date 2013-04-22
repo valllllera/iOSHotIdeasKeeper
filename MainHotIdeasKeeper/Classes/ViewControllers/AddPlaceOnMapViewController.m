@@ -7,6 +7,7 @@
 //
 
 #import "AddPlaceOnMapViewController.h"
+#import "DataManager.h"
 
 @interface AddPlaceOnMapViewController ()
 
@@ -21,7 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"";
+        self.title = @"Map";
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
         locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -52,6 +53,7 @@ static float y;
 
 - (void)viewDidUnload
 {
+    [self setNoteTextView:nil];
     [super viewDidUnload];
     self.map = nil;
 }
@@ -122,8 +124,7 @@ static float y;
     
     NSLog(@"long: %f, lat: %f", coorditate.longitude, coorditate.latitude);
     
-    x = coorditate.latitude;
-    y = coorditate.longitude;
+
     
     if(mapAnnotation)
     {
@@ -135,19 +136,26 @@ static float y;
     mapAnnotation.coordinate = coorditate;
     [_map addAnnotation:mapAnnotation];
     NSLog(@"%f %f",mapAnnotation.coordinate.longitude , mapAnnotation.coordinate.latitude);
-     CLLocation *newwLocation = [[CLLocation alloc]initWithLatitude:mapAnnotation.coordinate.latitude longitude:mapAnnotation.coordinate.longitude];
-    [self getPlacemakerAdress:newwLocation withSuccess:^(NSString *adress) {
+    newLocation = [[CLLocation alloc]initWithLatitude:mapAnnotation.coordinate.latitude longitude:mapAnnotation.coordinate.longitude];
+    [self getPlacemakerAdress:newLocation withSuccess:^(NSString *adress) {
         
         NSLog(@"adress %@", adress);
         mapAnnotation.subtitle = adress;
     }];
 
      [_map addAnnotation:mapAnnotation];
+    x = mapAnnotation.coordinate.latitude;
+    y = mapAnnotation.coordinate.longitude;
 }
 
 - (IBAction)savePlaceButtonPressed:(id)sender
 {
-   
+    _note = [[Note alloc]init];
+    self.note.noteText = _noteTextView.text;
+    self.note.x = [NSNumber numberWithFloat:x];
+    self.note.y = [NSNumber numberWithFloat:y];
+    NSLog(@"%@ %f %f",_noteTextView.text , x , y);
+    [[DataManager sharedInstance] saveNewNoteWithMap:_note];
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -162,7 +170,7 @@ static float y;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"didUpdateToLocation: %@", newLocation);
+
 }
 
 - (void)getPlacemakerAdress:(CLLocation *)location

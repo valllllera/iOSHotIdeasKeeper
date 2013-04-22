@@ -11,6 +11,7 @@
 #import "MainScreenViewController.h"
 #import "NVSlideMenuController.h"
 #import "AboutScreenViewController.h"
+#import "ViewNoteWithMapController.h"
 
 @interface MenuScreenViewController ()
 
@@ -79,6 +80,12 @@
 - (IBAction)aboutUsButtonPressed:(id)sender
 {
     AboutScreenViewController *aboutScreenViewController = [[AboutScreenViewController alloc]init];
+    [self.slideMenuController setContentViewController:[[UINavigationController alloc]initWithRootViewController:aboutScreenViewController] animated:YES completion:nil];
+}
+
+- (IBAction)geoButtonPressed:(id)sender
+{
+    ViewNoteWithMapController *aboutScreenViewController = [[ViewNoteWithMapController alloc]init];
     [self.slideMenuController setContentViewController:[[UINavigationController alloc]initWithRootViewController:aboutScreenViewController] animated:YES completion:nil];
 }
 

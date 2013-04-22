@@ -12,15 +12,18 @@
 @interface DataManager : NSObject
 
 @property (nonatomic, retain) NSMutableArray *notes;
-@property (nonatomic, retain) NSNumber *idx;
+
 
 + (DataManager *)sharedInstance;
 
-- (void)getNotesWithSucces:(void (^)(NSArray *notes))success
+- (void)getNotesWithSucces:(void (^)(NSMutableArray *notes))success
                   failture:(void (^)(NSError *error))failture;
+- (void)getNotesMapWithSucces:(void (^)(NSMutableArray *notes))success
+                     failture:(void (^)(NSError *error))failture;
 
-+(void)saveNewNote:(Note*)note;
-+(void)updateNewNote:(Note *)note;
-
+-(void)saveNewNote:(Note*)note;
+-(void)updateNewNote:(Note *)note;
+-(void)saveNewNoteWithMap:(Note *)note;
+-(void)updateNewNoteWithMap:(Note *)note;
 
 @end

@@ -18,6 +18,7 @@
 - (IBAction)notesButtonPressed:(id)sender;
 - (IBAction)mainButtonPressed:(id)sender;
 - (IBAction)aboutUsButtonPressed:(id)sender;
+- (IBAction)geoButtonPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *siteLinkBtn;
 - (IBAction)siteLinkBtnClicked:(id)sender;

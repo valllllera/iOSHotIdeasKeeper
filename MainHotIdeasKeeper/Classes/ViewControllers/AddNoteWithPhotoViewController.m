@@ -96,7 +96,7 @@
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
     
-        [DataManager saveNewNote:note];
+        [[DataManager sharedInstance] saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
         
         
@@ -108,7 +108,7 @@
     else
     {
         _activeNote.noteText = self.notesTextView.text;
-        [DataManager updateNewNote:_activeNote];
+        [[DataManager sharedInstance] updateNewNote:_activeNote];
         
     }
 }

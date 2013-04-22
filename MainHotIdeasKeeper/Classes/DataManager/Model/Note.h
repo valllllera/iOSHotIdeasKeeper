@@ -14,6 +14,8 @@
 @property (strong , nonatomic) NSNumber *idx;
 @property (strong , nonatomic) NSDate *date;
 @property (strong , nonatomic) NSString *imageUrlPath;
+@property (strong , nonatomic) NSNumber *x;
+@property (strong , nonatomic) NSNumber *y;
 
 
 

@@ -25,6 +25,8 @@
 		088B45EB1722E798002719C2 /* v_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E91722E798002719C2 /* v_icon.png */; };
 		088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45EA1722E798002719C2 /* v_icon@2x.png */; };
 		088B45EE1722ED76002719C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B45ED1722ED76002719C2 /* libsqlite3.dylib */; };
+		088B45F317253631002719C2 /* ViewNoteWithMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45F117253631002719C2 /* ViewNoteWithMapController.m */; };
+		088B45F417253631002719C2 /* ViewNoteWithMapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45F217253631002719C2 /* ViewNoteWithMapController.xib */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -128,6 +130,9 @@
 		088B45E91722E798002719C2 /* v_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v_icon.png; sourceTree = "<group>"; };
 		088B45EA1722E798002719C2 /* v_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "v_icon@2x.png"; sourceTree = "<group>"; };
 		088B45ED1722ED76002719C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		088B45F017253631002719C2 /* ViewNoteWithMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewNoteWithMapController.h; sourceTree = "<group>"; };
+		088B45F117253631002719C2 /* ViewNoteWithMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewNoteWithMapController.m; sourceTree = "<group>"; };
+		088B45F217253631002719C2 /* ViewNoteWithMapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNoteWithMapController.xib; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -305,6 +310,16 @@
 				088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */,
 			);
 			name = AddNoteWithPhotoViewController;
+			sourceTree = "<group>";
+		};
+		088B45EF17253609002719C2 /* ViewNoteWithMapController */ = {
+			isa = PBXGroup;
+			children = (
+				088B45F017253631002719C2 /* ViewNoteWithMapController.h */,
+				088B45F117253631002719C2 /* ViewNoteWithMapController.m */,
+				088B45F217253631002719C2 /* ViewNoteWithMapController.xib */,
+			);
+			name = ViewNoteWithMapController;
 			sourceTree = "<group>";
 		};
 		1A052C41171F1ED3007A0ACD /* MenuScreenViewController */ = {
@@ -554,6 +569,7 @@
 		8CAC940D171EBA1C006D3621 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				088B45EF17253609002719C2 /* ViewNoteWithMapController */,
 				088B45E31722DE1D002719C2 /* AddNoteWithPhotoViewController */,
 				1AEA616C1720229D00CF3CD2 /* AddPlaceOnMapScreenViewController */,
 				1AEA615E1720164900CF3CD2 /* AboutScreenViewController */,
@@ -749,6 +765,7 @@
 				1A401BFF1722FC3800FEF66A /* photo_menu_bg@2x.png in Resources */,
 				1A401C001722FC3800FEF66A /* video_menu_bg.png in Resources */,
 				1A401C011722FC3800FEF66A /* video_menu_bg@2x.png in Resources */,
+				088B45F417253631002719C2 /* ViewNoteWithMapController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +795,7 @@
 				088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */,
 				088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */,
 				1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */,
+				088B45F317253631002719C2 /* ViewNoteWithMapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

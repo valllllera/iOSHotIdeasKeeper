@@ -66,7 +66,7 @@
     
     [super viewWillAppear:YES];
     
-    [[DataManager sharedInstance]  getNotesWithSucces:^(NSArray *notes)
+    [[DataManager sharedInstance]  getNotesWithSucces:^(NSMutableArray *notes)
      {
          
          self.notesArray = notes;
