@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Twitter/Twitter.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface AboutScreenViewController : UIViewController
+{
+    SLComposeViewController *mySLComposerSheet;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *siteLinkBtn;
 - (IBAction)siteLinkBtnClicked:(id)sender;

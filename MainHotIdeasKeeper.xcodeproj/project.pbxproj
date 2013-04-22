@@ -29,6 +29,8 @@
 		088B45F417253631002719C2 /* ViewNoteWithMapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45F217253631002719C2 /* ViewNoteWithMapController.xib */; };
 		088B45FB17257238002719C2 /* map_imageholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45F917257237002719C2 /* map_imageholder.png */; };
 		088B45FC17257238002719C2 /* map_imageholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45FA17257237002719C2 /* map_imageholder@2x.png */; };
+		088B45FE1725983C002719C2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B45FD1725983C002719C2 /* Social.framework */; };
+		088B46001725984C002719C2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B45FF1725984C002719C2 /* Accounts.framework */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
 		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
@@ -138,6 +140,8 @@
 		088B45F217253631002719C2 /* ViewNoteWithMapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNoteWithMapController.xib; sourceTree = "<group>"; };
 		088B45F917257237002719C2 /* map_imageholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_imageholder.png; sourceTree = "<group>"; };
 		088B45FA17257237002719C2 /* map_imageholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_imageholder@2x.png"; sourceTree = "<group>"; };
+		088B45FD1725983C002719C2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		088B45FF1725984C002719C2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
 		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B46001725984C002719C2 /* Accounts.framework in Frameworks */,
+				088B45FE1725983C002719C2 /* Social.framework in Frameworks */,
 				1A401C261724408C00FEF66A /* Twitter.framework in Frameworks */,
 				7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */,
 				088B45EE1722ED76002719C2 /* libsqlite3.dylib in Frameworks */,
@@ -474,6 +480,8 @@
 		8CAC93E5171EB9F7006D3621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				088B45FF1725984C002719C2 /* Accounts.framework */,
+				088B45FD1725983C002719C2 /* Social.framework */,
 				1A401C251724408C00FEF66A /* Twitter.framework */,
 				8CAC944E172135E5006D3621 /* iAd.framework */,
 				8CAC944C172131A9006D3621 /* MessageUI.framework */,
