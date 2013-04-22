@@ -15,6 +15,7 @@
 #import "NSDate+ExtDate.h"
 #import "NVSlideMenuController.h"
 #import "SQLiteAccess.h"
+#import "AddPlaceOnMapViewController.h"
 
 @interface ViewNoteWithMapController ()
 
@@ -26,7 +27,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -34,12 +35,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _notesArray = [NSMutableArray array];
+    
     
     UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
+    
   }
 
 
@@ -50,7 +52,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
     
     [[DataManager sharedInstance]  getNotesMapWithSucces:^(NSMutableArray *notes) {
-         
+        
         self.notesArray = notes;
 
         [_tableView reloadData];
@@ -89,14 +91,12 @@
     }
     Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
     
-    NSLog(@"aas %d",_notesArray.count);
-    
     
     cell.noteTextLabel.text = noteInArray.noteText;
     
     cell.dateLabel.text = [noteInArray.date formatStringFromDb];
     
-    cell.imageForNote.image = [UIImage imageNamed:@"v_icon.png"];
+    cell.imageForNote.image = [UIImage imageNamed:@"map_imageholder.png"];
 
     
     
@@ -112,4 +112,11 @@
 {
     return [_notesArray count];
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AddPlaceOnMapViewController *notesScreenViewController = [[AddPlaceOnMapViewController alloc]initWithNote:[_notesArray objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:notesScreenViewController animated:YES];
+}
+
+
 @end

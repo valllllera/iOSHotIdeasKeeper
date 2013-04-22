@@ -75,14 +75,23 @@
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
         note.imageUrlPath = @"nil";
-        [[DataManager sharedInstance] saveNewNote:note];
-        ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
+        
+        if (_notesTextView.text.length > 1)
+        {
+            [[DataManager sharedInstance] saveNewNote:note];
       
-        
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
-        [alertView show];
-        
-          [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Заметка успешно    сохранена" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
+            [alertView show];
+            
+            ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
+            [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+        }
+        else
+        {
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Нельзя сохранить пустую зметку" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
+            [alertView show];
+        }
+
     }
     else
     {
@@ -90,9 +99,9 @@
         [[DataManager sharedInstance] updateNewNote:_activeNote];
         
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
-         [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
-        
+        [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
     }
+    
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range

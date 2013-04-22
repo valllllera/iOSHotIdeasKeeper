@@ -141,7 +141,7 @@ static DataManager *sharedInstance = nil;
 
 -(void)updateNewNoteWithMap:(Note *)note
 {
-    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' , x = %@ , y = %@ where id = %@",note.noteText, note.x, note.y ,note.idx];
+    NSString *query = [NSString stringWithFormat:@"update noteWithMap SET note = '%@' , x = %@ , y = %@ where id = %@",note.noteText, note.x, note.y ,note.idx];
     
     [SQLiteAccess updateWithSQL:query];
     

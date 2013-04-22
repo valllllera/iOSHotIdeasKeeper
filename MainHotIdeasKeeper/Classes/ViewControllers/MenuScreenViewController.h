@@ -10,8 +10,8 @@
 
 @interface MenuScreenViewController : UIViewController
 {
-    __weak IBOutlet UIButton *notesButton;
-    __weak IBOutlet UIButton *mainButton;
+   // __weak IBOutlet UIButton *notesButton;
+   // __weak IBOutlet UIButton *mainButton;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 

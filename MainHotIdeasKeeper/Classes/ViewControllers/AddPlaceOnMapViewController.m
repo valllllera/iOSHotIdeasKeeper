@@ -8,6 +8,9 @@
 
 #import "AddPlaceOnMapViewController.h"
 #import "DataManager.h"
+#import "Note.h"
+#import "ViewNoteWithMapController.h"
+#import "NVSlideMenuController.h"
 
 @interface AddPlaceOnMapViewController ()
 
@@ -30,6 +33,17 @@
         [locationManager startUpdatingLocation];
     }
     return self;
+}
+
+-(id)initWithNote:(Note *)note
+{
+    self =  [super init];
+    if (self)
+    {
+        self.note = note;
+        self.flagView = YES;
+    }
+    return  self;
 }
 
 static float x;
@@ -83,8 +97,27 @@ static float y;
                                                object:nil];
     
     _scrollView.contentSize = CGSizeMake(320, 408);
-
+    if (_note)
+    {
+        _noteTextView.text = _note.noteText;
+        
+        mapAnnotation = [Annotation new];
+        mapAnnotation.title = @"My point";
+        mapAnnotation.subtitle = @"Place";
+        mapAnnotation.coordinate = CLLocationCoordinate2DMake([_note.x floatValue], [_note.y floatValue]);
+        [_map addAnnotation:mapAnnotation];
+    
+        
+        CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake([_note.x floatValue], [_note.y floatValue]);
+        MKCoordinateRegion adjustedRegion = [_map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 1000000, 1000000)];
+        [_map setRegion:adjustedRegion animated:YES];
+        
+        
+        
     }
+
+}
+
 
 
 - (void)keyboardWasShown:(NSNotification *)notification
@@ -162,14 +195,12 @@ static float y;
     }
     mapAnnotation = [Annotation new];
     mapAnnotation.title = @"Точка";
-    NSLog(@"%@", _locationString);
     mapAnnotation.coordinate = coorditate;
     [_map addAnnotation:mapAnnotation];
-    NSLog(@"%f %f",mapAnnotation.coordinate.longitude , mapAnnotation.coordinate.latitude);
+   
     newLocation = [[CLLocation alloc]initWithLatitude:mapAnnotation.coordinate.latitude longitude:mapAnnotation.coordinate.longitude];
     [self getPlacemakerAdress:newLocation withSuccess:^(NSString *adress) {
         
-        NSLog(@"adress %@", adress);
         mapAnnotation.subtitle = adress;
     }];
 
@@ -180,12 +211,24 @@ static float y;
 
 - (IBAction)savePlaceButtonPressed:(id)sender
 {
-    _note = [[Note alloc]init];
-    self.note.noteText = _noteTextView.text;
-    self.note.x = [NSNumber numberWithFloat:x];
-    self.note.y = [NSNumber numberWithFloat:y];
-    NSLog(@"%@ %f %f",_noteTextView.text , x , y);
-    [[DataManager sharedInstance] saveNewNoteWithMap:_note];
+    if (_flagView == NO)
+    {
+        _note = [[Note alloc]init];
+        self.note.noteText = _noteTextView.text;
+        self.note.x = [NSNumber numberWithFloat:x];
+        self.note.y = [NSNumber numberWithFloat:y];
+        [[DataManager sharedInstance] saveNewNoteWithMap:_note];
+        ViewNoteWithMapController *viewNotesViewController = [[ViewNoteWithMapController alloc]init];
+        [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+    }
+    else
+    {
+        self.note.noteText = _noteTextView.text;
+
+        [[DataManager sharedInstance] updateNewNoteWithMap:_note];
+        ViewNoteWithMapController *viewNotesViewController = [[ViewNoteWithMapController alloc]init];
+        [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -209,11 +252,42 @@ static float y;
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
+            
+            NSString *subThoroughfare = [NSString string];
+            if (placemark.subThoroughfare == nil)
+                subThoroughfare = @"";
+            else
+                subThoroughfare = placemark.subThoroughfare;
+            
+            NSString *locality = [NSString string];
+            if (placemark.locality == nil)
+                locality = @"";
+            else
+                locality = placemark.locality;
+            
+            NSString *thoroughfare = [NSString string];
+            if (placemark.thoroughfare == nil)
+                thoroughfare = @"";
+            else
+                thoroughfare = placemark.thoroughfare;
+            
+            NSString *administrativeArea = [NSString string];
+            if (placemark.administrativeArea == nil)
+                administrativeArea = @"";
+            else
+                administrativeArea = placemark.administrativeArea;
+            
+            NSString *country = [NSString string];
+            if (placemark.country == nil)
+                country = @"";
+            else
+                country = placemark.country ;
+            
             NSString *adress = [NSString stringWithFormat:@"%@ %@\n %@\n%@\n%@",
-                               placemark.subThoroughfare, placemark.thoroughfare,
-                               placemark.locality,
-                               placemark.administrativeArea,
-                               placemark.country];
+                                subThoroughfare, thoroughfare,
+                                locality,
+                                administrativeArea,
+                                country];
             if(success)
             {
                 success(adress);

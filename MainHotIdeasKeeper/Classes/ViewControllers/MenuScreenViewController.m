@@ -56,8 +56,7 @@
 
 - (void)viewDidUnload {
     [self setScrollView:nil];
-    notesButton = nil;
-    mainButton = nil;
+
     [self setLibraryLabel:nil];
     [self setMainButton:nil];
     [self setNotesButton:nil];
