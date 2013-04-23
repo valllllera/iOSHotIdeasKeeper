@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Note.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface AddNoteWithPhotoViewController :  UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate>
+@interface AddNoteWithPhotoViewController :  UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     
     __weak IBOutlet UIButton *saveButton;
@@ -21,6 +23,8 @@
 - (IBAction)saveButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *photoForNote;
 @property (copy,nonatomic) NSURL* imageUrl;
+@property (nonatomic, strong) ALAssetsLibrary *assetLibrary;
+@property (nonatomic, strong) UIImageView *imageView;
 
 -(id)initWithNote:(Note *)note;
 -(id)initWithImageUrl:(NSURL *)imageUrl;
