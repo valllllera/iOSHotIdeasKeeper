@@ -82,7 +82,9 @@
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto) {
+    [self dismissModalViewControllerAnimated:YES];
+    if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto)
+    {
         
 
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
@@ -100,7 +102,7 @@
     UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     NSLog(@"imgage%@",_image);
     
-    [self dismissModalViewControllerAnimated:YES];
+    
     }
     else
     {
@@ -109,6 +111,17 @@
         {
             NSURL *movieUrl = [info objectForKey:UIImagePickerControllerMediaURL];
             UISaveVideoAtPathToSavedPhotosAlbum([movieUrl relativePath], self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+            NSLog(@"URL of video - %@", movieUrl);
+            NSError *dataReadingError = nil;
+            NSData *videoData = [NSData dataWithContentsOfURL:movieUrl options:NSDataReadingMapped error:&dataReadingError];
+            if (videoData != nil)
+            {
+                NSLog(@"Successfully loaded the data.");
+            }
+            else
+            {
+                NSLog(@"Failed to load the data with error = %@", dataReadingError);
+            }
         }
     }
 }

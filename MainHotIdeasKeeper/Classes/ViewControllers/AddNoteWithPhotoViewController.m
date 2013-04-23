@@ -131,6 +131,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     {
         Note *note = [[Note alloc]init];
         note.noteText = self.notesTextView.text;
+        note.imageUrlPath = [_imageUrl absoluteString];
     
         [[DataManager sharedInstance] saveNewNote:note];
         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
@@ -144,6 +145,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     else
     {
         _activeNote.noteText = self.notesTextView.text;
+        _activeNote.imageUrlPath = [_imageUrl absoluteString];
         [[DataManager sharedInstance] updateNewNote:_activeNote];
         
     }

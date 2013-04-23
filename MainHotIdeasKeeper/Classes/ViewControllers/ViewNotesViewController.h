@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Note.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ViewNotesViewController : UIViewController<UITableViewDataSource, UITabBarDelegate>
 {

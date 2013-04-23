@@ -159,6 +159,31 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
     else
     {
+        ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+        {
+            ALAssetRepresentation *rep = [myasset defaultRepresentation];
+            CGImageRef iref = [rep fullResolutionImage];
+            if (iref) {
+                UIImage *largeimage = [UIImage imageWithCGImage:iref];
+                cell.imageForNote.image = largeimage;
+            }
+        };
+        
+        
+        ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+        {
+            NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
+        };
+        
+        if(noteInArray.imageUrlPath)
+        {
+            NSURL *imageUrl = [NSURL URLWithString:noteInArray.imageUrlPath];
+            ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+            [assetslibrary assetForURL: imageUrl
+                           resultBlock:resultblock
+                          failureBlock:failureblock];
+        }
+        
         NSURL *imageUrl = [NSURL URLWithString:noteInArray.imageUrlPath];
         NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
         cell.imageForNote.image = [UIImage imageWithData:imageData];
