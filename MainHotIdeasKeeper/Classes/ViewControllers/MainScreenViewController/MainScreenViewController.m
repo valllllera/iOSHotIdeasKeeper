@@ -52,6 +52,7 @@
     [_videoButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     [_mapButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     
+    self.slideMenuController.panGestureEnabled = YES;
 
 }
 

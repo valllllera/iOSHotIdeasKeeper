@@ -45,6 +45,7 @@
                              initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                              target:self
                              action:@selector(editing)];
+    [edit setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.rightBarButtonItem = edit;
     
   }
