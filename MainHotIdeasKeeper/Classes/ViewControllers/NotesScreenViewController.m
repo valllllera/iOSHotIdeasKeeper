@@ -11,6 +11,7 @@
 #import "NVSlideMenuController.h"
 #import "Note.h"
 #import "ViewNotesViewController.h"
+#import "MainScreenViewController.h"
 
 @interface NotesScreenViewController ()
 
@@ -53,7 +54,12 @@
     }
     
     UIBarButtonItem *addImageButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImageButton:)];
+    [addImageButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.rightBarButtonItem = addImageButton;
+    
+    UIBarButtonItem *homeNaviButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_navi_button_bg.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(homeNaviButton:)];
+    [homeNaviButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    self.navigationItem.leftBarButtonItem = homeNaviButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +68,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setNotesTextView:nil];
     saveButton = nil;
     saveButton = nil;
@@ -119,5 +126,11 @@
     NSDictionary *info = [[NSDictionary alloc]init];
     image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     [self dismissModalViewControllerAnimated:YES];
+}
+
+-(IBAction)homeNaviButton:(id)sender
+{
+    MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
+    [self.navigationController pushViewController:mainScreenViewController animated:YES];
 }
 @end

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C3103</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -233,7 +233,6 @@
 								<string key="NSFrame">{{5, 219}, {235, 37}}</string>
 								<reference key="NSSuperview" ref="558723877"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -300,13 +299,17 @@
 							<object class="IBUIImageView" id="925364809">
 								<reference key="NSNextResponder" ref="558723877"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{11, 10}, {28, 26}}</string>
+								<string key="NSFrame">{{11, 11}, {28, 23}}</string>
 								<reference key="NSSuperview" ref="558723877"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="93412374"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">about_us_icon.png</string>
+								</object>
 							</object>
 						</array>
 						<string key="NSFrame">{{-5, 0}, {240, 460}}</string>
@@ -695,6 +698,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="about_us_icon.png">{213, 162}</string>
 			<string key="buttons_shadow@2x.png">{414, 7}</string>
 			<string key="main_menu_icon.png">{201, 201}</string>
 			<string key="map_icon.png">{193, 169}</string>

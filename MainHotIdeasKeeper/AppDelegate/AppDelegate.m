@@ -52,6 +52,7 @@
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bar_background.png"] forBarMetrics:UIBarMetricsDefault];
     
+    
     NVSlideMenuController *slideMenuViewController = [[NVSlideMenuController alloc] initWithMenuViewController:menuScreenViewController andContentViewController:mainNavigationController];
     self.window.rootViewController = slideMenuViewController;
 
