@@ -70,7 +70,7 @@
     {
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
-        [mailer setSubject:@"A Message from Hot Ideas Keeper"];
+        [mailer setSubject:@"Hot Ideas Keeper"];
         NSArray *toRecipients = [NSArray arrayWithObjects:@"info@vexadev.com", nil];
         [mailer setToRecipients:toRecipients];
         NSString *emailBody = @"";
@@ -140,6 +140,7 @@
     }];
 }
 
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     switch (result)
@@ -163,4 +164,8 @@
     // Remove the mail view
     [self dismissModalViewControllerAnimated:YES];
 }
+
+
+
+
 @end
