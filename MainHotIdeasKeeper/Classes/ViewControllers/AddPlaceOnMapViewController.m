@@ -31,6 +31,8 @@
         locationManager.distanceFilter = kCLDistanceFilterNone;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [locationManager startUpdatingLocation];
+        self.mapButton.selected = YES;
+        
     }
     return self;
 }
@@ -69,6 +71,9 @@ static float y;
 {
     [self setNoteTextView:nil];
     [self setScrollView:nil];
+    [self setMapButton:nil];
+    [self setSitButton:nil];
+    [self setHibridButton:nil];
     [super viewDidUnload];
     self.map = nil;
 }
@@ -77,7 +82,6 @@ static float y;
 {
     [super viewDidLoad];
 	_map.showsUserLocation = YES;
-    [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     locationManager = [[CLLocationManager alloc] init];
     geocoder = [[CLGeocoder alloc] init];
@@ -109,11 +113,15 @@ static float y;
     
         
         CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake([_note.x floatValue], [_note.y floatValue]);
-        MKCoordinateRegion adjustedRegion = [_map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 1000000, 1000000)];
+        MKCoordinateRegion adjustedRegion = [_map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 100000, 100000)];
         [_map setRegion:adjustedRegion animated:YES];
         
         
         
+    }
+    else
+    {
+        [_map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     }
 
 }
@@ -169,14 +177,33 @@ static float y;
 }
 
 - (IBAction)mapButtonPressed:(id)sender {
+    if (_mapButton.selected == YES) {
+        return;
+    }
+    self.mapButton.selected = YES;
+    self.sitButton.selected = NO;
+    self.hibridButton.selected = NO;
+    
     _map.mapType = MKMapTypeStandard;
 }
 
 - (IBAction)satelliteButtonPressed:(id)sender {
+    if (_sitButton.selected == YES) {
+        return;
+    }
+    self.sitButton.selected = YES;
+    self.mapButton.selected = NO;
+    self.hibridButton.selected = NO;
     _map.mapType = MKMapTypeSatellite;
 }
 
 - (IBAction)hybridButtonPressed:(id)sender {
+    if (_hibridButton.selected == YES) {
+        return;
+    }
+    self.hibridButton.selected = YES;
+    self.sitButton.selected = NO;
+    self.mapButton.selected = NO;
     _map.mapType = MKMapTypeHybrid;
 }
 
@@ -241,14 +268,12 @@ static float y;
     [errorAlert show];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-
-}
 
 - (void)getPlacemakerAdress:(CLLocation *)location
              withSuccess:(void (^)(NSString *adress))success
 {
+
+    
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];

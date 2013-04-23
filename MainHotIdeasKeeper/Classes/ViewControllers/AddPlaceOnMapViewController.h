@@ -21,6 +21,9 @@
 }
 
 -(id)initWithNote:(Note *)note;
+@property (weak, nonatomic) IBOutlet UIButton *mapButton;
+@property (weak, nonatomic) IBOutlet UIButton *sitButton;
+@property (weak, nonatomic) IBOutlet UIButton *hibridButton;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet MKMapView *map;

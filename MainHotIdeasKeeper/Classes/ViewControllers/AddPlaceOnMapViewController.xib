@@ -84,9 +84,13 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="472566089">
+								<object class="NSCustomResource" key="IBUISelectedBackgroundImage" id="697622658">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">button_background.png</string>
+									<string key="NSResourceName">selected_button_bg.png</string>
+								</object>
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">main_button_bg.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="504792294">
 									<int key="type">2</int>
@@ -115,7 +119,7 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
-								<reference key="IBUINormalBackgroundImage" ref="472566089"/>
+								<reference key="IBUINormalBackgroundImage" ref="697622658"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -136,7 +140,7 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
-								<reference key="IBUINormalBackgroundImage" ref="472566089"/>
+								<reference key="IBUINormalBackgroundImage" ref="697622658"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -146,7 +150,6 @@
 								<string key="NSFrame">{{-1, 364}, {321, 44}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -157,7 +160,10 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
-								<reference key="IBUINormalBackgroundImage" ref="472566089"/>
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">button_background.png</string>
+								</object>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -308,6 +314,30 @@
 						<reference key="destination" ref="1063488325"/>
 					</object>
 					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">mapButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="720869408"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">sitButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="778804391"/>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hibridButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="875722500"/>
+					</object>
+					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
@@ -474,6 +504,7 @@
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="2" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -481,7 +512,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">51</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -519,15 +550,22 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="geoCoder">CLGeocoder</string>
+						<string key="hibridButton">UIButton</string>
 						<string key="locationManager">CLLocationManager</string>
 						<string key="map">MKMapView</string>
+						<string key="mapButton">UIButton</string>
 						<string key="noteTextView">UITextView</string>
 						<string key="scrollView">UIScrollView</string>
+						<string key="sitButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="geoCoder">
 							<string key="name">geoCoder</string>
 							<string key="candidateClassName">CLGeocoder</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hibridButton">
+							<string key="name">hibridButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="locationManager">
 							<string key="name">locationManager</string>
@@ -537,6 +575,10 @@
 							<string key="name">map</string>
 							<string key="candidateClassName">MKMapView</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="mapButton">
+							<string key="name">mapButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="noteTextView">
 							<string key="name">noteTextView</string>
 							<string key="candidateClassName">UITextView</string>
@@ -544,6 +586,10 @@
 						<object class="IBToOneOutletInfo" key="scrollView">
 							<string key="name">scrollView</string>
 							<string key="candidateClassName">UIScrollView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sitButton">
+							<string key="name">sitButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -579,7 +625,9 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="button_background.png">{320, 303}</string>
+			<string key="main_button_bg.png">{106, 30}</string>
 			<string key="note_bg.png">{152, 110}</string>
+			<string key="selected_button_bg.png">{106, 30}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
