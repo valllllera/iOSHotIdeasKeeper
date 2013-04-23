@@ -25,5 +25,6 @@
 @property(strong,nonatomic) Note *activeNote;
 
 @property (assign,nonatomic) BOOL flagView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

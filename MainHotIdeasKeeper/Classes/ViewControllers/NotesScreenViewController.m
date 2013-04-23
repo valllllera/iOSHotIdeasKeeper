@@ -61,7 +61,39 @@
     [homeNaviButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.leftBarButtonItem = homeNaviButton;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    _scrollView.contentSize = CGSizeMake(320, 408);
+    
     self.slideMenuController.panGestureEnabled = NO;
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, _notesTextView.frame.origin) )
+    {
+        CGPoint scrollPoint = CGPointMake(0.0, _notesTextView.frame.origin.y - (keyboardSize.height-15));
+        [_scrollView setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+- (void) keyboardWillHide:(NSNotification *)notification {
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +107,7 @@
     [self setNotesTextView:nil];
     saveButton = nil;
     saveButton = nil;
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 
@@ -121,7 +154,7 @@
     
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+/*- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
  replacementText:(NSString *)text
 {
     if([text isEqualToString:@"\n"]) {
@@ -129,7 +162,7 @@
         return NO;
 }
     return YES;
-}
+}*/
 
 -(IBAction)addImageButton:(id)sender
 {

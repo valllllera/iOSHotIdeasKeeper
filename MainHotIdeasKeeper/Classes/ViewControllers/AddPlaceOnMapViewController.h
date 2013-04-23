@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *sitButton;
 @property (weak, nonatomic) IBOutlet UIButton *hibridButton;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet CLGeocoder *geoCoder;
 @property (strong, nonatomic) IBOutlet CLLocationManager *locationManager;
@@ -34,6 +33,7 @@
 @property (copy , nonatomic )NSString * locationString;
 @property (weak, nonatomic) IBOutlet UITextView *noteTextView;
 @property (assign ,nonatomic)BOOL flagView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)mapButtonPressed:(id)sender;
 - (IBAction)satelliteButtonPressed:(id)sender;

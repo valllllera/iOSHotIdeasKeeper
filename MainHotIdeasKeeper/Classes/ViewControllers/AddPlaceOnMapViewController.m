@@ -75,6 +75,7 @@ static float y;
     [self setMapButton:nil];
     [self setSitButton:nil];
     [self setHibridButton:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
     self.map = nil;
 }
