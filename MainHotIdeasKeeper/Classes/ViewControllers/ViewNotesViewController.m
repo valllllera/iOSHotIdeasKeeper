@@ -38,6 +38,11 @@
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
+    UIBarButtonItem *edit =[[UIBarButtonItem alloc]
+                            initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                            target:self
+                            action:@selector(editing)];
+    self.navigationItem.rightBarButtonItem = edit;
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,6 +94,30 @@
     NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]initWithNote:[_notesArray objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:notesScreenViewController animated:YES];
     
+}
+
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_notesArray removeObjectAtIndex:indexPath.row];
+        [[DataManager sharedInstance] deleteNote:indexPath.row+1];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
+}
+
+- (void)editing {
+    [self.mainNotesTable setEditing:!self.mainNotesTable.editing animated:YES];
+}
+
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;

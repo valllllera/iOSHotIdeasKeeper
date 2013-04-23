@@ -146,4 +146,16 @@ static DataManager *sharedInstance = nil;
     [SQLiteAccess updateWithSQL:query];
     
 }
+
+-(void)deleteNote : (NSInteger )idx
+{
+    NSString *query = [NSString stringWithFormat:@"delete from noteTable where id  = %d" ,idx];
+    [SQLiteAccess deleteWithSQL:query];
+}
+
+-(void)deleteNoteWithMap:(NSInteger )idx
+{
+    NSString *query = [NSString stringWithFormat:@"delete from noteWithMap where id  = %d" , idx];
+    [SQLiteAccess deleteWithSQL:query];
+}
 @end

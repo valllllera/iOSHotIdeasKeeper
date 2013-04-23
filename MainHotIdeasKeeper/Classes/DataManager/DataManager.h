@@ -25,5 +25,7 @@
 -(void)updateNewNote:(Note *)note;
 -(void)saveNewNoteWithMap:(Note *)note;
 -(void)updateNewNoteWithMap:(Note *)note;
+-(void)deleteNoteWithMap:(NSInteger )idx;
+-(void)deleteNote : (NSInteger )idx;
 
 @end
