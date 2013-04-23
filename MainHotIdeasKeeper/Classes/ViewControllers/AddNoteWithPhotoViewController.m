@@ -58,51 +58,33 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     [super viewDidLoad];
     self.assetLibrary = [[ALAssetsLibrary alloc] init];
     self.flagView = NO;
-    dispatch_queue_t dispatchQueue =  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(dispatchQueue, ^(void) {
-        [self.assetLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-            [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-                __block BOOL foundThePhoto = NO;
-                if (foundThePhoto) {
-                    *stop = YES;
-                }
-                
-                NSString *assetType = [result valueForProperty:ALAssetPropertyType];
-                
-                if ([assetType isEqualToString:ALAssetTypePhoto]){
-                    foundThePhoto = YES;
-                    *stop = YES;
-                    ALAssetRepresentation *assetRepresentation = [result defaultRepresentation];
-                    CGFloat imageScale = [assetRepresentation scale];
-                    UIImageOrientation imageOrientation = (UIImageOrientation)[assetRepresentation orientation];
-                    dispatch_async(dispatch_get_main_queue(), ^(void) {
-                        CGImageRef imageReference = [assetRepresentation fullResolutionImage];
-                        UIImage *image1 = [[UIImage alloc] initWithCGImage:imageReference scale:imageScale orientation:imageOrientation];
-                        if (image != nil) {
-                            self.photoForNote.contentMode = UIViewContentModeScaleAspectFit;
-                            [self.photoForNote setImage:image1];
-                           // [self.view addSubview:self.photoForNote];
-                        } else
-                        {
-                            NSLog(@"Failed to create the image");
-                        }
-                        NSDictionary *assertUrls = [result valueForProperty:ALAssetPropertyURLs];
-                        [assertUrls setValue:_imageUrl forKey:@"assertKey"];
-                
-                        NSInteger assetCounter = 0;
-                        for (NSString *assertKey in assertUrls)
-                        {
-                            assetCounter++;
-                            NSLog(@"Assert URL %lu = %@", (unsigned long)assetCounter, [assertUrls valueForKey:assertKey]);
-                        }
-                    });
-                }
-                                                                }];
-        } failureBlock:^(NSError *error) {
-            NSLog(@"Failed to rnumerate the asset group");
-        }];
-                                   
-                                   });
+
+    
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *rep = [myasset defaultRepresentation];
+        CGImageRef iref = [rep fullResolutionImage];
+        if (iref) {
+            UIImage *largeimage = [UIImage imageWithCGImage:iref];
+            _photoForNote.image = largeimage;
+        }
+    };
+    
+
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+    {
+        NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
+    };
+    
+    if(_imageUrl)
+    {
+        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+        [assetslibrary assetForURL:_imageUrl
+                       resultBlock:resultblock
+                      failureBlock:failureblock];
+    }
+    
+    
     self.notesTextView.delegate = self;
     
     if (_imageUrl)
