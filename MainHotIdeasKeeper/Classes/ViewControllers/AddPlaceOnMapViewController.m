@@ -113,7 +113,7 @@ static float y;
     
         
         CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake([_note.x floatValue], [_note.y floatValue]);
-        MKCoordinateRegion adjustedRegion = [_map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 100000, 100000)];
+        MKCoordinateRegion adjustedRegion = [_map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 10000, 10000)];
         [_map setRegion:adjustedRegion animated:YES];
         
         
@@ -177,9 +177,7 @@ static float y;
 }
 
 - (IBAction)mapButtonPressed:(id)sender {
-    if (_mapButton.selected == YES) {
-        return;
-    }
+
     self.mapButton.selected = YES;
     self.sitButton.selected = NO;
     self.hibridButton.selected = NO;
@@ -188,9 +186,7 @@ static float y;
 }
 
 - (IBAction)satelliteButtonPressed:(id)sender {
-    if (_sitButton.selected == YES) {
-        return;
-    }
+
     self.sitButton.selected = YES;
     self.mapButton.selected = NO;
     self.hibridButton.selected = NO;
@@ -198,9 +194,7 @@ static float y;
 }
 
 - (IBAction)hybridButtonPressed:(id)sender {
-    if (_hibridButton.selected == YES) {
-        return;
-    }
+
     self.hibridButton.selected = YES;
     self.sitButton.selected = NO;
     self.mapButton.selected = NO;
