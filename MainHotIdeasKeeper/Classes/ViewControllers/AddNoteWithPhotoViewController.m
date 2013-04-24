@@ -69,6 +69,9 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
         }
     };
     
+    UIBarButtonItem *homeNaviButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_navi_button_bg.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(homeNaviButton:)];
+    [homeNaviButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    self.navigationItem.leftBarButtonItem = homeNaviButton;
 
     ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
     {
@@ -102,6 +105,8 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
     
     UIBarButtonItem *addImageButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImageButton:)];
+    [addImageButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+
     self.navigationItem.rightBarButtonItem = addImageButton;
 }
 
@@ -169,5 +174,9 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     [self dismissModalViewControllerAnimated:YES];
 }
 
+-(IBAction)homeNaviButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
