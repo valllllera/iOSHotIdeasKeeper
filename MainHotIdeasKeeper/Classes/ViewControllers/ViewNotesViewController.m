@@ -38,10 +38,12 @@
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
-    UIBarButtonItem *edit =[[UIBarButtonItem alloc]
-                            initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                            target:self
-                            action:@selector(editing)];
+    edit=[[UIBarButtonItem alloc]initWithTitle:@"Edit"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                        action:@selector(editing)];
+    
+
     [edit setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.rightBarButtonItem = edit;
 }
@@ -98,6 +100,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView
+moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+      toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [_notesArray exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+}
+
+- (void)tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -111,15 +120,16 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 - (void)editing {
+    
     [self.mainNotesTable setEditing:!self.mainNotesTable.editing animated:YES];
+    
+    if (self.mainNotesTable.editing)
+        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+    else
+        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
+    
 }
 
-
-- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView
-           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellEditingStyleDelete;
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {

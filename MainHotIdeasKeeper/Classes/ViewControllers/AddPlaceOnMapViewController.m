@@ -89,6 +89,7 @@ static float y;
     geocoder = [[CLGeocoder alloc] init];
     
     locationManager.delegate = self;
+    self.mapButton.selected = YES;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [locationManager startUpdatingLocation];

@@ -41,10 +41,10 @@
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
-    UIBarButtonItem *edit =[[UIBarButtonItem alloc]
-                             initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                             target:self
-                             action:@selector(editing)];
+    edit=[[UIBarButtonItem alloc]initWithTitle:@"Edit"
+                                         style:UIBarButtonItemStylePlain
+                                        target:self
+                                        action:@selector(editing)];
     [edit setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.rightBarButtonItem = edit;
     
@@ -65,8 +65,19 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)editing {
     [self.tableView setEditing:!self.tableView.editing animated:YES];
+    
+    if (self.tableView.editing)
+        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+    else
+        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
 }
 
+- (void)tableView:(UITableView *)tableView
+moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+      toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [_notesArray exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+}
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView
            editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath

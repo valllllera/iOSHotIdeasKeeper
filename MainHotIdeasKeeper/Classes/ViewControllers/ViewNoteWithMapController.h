@@ -10,6 +10,9 @@
 #import "Note.h"
 
 @interface ViewNoteWithMapController : UIViewController <UITableViewDataSource , UITableViewDelegate>
+{
+     UIBarButtonItem *edit;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *notesArray;
 

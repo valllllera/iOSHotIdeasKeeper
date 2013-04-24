@@ -11,7 +11,7 @@
 
 @interface ViewNotesViewController : UIViewController<UITableViewDataSource, UITabBarDelegate>
 {
-    
+    UIBarButtonItem *edit;
 }
 
 @property(nonatomic, retain) NSMutableArray *notesArray;

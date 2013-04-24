@@ -150,6 +150,7 @@ static DataManager *sharedInstance = nil;
 -(void)deleteNote : (NSInteger )idx
 {
     NSString *query = [NSString stringWithFormat:@"delete from noteTable where id  = %d" ,idx];
+    NSLog(@"%d",idx);
     [SQLiteAccess deleteWithSQL:query];
 }
 

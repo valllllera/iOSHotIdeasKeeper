@@ -12,6 +12,7 @@
 #import "Note.h"
 #import "ViewNotesViewController.h"
 #import "MainScreenViewController.h"
+#import "CameraScreenViewController.h"
 
 @interface NotesScreenViewController ()
 
@@ -169,11 +170,12 @@
     NSDictionary *info = [[NSDictionary alloc]init];
     image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     [self dismissModalViewControllerAnimated:YES];
+
+    
 }
 
 -(IBAction)homeNaviButton:(id)sender
 {
-    MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
-    [self.navigationController pushViewController:mainScreenViewController animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
