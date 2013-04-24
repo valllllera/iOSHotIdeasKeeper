@@ -13,6 +13,7 @@
 #import "NSString+ExtString.h"
 #import "NSDate+ExtDate.h"
 #import "NVSlideMenuController.h"
+#import "AddNoteWithPhotoViewController.h"
 
 @interface ViewNotesViewController ()
 
@@ -95,8 +96,18 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]initWithNote:[_notesArray objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:notesScreenViewController animated:YES];
+    Note *note = [_notesArray objectAtIndex:indexPath.row];
+    if ([note.imageUrlPath isEqualToString:@"nil"])
+    {
+        NotesScreenViewController *notesScreenViewController = [[NotesScreenViewController alloc]initWithNote:[_notesArray objectAtIndex:indexPath.row]];
+        [self.navigationController pushViewController:notesScreenViewController animated:YES];
+    }
+    else
+    {
+        AddNoteWithPhotoViewController *addNote = [[AddNoteWithPhotoViewController alloc]initWithNote:note];
+        [self.navigationController pushViewController:addNote animated:YES];
+                                                   
+    }
     
 }
 

@@ -100,6 +100,31 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     {
         _flagView = YES;
         self.notesTextView.text = _activeNote.noteText;
+        
+        ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+        {
+            ALAssetRepresentation *rep = [myasset defaultRepresentation];
+            CGImageRef iref = [rep fullResolutionImage];
+            if (iref) {
+                UIImage *largeimage = [UIImage imageWithCGImage:iref];
+                self.photoForNote.image = largeimage;
+            }
+        };
+        
+        
+        ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+        {
+            NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
+        };
+        
+        if(_activeNote.imageUrlPath)
+        {
+            NSURL *imageUrl = [NSURL URLWithString:_activeNote.imageUrlPath];
+            ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+            [assetslibrary assetForURL: imageUrl
+                           resultBlock:resultblock
+                          failureBlock:failureblock];
+        }
     }
     
 
@@ -153,6 +178,8 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
         _activeNote.noteText = self.notesTextView.text;
         _activeNote.imageUrlPath = [_imageUrl absoluteString];
         [[DataManager sharedInstance] updateNewNote:_activeNote];
+         ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];        
+        [self.slideMenuController setContentViewController:[[UINavigationController alloc] initWithRootViewController:viewNotesViewController] animated:YES completion:nil];
         
     }
 }
