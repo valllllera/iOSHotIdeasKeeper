@@ -23,7 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.title = @"About";
+        self.title = NSLocalizedString(@"О нас", nil);
     }
     return self;
 }

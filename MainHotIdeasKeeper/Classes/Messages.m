@@ -13,7 +13,7 @@
 +(NSString *)noteSuccssesfullSaved
 {
         return @"Заметка успешно сохранена";
- }
+}
 
 +(NSString *)noteIsNotSaved
 {

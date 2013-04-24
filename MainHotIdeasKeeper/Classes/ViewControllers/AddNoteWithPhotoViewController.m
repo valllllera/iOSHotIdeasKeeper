@@ -26,7 +26,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.title = @"Заметки";
+        self.title = NSLocalizedString(@"Заметки", nil);
     }
     return self;
 }
@@ -58,7 +58,6 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     [super viewDidLoad];
     self.assetLibrary = [[ALAssetsLibrary alloc] init];
     self.flagView = NO;
-
     
     ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
     {
@@ -123,6 +122,8 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     self.assetLibrary = nil;
     self.imageView = nil;
     [self setPhotoForNote:nil];
+    [self setWriteANoteLabel:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)saveButtonPressed:(id)sender

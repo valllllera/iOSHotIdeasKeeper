@@ -25,6 +25,8 @@
 @property (copy,nonatomic) NSURL* imageUrl;
 @property (nonatomic, strong) ALAssetsLibrary *assetLibrary;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *writeANoteLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 -(id)initWithNote:(Note *)note;
 -(id)initWithImageUrl:(NSURL *)imageUrl;

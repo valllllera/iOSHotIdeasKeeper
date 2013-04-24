@@ -25,6 +25,7 @@
     if (self)
     {
         self.title = @"Hot Ideas Keeper";
+        [self.addLabel setText:NSLocalizedString(@"Добавить", nil)];
     
     }
     return self;

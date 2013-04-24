@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  MainHotIdeasKeeper
+
+  Created by iOS - Evgeniy Lipskiy on 23.04.13.
+  Copyright (c) 2013 vexadev. All rights reserved.
+*/
+"Заметка успешно сохранена" = "A note has been saved successfully";
+
+"Заметка не сохранена" = "A note has not been saved";
+
+"Заметка успешно изменена" = "A note has been successfully changed";
+
+"Заметка не изменена" = "A note is not changed";
+
+"Геозаметки" = "Geotagging";
+
+
+"Не получилось загрузить данные" = "Could not load data";
+"Заметки" = "Notes";
+
+"Геозаметка" = "Geotagging";
+"Точка" = "Point";
+"Сохранить" = "Save";
+
+"Написать заметку:" = "Write a note:";
+"О нас" = "About Us";
+"Отмена" = "Cancel";
+
+
+"Нельзя сохранить пустую заметку" = "You can not save a blank note";

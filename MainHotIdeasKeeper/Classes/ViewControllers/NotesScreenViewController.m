@@ -25,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.title = @"Заметки";
+        self.title = NSLocalizedString(@"Заметки", nil);
     }
     return self;
 }
@@ -139,7 +139,7 @@
         }
         else
         {
-            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Нельзя сохранить пустую зметку" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:@"Нельзя сохранить пустую заметку" delegate:self cancelButtonTitle:@"Oк" otherButtonTitles: nil];
             [alertView show];
         }
 

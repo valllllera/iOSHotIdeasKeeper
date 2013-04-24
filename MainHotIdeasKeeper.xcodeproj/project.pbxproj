@@ -17,16 +17,13 @@
 		0814F94417216EE700D7C3CC /* notesTableDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0814F94317216EE700D7C3CC /* notesTableDB.sqlite */; };
 		0814F94E1721795000D7C3CC /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814F94D1721795000D7C3CC /* Messages.m */; };
 		088B45D017218F39002719C2 /* NotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45CE17218F39002719C2 /* NotesCell.m */; };
-		088B45D117218F39002719C2 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45CF17218F39002719C2 /* NotesCell.xib */; };
 		088B45D61721A49C002719C2 /* NSDate+ExtDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D51721A49C002719C2 /* NSDate+ExtDate.m */; };
 		088B45D91721A4FC002719C2 /* NSString+ExtString.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45D81721A4FC002719C2 /* NSString+ExtString.m */; };
 		088B45E71722DE37002719C2 /* AddNoteWithPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */; };
-		088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */; };
 		088B45EB1722E798002719C2 /* v_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45E91722E798002719C2 /* v_icon.png */; };
 		088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45EA1722E798002719C2 /* v_icon@2x.png */; };
 		088B45EE1722ED76002719C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B45ED1722ED76002719C2 /* libsqlite3.dylib */; };
 		088B45F317253631002719C2 /* ViewNoteWithMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B45F117253631002719C2 /* ViewNoteWithMapController.m */; };
-		088B45F417253631002719C2 /* ViewNoteWithMapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088B45F217253631002719C2 /* ViewNoteWithMapController.xib */; };
 		088B45FB17257238002719C2 /* map_imageholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45F917257237002719C2 /* map_imageholder.png */; };
 		088B45FC17257238002719C2 /* map_imageholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B45FA17257237002719C2 /* map_imageholder@2x.png */; };
 		088B45FE1725983C002719C2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B45FD1725983C002719C2 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -36,7 +33,6 @@
 		088B460F1726D39C002719C2 /* selected_button_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B460B1726D39C002719C2 /* selected_button_bg.png */; };
 		088B46101726D39C002719C2 /* selected_button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 088B460C1726D39C002719C2 /* selected_button_bg@2x.png */; };
 		1A052C45171F1EED007A0ACD /* MenuScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */; };
-		1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */; };
 		1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C48171F2021007A0ACD /* menu_item_bg.png */; };
 		1A052C4D171F2021007A0ACD /* menu_item_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C49171F2021007A0ACD /* menu_item_bg@2x.png */; };
 		1A052C4E171F2021007A0ACD /* menu_selected_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C4A171F2021007A0ACD /* menu_selected_item_bg.png */; };
@@ -46,7 +42,6 @@
 		1A052C5A171F33F9007A0ACD /* second_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C58171F33F8007A0ACD /* second_shadow@2x.png */; };
 		1A052C5D171F3494007A0ACD /* buttons_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C5C171F3494007A0ACD /* buttons_shadow@2x.png */; };
 		1A052C62171F3591007A0ACD /* NotesScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C60171F3591007A0ACD /* NotesScreenViewController.m */; };
-		1A052C63171F3591007A0ACD /* NotesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */; };
 		1A052C67171F3852007A0ACD /* note_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C65171F3852007A0ACD /* note_bg.png */; };
 		1A052C68171F3852007A0ACD /* note_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C66171F3852007A0ACD /* note_bg@2x.png */; };
 		1A052C6B171F4D61007A0ACD /* label_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C69171F4D61007A0ACD /* label_background.png */; };
@@ -54,9 +49,7 @@
 		1A052C6F171F5282007A0ACD /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C6E171F5282007A0ACD /* Note.m */; };
 		1A052C72171F5390007A0ACD /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C71171F5390007A0ACD /* DataManager.m */; };
 		1A052C84171F5C25007A0ACD /* ViewNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */; };
-		1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */; };
 		1A052C9F17200F9D007A0ACD /* CameraScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */; };
-		1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */; };
 		1A401BD61722C5BD00FEF66A /* button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD41722C5BD00FEF66A /* button_background.png */; };
 		1A401BD71722C5BD00FEF66A /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD51722C5BD00FEF66A /* button_background@2x.png */; };
 		1A401BDB1722CE7B00FEF66A /* notes_cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A401BD91722CE7B00FEF66A /* notes_cell_bg.png */; };
@@ -85,9 +78,7 @@
 		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
 		1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED9B917219A55004DE58D /* SQLiteAccess.m */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
-		1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */; };
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
-		1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */; };
 		1AFE582117267FFF00A1779D /* button_item_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE581F17267FFF00A1779D /* button_item_background.png */; };
 		1AFE582217267FFF00A1779D /* button_item_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE582017267FFF00A1779D /* button_item_background@2x.png */; };
 		1AFE5830172686FB00A1779D /* about_us_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE5824172686FB00A1779D /* about_us_icon.png */; };
@@ -102,6 +93,17 @@
 		1AFE5839172686FB00A1779D /* photo_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE582D172686FB00A1779D /* photo_camera_icon@2x.png */; };
 		1AFE583A172686FB00A1779D /* video_camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE582E172686FB00A1779D /* video_camera_icon.png */; };
 		1AFE583B172686FB00A1779D /* video_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE582F172686FB00A1779D /* video_camera_icon@2x.png */; };
+		1AFE58461726DC9400A1779D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58481726DC9400A1779D /* Localizable.strings */; };
+		1AFE584A1726DCBB00A1779D /* ViewNoteWithMapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE584C1726DCBB00A1779D /* ViewNoteWithMapController.xib */; };
+		1AFE584E1726DCD900A1779D /* AddNoteWithPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58501726DCD900A1779D /* AddNoteWithPhotoViewController.xib */; };
+		1AFE58521726DCE800A1779D /* AddPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58541726DCE800A1779D /* AddPlaceOnMapViewController.xib */; };
+		1AFE58561726DCF700A1779D /* AboutScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58581726DCF700A1779D /* AboutScreenViewController.xib */; };
+		1AFE585A1726DD0400A1779D /* ViewNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE585C1726DD0400A1779D /* ViewNotesViewController.xib */; };
+		1AFE585E1726DD1300A1779D /* NotesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58601726DD1300A1779D /* NotesScreenViewController.xib */; };
+		1AFE58621726DD2000A1779D /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58641726DD2000A1779D /* MenuScreenViewController.xib */; };
+		1AFE58661726DD2E00A1779D /* CameraScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58681726DD2E00A1779D /* CameraScreenViewController.xib */; };
+		1AFE586A1726DD3A00A1779D /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE586C1726DD3A00A1779D /* MainScreenViewController.xib */; };
+		1AFE586E1726DD4E00A1779D /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE58701726DD4E00A1779D /* NotesCell.xib */; };
 		7E17CBEB1720257E00BD06BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEA1720257E00BD06BA /* MapKit.framework */; };
 		7E17CBEE1720343D00BD06BA /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17CBED1720343D00BD06BA /* Annotation.m */; };
 		7E17CBF01720549000BD06BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E17CBEF1720549000BD06BA /* CoreLocation.framework */; };
@@ -116,7 +118,6 @@
 		8CAC941D171EBA1C006D3621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAC9405171EBA1C006D3621 /* AppDelegate.m */; };
 		8CAC941E171EBA1C006D3621 /* NVSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAC940C171EBA1C006D3621 /* NVSlideMenuController.m */; };
 		8CAC941F171EBA1C006D3621 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAC9410171EBA1C006D3621 /* MainScreenViewController.m */; };
-		8CAC9420171EBA1C006D3621 /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC9411171EBA1C006D3621 /* MainScreenViewController.xib */; };
 		8CAC9421171EBA1C006D3621 /* backgrond.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC9415171EBA1C006D3621 /* backgrond.png */; };
 		8CAC9422171EBA1C006D3621 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC9416171EBA1C006D3621 /* background@2x.png */; };
 		8CAC9423171EBA1C006D3621 /* button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC9417171EBA1C006D3621 /* button_background.png */; };
@@ -144,20 +145,17 @@
 		0814F94D1721795000D7C3CC /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
 		088B45CD17218F39002719C2 /* NotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesCell.h; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.h; sourceTree = SOURCE_ROOT; };
 		088B45CE17218F39002719C2 /* NotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesCell.m; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.m; sourceTree = SOURCE_ROOT; };
-		088B45CF17218F39002719C2 /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesCell.xib; path = MainHotIdeasKeeper/Classes/Views/NotesCell/NotesCell.xib; sourceTree = SOURCE_ROOT; };
 		088B45D41721A49C002719C2 /* NSDate+ExtDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ExtDate.h"; sourceTree = "<group>"; };
 		088B45D51721A49C002719C2 /* NSDate+ExtDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ExtDate.m"; sourceTree = "<group>"; };
 		088B45D71721A4FC002719C2 /* NSString+ExtString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtString.h"; sourceTree = "<group>"; };
 		088B45D81721A4FC002719C2 /* NSString+ExtString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtString.m"; sourceTree = "<group>"; };
 		088B45E41722DE37002719C2 /* AddNoteWithPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteWithPhotoViewController.h; sourceTree = "<group>"; };
 		088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteWithPhotoViewController.m; sourceTree = "<group>"; };
-		088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
 		088B45E91722E798002719C2 /* v_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v_icon.png; sourceTree = "<group>"; };
 		088B45EA1722E798002719C2 /* v_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "v_icon@2x.png"; sourceTree = "<group>"; };
 		088B45ED1722ED76002719C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		088B45F017253631002719C2 /* ViewNoteWithMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewNoteWithMapController.h; sourceTree = "<group>"; };
 		088B45F117253631002719C2 /* ViewNoteWithMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewNoteWithMapController.m; sourceTree = "<group>"; };
-		088B45F217253631002719C2 /* ViewNoteWithMapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNoteWithMapController.xib; sourceTree = "<group>"; };
 		088B45F917257237002719C2 /* map_imageholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_imageholder.png; sourceTree = "<group>"; };
 		088B45FA17257237002719C2 /* map_imageholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_imageholder@2x.png"; sourceTree = "<group>"; };
 		088B45FD1725983C002719C2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -168,7 +166,6 @@
 		088B460C1726D39C002719C2 /* selected_button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_button_bg@2x.png"; sourceTree = "<group>"; };
 		1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreenViewController.h; sourceTree = "<group>"; };
 		1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreenViewController.m; sourceTree = "<group>"; };
-		1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
 		1A052C48171F2021007A0ACD /* menu_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_item_bg.png; sourceTree = "<group>"; };
 		1A052C49171F2021007A0ACD /* menu_item_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_bg@2x.png"; sourceTree = "<group>"; };
 		1A052C4A171F2021007A0ACD /* menu_selected_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_selected_item_bg.png; sourceTree = "<group>"; };
@@ -179,7 +176,6 @@
 		1A052C5C171F3494007A0ACD /* buttons_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons_shadow@2x.png"; sourceTree = "<group>"; };
 		1A052C5F171F3591007A0ACD /* NotesScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesScreenViewController.h; sourceTree = "<group>"; };
 		1A052C60171F3591007A0ACD /* NotesScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesScreenViewController.m; sourceTree = "<group>"; };
-		1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesScreenViewController.xib; sourceTree = "<group>"; };
 		1A052C65171F3852007A0ACD /* note_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_bg.png; sourceTree = "<group>"; };
 		1A052C66171F3852007A0ACD /* note_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_bg@2x.png"; sourceTree = "<group>"; };
 		1A052C69171F4D61007A0ACD /* label_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = label_background.png; sourceTree = "<group>"; };
@@ -190,10 +186,8 @@
 		1A052C71171F5390007A0ACD /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		1A052C81171F5C25007A0ACD /* ViewNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewNotesViewController.h; sourceTree = "<group>"; };
 		1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewNotesViewController.m; sourceTree = "<group>"; };
-		1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewNotesViewController.xib; sourceTree = "<group>"; };
 		1A052C9C17200F9D007A0ACD /* CameraScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraScreenViewController.h; sourceTree = "<group>"; };
 		1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraScreenViewController.m; sourceTree = "<group>"; };
-		1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraScreenViewController.xib; sourceTree = "<group>"; };
 		1A401BD41722C5BD00FEF66A /* button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_background.png; sourceTree = "<group>"; };
 		1A401BD51722C5BD00FEF66A /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
 		1A401BD91722CE7B00FEF66A /* notes_cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notes_cell_bg.png; sourceTree = "<group>"; };
@@ -224,10 +218,8 @@
 		1A8ED9B917219A55004DE58D /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
 		1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutScreenViewController.h; sourceTree = "<group>"; };
 		1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScreenViewController.m; sourceTree = "<group>"; };
-		1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutScreenViewController.xib; sourceTree = "<group>"; };
 		1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceOnMapViewController.h; sourceTree = "<group>"; };
 		1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceOnMapViewController.m; sourceTree = "<group>"; };
-		1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
 		1AFE581F17267FFF00A1779D /* button_item_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_item_background.png; sourceTree = "<group>"; };
 		1AFE582017267FFF00A1779D /* button_item_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_item_background@2x.png"; sourceTree = "<group>"; };
 		1AFE5824172686FB00A1779D /* about_us_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_us_icon.png; sourceTree = "<group>"; };
@@ -242,6 +234,29 @@
 		1AFE582D172686FB00A1779D /* photo_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_camera_icon@2x.png"; sourceTree = "<group>"; };
 		1AFE582E172686FB00A1779D /* video_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_camera_icon.png; sourceTree = "<group>"; };
 		1AFE582F172686FB00A1779D /* video_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_camera_icon@2x.png"; sourceTree = "<group>"; };
+		1AFE58451726DC8B00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AFE58491726DC9B00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1AFE584B1726DCBB00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
+		1AFE584D1726DCC200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
+		1AFE584F1726DCD900A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
+		1AFE58511726DCE000A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
+		1AFE58531726DCE800A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
+		1AFE58551726DCED00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
+		1AFE58571726DCF700A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58591726DCFB00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE585B1726DD0400A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
+		1AFE585D1726DD0700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
+		1AFE585F1726DD1300A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58611726DD1700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58631726DD2000A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58651726DD2400A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58671726DD2E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58691726DD3100A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586B1726DD3A00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586D1726DD3E00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586F1726DD4E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/NotesCell.xib; sourceTree = "<group>"; };
+		1AFE58711726DD5200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/NotesCell.xib; sourceTree = "<group>"; };
+		1AFE58771726F05000A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E17CBEA1720257E00BD06BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E17CBEC1720343D00BD06BA /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annotation.h; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.h; sourceTree = SOURCE_ROOT; };
 		7E17CBED1720343D00BD06BA /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annotation.m; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.m; sourceTree = SOURCE_ROOT; };
@@ -263,7 +278,6 @@
 		8CAC940C171EBA1C006D3621 /* NVSlideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSlideMenuController.m; sourceTree = "<group>"; };
 		8CAC940F171EBA1C006D3621 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
 		8CAC9410171EBA1C006D3621 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
-		8CAC9411171EBA1C006D3621 /* MainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
 		8CAC9415171EBA1C006D3621 /* backgrond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgrond.png; sourceTree = "<group>"; };
 		8CAC9416171EBA1C006D3621 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		8CAC9417171EBA1C006D3621 /* button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_background.png; sourceTree = "<group>"; };
@@ -308,7 +322,7 @@
 			children = (
 				1A052C9C17200F9D007A0ACD /* CameraScreenViewController.h */,
 				1A052C9D17200F9D007A0ACD /* CameraScreenViewController.m */,
-				1A052C9E17200F9D007A0ACD /* CameraScreenViewController.xib */,
+				1AFE58681726DD2E00A1779D /* CameraScreenViewController.xib */,
 			);
 			name = CameraScreenViewController;
 			sourceTree = "<group>";
@@ -329,7 +343,7 @@
 			children = (
 				088B45CD17218F39002719C2 /* NotesCell.h */,
 				088B45CE17218F39002719C2 /* NotesCell.m */,
-				088B45CF17218F39002719C2 /* NotesCell.xib */,
+				1AFE58701726DD4E00A1779D /* NotesCell.xib */,
 			);
 			name = NotesCell;
 			path = ../ViewControllers;
@@ -360,7 +374,7 @@
 			children = (
 				088B45E41722DE37002719C2 /* AddNoteWithPhotoViewController.h */,
 				088B45E51722DE37002719C2 /* AddNoteWithPhotoViewController.m */,
-				088B45E61722DE37002719C2 /* AddNoteWithPhotoViewController.xib */,
+				1AFE58501726DCD900A1779D /* AddNoteWithPhotoViewController.xib */,
 			);
 			name = AddNoteWithPhotoViewController;
 			sourceTree = "<group>";
@@ -370,7 +384,7 @@
 			children = (
 				088B45F017253631002719C2 /* ViewNoteWithMapController.h */,
 				088B45F117253631002719C2 /* ViewNoteWithMapController.m */,
-				088B45F217253631002719C2 /* ViewNoteWithMapController.xib */,
+				1AFE584C1726DCBB00A1779D /* ViewNoteWithMapController.xib */,
 			);
 			name = ViewNoteWithMapController;
 			sourceTree = "<group>";
@@ -380,7 +394,7 @@
 			children = (
 				1A052C42171F1EED007A0ACD /* MenuScreenViewController.h */,
 				1A052C43171F1EED007A0ACD /* MenuScreenViewController.m */,
-				1A052C44171F1EED007A0ACD /* MenuScreenViewController.xib */,
+				1AFE58641726DD2000A1779D /* MenuScreenViewController.xib */,
 			);
 			name = MenuScreenViewController;
 			sourceTree = "<group>";
@@ -403,7 +417,7 @@
 			children = (
 				1A052C5F171F3591007A0ACD /* NotesScreenViewController.h */,
 				1A052C60171F3591007A0ACD /* NotesScreenViewController.m */,
-				1A052C61171F3591007A0ACD /* NotesScreenViewController.xib */,
+				1AFE58601726DD1300A1779D /* NotesScreenViewController.xib */,
 			);
 			name = NotesScreenViewController;
 			sourceTree = "<group>";
@@ -431,7 +445,7 @@
 			children = (
 				1A052C81171F5C25007A0ACD /* ViewNotesViewController.h */,
 				1A052C82171F5C25007A0ACD /* ViewNotesViewController.m */,
-				1A052C83171F5C25007A0ACD /* ViewNotesViewController.xib */,
+				1AFE585C1726DD0400A1779D /* ViewNotesViewController.xib */,
 			);
 			name = ViewNotesViewController;
 			sourceTree = "<group>";
@@ -493,7 +507,7 @@
 			children = (
 				1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */,
 				1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */,
-				1AEA61611720165B00CF3CD2 /* AboutScreenViewController.xib */,
+				1AFE58581726DCF700A1779D /* AboutScreenViewController.xib */,
 			);
 			name = AboutScreenViewController;
 			sourceTree = "<group>";
@@ -503,7 +517,7 @@
 			children = (
 				1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */,
 				1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */,
-				1AEA616F172022B700CF3CD2 /* AddPlaceOnMapViewController.xib */,
+				1AFE58541726DCE800A1779D /* AddPlaceOnMapViewController.xib */,
 			);
 			name = AddPlaceOnMapScreenViewController;
 			sourceTree = "<group>";
@@ -571,6 +585,7 @@
 				8CAC9406171EBA1C006D3621 /* Classes */,
 				8CAC9413171EBA1C006D3621 /* Resources */,
 				8CAC93ED171EB9F7006D3621 /* Supporting Files */,
+				1AFE58481726DC9400A1779D /* Localizable.strings */,
 			);
 			path = MainHotIdeasKeeper;
 			sourceTree = "<group>";
@@ -672,7 +687,7 @@
 			children = (
 				8CAC940F171EBA1C006D3621 /* MainScreenViewController.h */,
 				8CAC9410171EBA1C006D3621 /* MainScreenViewController.m */,
-				8CAC9411171EBA1C006D3621 /* MainScreenViewController.xib */,
+				1AFE586C1726DD3A00A1779D /* MainScreenViewController.xib */,
 			);
 			path = MainScreenViewController;
 			sourceTree = "<group>";
@@ -770,6 +785,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = 8CAC93DA171EB9F7006D3621;
 			productRefGroup = 8CAC93E4171EB9F7006D3621 /* Products */;
@@ -790,7 +806,7 @@
 				8CAC93F9171EB9F7006D3621 /* Default.png in Resources */,
 				8CAC93FB171EB9F7006D3621 /* Default@2x.png in Resources */,
 				8CAC93FD171EB9F7006D3621 /* Default-568h@2x.png in Resources */,
-				8CAC9420171EBA1C006D3621 /* MainScreenViewController.xib in Resources */,
+				1AFE586A1726DD3A00A1779D /* MainScreenViewController.xib in Resources */,
 				8CAC9421171EBA1C006D3621 /* backgrond.png in Resources */,
 				8CAC9422171EBA1C006D3621 /* background@2x.png in Resources */,
 				8CAC9423171EBA1C006D3621 /* button_background.png in Resources */,
@@ -803,7 +819,7 @@
 				0814F9341720544F00D7C3CC /* camera_photo_button@2x.png in Resources */,
 				0814F9351720544F00D7C3CC /* camera_video_button.png in Resources */,
 				0814F9361720544F00D7C3CC /* camera_video_button@2x.png in Resources */,
-				1A052C46171F1EED007A0ACD /* MenuScreenViewController.xib in Resources */,
+				1AFE58621726DD2000A1779D /* MenuScreenViewController.xib in Resources */,
 				1A052C4C171F2021007A0ACD /* menu_item_bg.png in Resources */,
 				1A052C4D171F2021007A0ACD /* menu_item_bg@2x.png in Resources */,
 				1A052C4E171F2021007A0ACD /* menu_selected_item_bg.png in Resources */,
@@ -812,21 +828,21 @@
 				1A052C53171F20E3007A0ACD /* menu_separator@2x.png in Resources */,
 				1A052C5A171F33F9007A0ACD /* second_shadow@2x.png in Resources */,
 				1A052C5D171F3494007A0ACD /* buttons_shadow@2x.png in Resources */,
-				1A052C63171F3591007A0ACD /* NotesScreenViewController.xib in Resources */,
+				1AFE585E1726DD1300A1779D /* NotesScreenViewController.xib in Resources */,
 				1A052C67171F3852007A0ACD /* note_bg.png in Resources */,
 				1A052C68171F3852007A0ACD /* note_bg@2x.png in Resources */,
 				1A052C6B171F4D61007A0ACD /* label_background.png in Resources */,
 				1A052C6C171F4D61007A0ACD /* label_background@2x.png in Resources */,
-				1A052C85171F5C25007A0ACD /* ViewNotesViewController.xib in Resources */,
-				1A052CA017200F9D007A0ACD /* CameraScreenViewController.xib in Resources */,
-				1AEA61631720165B00CF3CD2 /* AboutScreenViewController.xib in Resources */,
+				1AFE585A1726DD0400A1779D /* ViewNotesViewController.xib in Resources */,
+				1AFE58661726DD2E00A1779D /* CameraScreenViewController.xib in Resources */,
+				1AFE58561726DCF700A1779D /* AboutScreenViewController.xib in Resources */,
 				0814F94417216EE700D7C3CC /* notesTableDB.sqlite in Resources */,
-				1AEA6171172022B700CF3CD2 /* AddPlaceOnMapViewController.xib in Resources */,
-				088B45D117218F39002719C2 /* NotesCell.xib in Resources */,
+				1AFE58521726DCE800A1779D /* AddPlaceOnMapViewController.xib in Resources */,
+				1AFE586E1726DD4E00A1779D /* NotesCell.xib in Resources */,
 				8CAC944617212E79006D3621 /* vexadev.png in Resources */,
 				8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */,
 				1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */,
-				088B45E81722DE37002719C2 /* AddNoteWithPhotoViewController.xib in Resources */,
+				1AFE584E1726DCD900A1779D /* AddNoteWithPhotoViewController.xib in Resources */,
 				088B45EB1722E798002719C2 /* v_icon.png in Resources */,
 				088B45EC1722E798002719C2 /* v_icon@2x.png in Resources */,
 				1A401BD61722C5BD00FEF66A /* button_background.png in Resources */,
@@ -851,7 +867,7 @@
 				1A401BFF1722FC3800FEF66A /* photo_menu_bg@2x.png in Resources */,
 				1A401C001722FC3800FEF66A /* video_menu_bg.png in Resources */,
 				1A401C011722FC3800FEF66A /* video_menu_bg@2x.png in Resources */,
-				088B45F417253631002719C2 /* ViewNoteWithMapController.xib in Resources */,
+				1AFE584A1726DCBB00A1779D /* ViewNoteWithMapController.xib in Resources */,
 				088B45FB17257238002719C2 /* map_imageholder.png in Resources */,
 				088B45FC17257238002719C2 /* map_imageholder@2x.png in Resources */,
 				088B460D1726D39C002719C2 /* main_button_bg.png in Resources */,
@@ -874,6 +890,7 @@
 				1AFE5839172686FB00A1779D /* photo_camera_icon@2x.png in Resources */,
 				1AFE583A172686FB00A1779D /* video_camera_icon.png in Resources */,
 				1AFE583B172686FB00A1779D /* video_camera_icon@2x.png in Resources */,
+				1AFE58461726DC9400A1779D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,10 +927,111 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1AFE58481726DC9400A1779D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE58491726DC9B00A1779D /* en */,
+				1AFE58771726F05000A1779D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1AFE584C1726DCBB00A1779D /* ViewNoteWithMapController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE584B1726DCBB00A1779D /* ru */,
+				1AFE584D1726DCC200A1779D /* en */,
+			);
+			name = ViewNoteWithMapController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58501726DCD900A1779D /* AddNoteWithPhotoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE584F1726DCD900A1779D /* ru */,
+				1AFE58511726DCE000A1779D /* en */,
+			);
+			name = AddNoteWithPhotoViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58541726DCE800A1779D /* AddPlaceOnMapViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE58531726DCE800A1779D /* ru */,
+				1AFE58551726DCED00A1779D /* en */,
+			);
+			name = AddPlaceOnMapViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58581726DCF700A1779D /* AboutScreenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE58571726DCF700A1779D /* ru */,
+				1AFE58591726DCFB00A1779D /* en */,
+			);
+			name = AboutScreenViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE585C1726DD0400A1779D /* ViewNotesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE585B1726DD0400A1779D /* ru */,
+				1AFE585D1726DD0700A1779D /* en */,
+			);
+			name = ViewNotesViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58601726DD1300A1779D /* NotesScreenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE585F1726DD1300A1779D /* ru */,
+				1AFE58611726DD1700A1779D /* en */,
+			);
+			name = NotesScreenViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58641726DD2000A1779D /* MenuScreenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE58631726DD2000A1779D /* ru */,
+				1AFE58651726DD2400A1779D /* en */,
+			);
+			name = MenuScreenViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58681726DD2E00A1779D /* CameraScreenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE58671726DD2E00A1779D /* ru */,
+				1AFE58691726DD3100A1779D /* en */,
+			);
+			name = CameraScreenViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE586C1726DD3A00A1779D /* MainScreenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE586B1726DD3A00A1779D /* ru */,
+				1AFE586D1726DD3E00A1779D /* en */,
+			);
+			name = MainScreenViewController.xib;
+			sourceTree = "<group>";
+		};
+		1AFE58701726DD4E00A1779D /* NotesCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFE586F1726DD4E00A1779D /* ru */,
+				1AFE58711726DD5200A1779D /* en */,
+			);
+			name = NotesCell.xib;
+			path = MainHotIdeasKeeper/Classes/Views/NotesCell;
+			sourceTree = SOURCE_ROOT;
+		};
 		8CAC93EF171EB9F7006D3621 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8CAC93F0171EB9F7006D3621 /* en */,
+				1AFE58451726DC8B00A1779D /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
