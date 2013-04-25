@@ -255,6 +255,8 @@ static float y;
     else
     {
         self.note.noteText = _noteTextView.text;
+        self.note.x = [NSNumber numberWithFloat: x];
+        self.note.y = [NSNumber numberWithFloat: y];
 
         [[DataManager sharedInstance] updateNewNoteWithMap:_note];
         ViewNoteWithMapController *viewNotesViewController = [[ViewNoteWithMapController alloc]init];

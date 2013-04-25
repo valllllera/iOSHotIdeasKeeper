@@ -125,8 +125,10 @@ static DataManager *sharedInstance = nil;
 }
 
 -(void)updateNewNote:(Note *)note
-{    
-    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' where id = %@",note.noteText ,note.idx];
+{
+    NSDate *date = [NSDate date];
+    
+    NSString *query = [NSString stringWithFormat:@"update noteTable SET note = '%@' , date = %@ where id = %@",note.noteText ,[date saveStringToDb],note.idx];
     [SQLiteAccess updateWithSQL:query];
     
 }
@@ -141,7 +143,9 @@ static DataManager *sharedInstance = nil;
 
 -(void)updateNewNoteWithMap:(Note *)note
 {
-    NSString *query = [NSString stringWithFormat:@"update noteWithMap SET note = '%@' , x = %@ , y = %@ where id = %@",note.noteText, note.x, note.y ,note.idx];
+    NSDate *date = [NSDate date];
+    
+    NSString *query = [NSString stringWithFormat:@"update noteWithMap SET note = '%@' ,date = %@, x = %@ , y = %@ where id = %@",note.noteText,[date saveStringToDb], note.x, note.y ,note.idx];
     
     [SQLiteAccess updateWithSQL:query];
     
