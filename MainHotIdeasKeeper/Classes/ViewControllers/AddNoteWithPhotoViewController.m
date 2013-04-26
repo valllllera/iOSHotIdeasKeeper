@@ -133,7 +133,43 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     [addImageButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 
     self.navigationItem.rightBarButtonItem = addImageButton;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    _scrollView.contentSize = CGSizeMake(320, 408);
 }
+
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, _notesTextView.frame.origin) )
+    {
+        CGPoint scrollPoint = CGPointMake(0.0, _notesTextView.frame.origin.y - (keyboardSize.height-15));
+        [_scrollView setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+- (void) keyboardWillHide:(NSNotification *)notification {
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+
 
 -(UIImage *)imageWithContentsOfFile:(NSString *)path
 {
@@ -154,6 +190,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     [self setPhotoForNote:nil];
     [self setWriteANoteLabel:nil];
     [self setSaveButton:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 - (IBAction)saveButtonPressed:(id)sender

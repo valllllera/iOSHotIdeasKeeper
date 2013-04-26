@@ -12,6 +12,7 @@
 #import "ViewNoteWithMapController.h"
 #import "NVSlideMenuController.h"
 #import "MainScreenViewController.h"
+#import "ViewNoteWithMapController.h"
 
 @interface AddPlaceOnMapViewController ()
 
@@ -129,6 +130,7 @@ static float y;
     
     
     UIBarButtonItem *homeNaviButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_navi_button_bg.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(homeNaviButton:)];
+    
     [homeNaviButton setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.leftBarButtonItem = homeNaviButton;
     
@@ -335,8 +337,12 @@ static float y;
 
 -(IBAction)homeNaviButton:(id)sender
 {
-    MainScreenViewController *mainScreenViewController = [[MainScreenViewController alloc]init];
-    [self.navigationController pushViewController:mainScreenViewController animated:YES];
-}
+    ViewNoteWithMapController *viewNotesWithMapController = [[ViewNoteWithMapController alloc]init];
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [self.navigationController pushViewController:viewNotesWithMapController animated:NO];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                     }];}
 
 @end

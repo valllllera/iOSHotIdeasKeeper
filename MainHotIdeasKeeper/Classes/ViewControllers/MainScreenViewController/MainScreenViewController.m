@@ -54,7 +54,6 @@
     [_mapButton.titleLabel setFont:[UIFont fontWithName:@"OpenSans-LightItalic" size:30]];
     
     self.slideMenuController.panGestureEnabled = YES;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,13 +71,36 @@
     [self setMapButton:nil];
     [super viewDidUnload];
 }
+
 - (IBAction)showCameraPhotoController:(id)sender
 {
-    UIImagePickerController *imagepicker = [[UIImagePickerController alloc] init];
-    imagepicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagepicker.delegate = self;
-    imagepicker.allowsEditing = NO;
-    [self presentModalViewController:imagepicker animated:YES];
+    imagePick = [[UIImagePickerController alloc] init];
+    [imagePick setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [imagePick setDelegate:self];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(280, 280, 60, 30)];
+    [button setTitle:@"Library" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor darkGrayColor]];
+    [button addTarget:self action:@selector(gotoLibrary:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [imagePick.view addSubview:button];
+    
+    [self presentViewController:imagePick animated:YES completion:nil];}
+
+-(IBAction)gotoLibrary:(id)sender
+{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker.view setFrame:CGRectMake(0, 80, 320, 350)];
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [imagePicker setDelegate:self];
+    
+    [imagePicker presentViewController:imagePicker animated:YES completion:nil];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -124,6 +146,7 @@
                 NSLog(@"Failed to load the data with error = %@", dataReadingError);
             }
         }
+          [picker dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -159,12 +182,24 @@
 
 - (IBAction)showCameraVideoController:(id)sender
 {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        picker.mediaTypes = @[(NSString *)kUTTypeMovie];
-    
-        [self presentModalViewController:picker animated:YES];
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.mediaTypes = @[(NSString *)kUTTypeMovie];
+
+    [self presentModalViewController:picker animated:YES];
+}
+
+- (void)viewDidSlideIn:(BOOL)animated inSlideMenuController:(NVSlideMenuController *)slideMenuController
+{
+    _photoButton.userInteractionEnabled = YES;
+    _videoButton.userInteractionEnabled = YES;
+}
+
+- (void)viewDidSlideOut:(BOOL)animated inSlideMenuController:(NVSlideMenuController *)slideMenuController
+{
+    _photoButton.userInteractionEnabled = NO;
+    _videoButton.userInteractionEnabled = NO;
 }
 
 @end

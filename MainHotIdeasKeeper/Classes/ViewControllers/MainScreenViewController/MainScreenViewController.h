@@ -10,6 +10,10 @@
 
 @interface MainScreenViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+{
+    UIImagePickerController *imagePick;
+}
+
 @property (strong, nonatomic) UIImage *image;
 @property (strong,nonatomic) NSURL *imageUrl;
 
