@@ -34,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"asd");
+    isChoosen = NO;
     
     UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
@@ -77,24 +79,30 @@
     imagePick = [[UIImagePickerController alloc] init];
     [imagePick setSourceType:UIImagePickerControllerSourceTypeCamera];
     [imagePick setDelegate:self];
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(280, 280, 60, 30)];
-    [button setTitle:@"Library" forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor darkGrayColor]];
+    button = [[UIButton alloc] initWithFrame:CGRectMake(270, 435, 35, 35)];
+    [button setBackgroundColor:[UIColor blackColor]];
+    [button setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(gotoLibrary:) forControlEvents:UIControlEventTouchUpInside];
     
     [imagePick.view addSubview:button];
     
-    [self presentViewController:imagePick animated:YES completion:nil];}
+    [self presentViewController:imagePick animated:YES completion:nil];
+    NSLog(@"asd");
+}
 
--(IBAction)gotoLibrary:(id)sender
+-(void)gotoLibrary:(id)sender
 {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    [imagePicker.view setFrame:CGRectMake(0, 80, 320, 350)];
-    [imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    [imagePicker setDelegate:self];
     
-    [imagePicker presentViewController:imagePicker animated:YES completion:nil];
+    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+	picker.delegate = self;
+    
+	if((UIButton *) sender == button) {
+		picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+	} else {
+		picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	}
+    isChoosen = YES;
+	[self.presentedViewController presentModalViewController:picker animated:YES];
 }
 
 
@@ -106,6 +114,7 @@
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [self dismissModalViewControllerAnimated:YES];
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto)
     {
         
@@ -122,7 +131,10 @@
                               
                           }];
     _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        if (!isChoosen)
+        {
+            UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        }
     NSLog(@"imgage%@",_image);
     
     
@@ -188,6 +200,7 @@
     picker.mediaTypes = @[(NSString *)kUTTypeMovie];
 
     [self presentModalViewController:picker animated:YES];
+    NSLog(@"aaa");
 }
 
 - (void)viewDidSlideIn:(BOOL)animated inSlideMenuController:(NVSlideMenuController *)slideMenuController
@@ -200,6 +213,26 @@
 {
     _photoButton.userInteractionEnabled = NO;
     _videoButton.userInteractionEnabled = NO;
+}
+
+- (void) makeUIImagePickerControllerForCamera:(BOOL)camera
+{
+
+
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    if (camera) {
+        NSLog(@"!!! Show camera");
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    
+    [picker setMediaTypes:[NSArray arrayWithObjects:(NSString *) kUTTypeImage, nil]];
+    
+    [self presentModalViewController: picker animated: YES];
+
+
 }
 
 @end

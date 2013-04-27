@@ -12,6 +12,8 @@
 
 {
     UIImagePickerController *imagePick;
+    UIButton *button;
+    BOOL isChoosen ;
 }
 
 @property (strong, nonatomic) UIImage *image;
