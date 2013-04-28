@@ -77,6 +77,8 @@
 		1A4681A017267A0300E07E73 /* home_navi_button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A46819E17267A0300E07E73 /* home_navi_button_bg@2x.png */; };
 		1A8ED91B1721800E004DE58D /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */; };
 		1A8ED9BA17219A55004DE58D /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED9B917219A55004DE58D /* SQLiteAccess.m */; };
+		1AB233D2172D0F5500ADEF79 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB233D1172D0F5500ADEF79 /* icon.png */; };
+		1AB233D4172D0F5F00ADEF79 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB233D3172D0F5F00ADEF79 /* icon@2x.png */; };
 		1AEA61621720165B00CF3CD2 /* AboutScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */; };
 		1AEA6170172022B700CF3CD2 /* AddPlaceOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA616E172022B700CF3CD2 /* AddPlaceOnMapViewController.m */; };
 		1AFE582117267FFF00A1779D /* button_item_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE581F17267FFF00A1779D /* button_item_background.png */; };
@@ -216,6 +218,8 @@
 		1A8ED91A1721800D004DE58D /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		1A8ED9B817219A55004DE58D /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
 		1A8ED9B917219A55004DE58D /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
+		1AB233D1172D0F5500ADEF79 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		1AB233D3172D0F5F00ADEF79 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		1AEA615F1720165B00CF3CD2 /* AboutScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutScreenViewController.h; sourceTree = "<group>"; };
 		1AEA61601720165B00CF3CD2 /* AboutScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScreenViewController.m; sourceTree = "<group>"; };
 		1AEA616D172022B700CF3CD2 /* AddPlaceOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceOnMapViewController.h; sourceTree = "<group>"; };
@@ -235,27 +239,27 @@
 		1AFE582E172686FB00A1779D /* video_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_camera_icon.png; sourceTree = "<group>"; };
 		1AFE582F172686FB00A1779D /* video_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_camera_icon@2x.png"; sourceTree = "<group>"; };
 		1AFE58451726DC8B00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1AFE58491726DC9B00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1AFE584B1726DCBB00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
-		1AFE584D1726DCC200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
-		1AFE584F1726DCD900A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
-		1AFE58511726DCE000A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
-		1AFE58531726DCE800A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
-		1AFE58551726DCED00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
-		1AFE58571726DCF700A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58591726DCFB00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE585B1726DD0400A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
-		1AFE585D1726DD0700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
-		1AFE585F1726DD1300A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58611726DD1700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58631726DD2000A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58651726DD2400A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58671726DD2E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE58691726DD3100A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE586B1726DD3A00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE586D1726DD3E00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
-		1AFE586F1726DD4E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/NotesCell.xib; sourceTree = "<group>"; };
-		1AFE58711726DD5200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/NotesCell.xib; sourceTree = "<group>"; };
+		1AFE58491726DC9B00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1AFE584B1726DCBB00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
+		1AFE584D1726DCC200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewNoteWithMapController.xib; sourceTree = "<group>"; };
+		1AFE584F1726DCD900A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
+		1AFE58511726DCE000A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AddNoteWithPhotoViewController.xib; sourceTree = "<group>"; };
+		1AFE58531726DCE800A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
+		1AFE58551726DCED00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AddPlaceOnMapViewController.xib; sourceTree = "<group>"; };
+		1AFE58571726DCF700A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58591726DCFB00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE585B1726DD0400A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
+		1AFE585D1726DD0700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewNotesViewController.xib; sourceTree = "<group>"; };
+		1AFE585F1726DD1300A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58611726DD1700A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NotesScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58631726DD2000A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58651726DD2400A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MenuScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58671726DD2E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE58691726DD3100A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CameraScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586B1726DD3A00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586D1726DD3E00A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainScreenViewController.xib; sourceTree = "<group>"; };
+		1AFE586F1726DD4E00A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/NotesCell.xib; sourceTree = "<group>"; };
+		1AFE58711726DD5200A1779D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NotesCell.xib; sourceTree = "<group>"; };
 		1AFE58771726F05000A1779D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E17CBEA1720257E00BD06BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E17CBEC1720343D00BD06BA /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annotation.h; path = MainHotIdeasKeeper/Classes/DataManager/Model/Annotation.h; sourceTree = SOURCE_ROOT; };
@@ -703,6 +707,8 @@
 		8CAC9413171EBA1C006D3621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1AB233D3172D0F5F00ADEF79 /* icon@2x.png */,
+				1AB233D1172D0F5500ADEF79 /* icon.png */,
 				1AFE5823172686FB00A1779D /* icons */,
 				1A401BD81722CE7B00FEF66A /* NotesCell */,
 				1A401BD31722C5BD00FEF66A /* AddPlaceOnMapViewController */,
@@ -891,6 +897,8 @@
 				1AFE583A172686FB00A1779D /* video_camera_icon.png in Resources */,
 				1AFE583B172686FB00A1779D /* video_camera_icon@2x.png in Resources */,
 				1AFE58461726DC9400A1779D /* Localizable.strings in Resources */,
+				1AB233D2172D0F5500ADEF79 /* icon.png in Resources */,
+				1AB233D4172D0F5F00ADEF79 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
