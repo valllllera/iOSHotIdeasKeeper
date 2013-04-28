@@ -167,11 +167,11 @@
     UIAlertView *alert;
     if (error)
         alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                           message:@"Unable to save image to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                           message:@"Unable to save to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     else
     {
         alert = [[UIAlertView alloc] initWithTitle:@"Succes"
-                                           message:@"Image saved to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                           message:@"Saved to Photo Album." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         NSLog(@"%@",_imageUrl);
        
         

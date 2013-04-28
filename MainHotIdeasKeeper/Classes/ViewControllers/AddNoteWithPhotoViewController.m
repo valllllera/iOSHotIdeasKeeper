@@ -109,6 +109,8 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
                 UIImage *largeimage = [UIImage imageWithCGImage:iref];
                 self.photoForNote.image = largeimage;
             }
+            else
+                self.photoForNote.image  = [UIImage imageNamed:@"v_icon.png"];
         };
         
         

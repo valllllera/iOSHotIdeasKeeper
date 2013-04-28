@@ -179,6 +179,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
                 UIImage *largeimage = [UIImage imageWithCGImage:iref];
                 cell.imageForNote.image = largeimage;
             }
+            else
+                cell.imageForNote.image = [UIImage imageNamed:@"v_icon.png"];
+                
         };
         
         
