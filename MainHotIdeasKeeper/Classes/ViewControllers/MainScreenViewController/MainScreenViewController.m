@@ -79,8 +79,8 @@
     imagePick = [[UIImagePickerController alloc] init];
     [imagePick setSourceType:UIImagePickerControllerSourceTypeCamera];
     [imagePick setDelegate:self];
-    button = [[UIButton alloc] initWithFrame:CGRectMake(270, 435, 35, 35)];
-    [button setBackgroundColor:[UIColor blackColor]];
+    button = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 35, 35)];
+    
     [button setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(gotoLibrary:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -118,7 +118,7 @@
     if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto)
     {
         
-
+ 
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library writeImageToSavedPhotosAlbum:((UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage]).CGImage
                                  metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
