@@ -132,6 +132,8 @@
 		8CAC944717212E79006D3621 /* vexadev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAC943D17212E79006D3621 /* vexadev@2x.png */; };
 		8CAC944D172131AA006D3621 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC944C172131A9006D3621 /* MessageUI.framework */; };
 		8CAC944F172135E6006D3621 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC944E172135E5006D3621 /* iAd.framework */; };
+		D79E3A42172E91A300381FA9 /* media_library_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D79E3A40172E91A300381FA9 /* media_library_background.png */; };
+		D79E3A43172E91A300381FA9 /* media_library_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D79E3A41172E91A300381FA9 /* media_library_background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -294,6 +296,8 @@
 		8CAC943D17212E79006D3621 /* vexadev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vexadev@2x.png"; sourceTree = "<group>"; };
 		8CAC944C172131A9006D3621 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CAC944E172135E5006D3621 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D79E3A40172E91A300381FA9 /* media_library_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = media_library_background.png; sourceTree = "<group>"; };
+		D79E3A41172E91A300381FA9 /* media_library_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media_library_background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -725,6 +729,8 @@
 		8CAC9414171EBA1C006D3621 /* MainScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D79E3A40172E91A300381FA9 /* media_library_background.png */,
+				D79E3A41172E91A300381FA9 /* media_library_background@2x.png */,
 				1A401BF21722FC3800FEF66A /* map_menu_bg.png */,
 				1A401BF31722FC3800FEF66A /* map_menu_bg@2x.png */,
 				1A401BF41722FC3800FEF66A /* notes_menu_bg.png */,
@@ -899,6 +905,8 @@
 				1AFE58461726DC9400A1779D /* Localizable.strings in Resources */,
 				1AB233D2172D0F5500ADEF79 /* icon.png in Resources */,
 				1AB233D4172D0F5F00ADEF79 /* icon@2x.png in Resources */,
+				D79E3A42172E91A300381FA9 /* media_library_background.png in Resources */,
+				D79E3A43172E91A300381FA9 /* media_library_background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

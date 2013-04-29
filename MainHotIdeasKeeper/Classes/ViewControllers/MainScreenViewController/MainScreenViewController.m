@@ -79,9 +79,9 @@
     imagePick = [[UIImagePickerController alloc] init];
     [imagePick setSourceType:UIImagePickerControllerSourceTypeCamera];
     [imagePick setDelegate:self];
-    button = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 35, 35)];
+    button = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 35, 35)];
     
-    [button setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"media_library_background"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(gotoLibrary:) forControlEvents:UIControlEventTouchUpInside];
     
     [imagePick.view addSubview:button];
