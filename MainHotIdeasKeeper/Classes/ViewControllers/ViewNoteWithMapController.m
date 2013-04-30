@@ -56,8 +56,9 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
+        [[DataManager sharedInstance] deleteNoteWithMap:[noteInArray.idx integerValue]];
         [_notesArray removeObjectAtIndex:indexPath.row];
-        [[DataManager sharedInstance] deleteNoteWithMap:indexPath.row+1];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
 

@@ -11,7 +11,12 @@
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
 
-@interface AboutScreenViewController : UIViewController
+@protocol MFMailComposeViewControllerDelegate <NSObject>
+
+- (IBAction)writeUsBtnClicked:(id)sender;
+
+@end
+@interface AboutScreenViewController : UIViewController < UIPageViewControllerDelegate , MFMailComposeViewControllerDelegate >
 {
     SLComposeViewController *mySLComposerSheet;
 }

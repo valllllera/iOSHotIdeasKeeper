@@ -18,6 +18,7 @@
 @end
 
 @implementation AddNoteWithPhotoViewController
+@synthesize saveButton;
 typedef void (^ALAssetsLibraryAssetForURLResultBlock)(ALAsset *asset);
 typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
@@ -172,11 +173,6 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 }
 
 
-
--(UIImage *)imageWithContentsOfFile:(NSString *)path
-{
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

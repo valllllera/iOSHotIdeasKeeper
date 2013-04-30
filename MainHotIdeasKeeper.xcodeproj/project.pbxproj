@@ -1118,11 +1118,7 @@
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
-					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1135,11 +1131,7 @@
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
-					"\"$(SRCROOT)/MainHotIdeasKeeper/Classes/Libs/GoogleAdMobAdsSdkiOS-6.4.1 18.18.25 18.19.21\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
