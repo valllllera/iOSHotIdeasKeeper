@@ -122,9 +122,11 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Note *noteInArray = [_notesArray objectAtIndex:indexPath.row];
+        [[DataManager sharedInstance] deleteNote:[noteInArray.idx integerValue]];
         [_notesArray removeObjectAtIndex:indexPath.row];
-        [[DataManager sharedInstance] deleteNote:indexPath.row+1];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
         
@@ -171,16 +173,19 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
     else
     {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
         {
-            ALAssetRepresentation *rep = [myasset defaultRepresentation];
-            CGImageRef iref = [rep fullResolutionImage];
+            CGImageRef iref = [myasset thumbnail];
+            UIImage *largeimage = [UIImage imageWithCGImage:iref];
+            dispatch_async(dispatch_get_main_queue(), ^{
             if (iref) {
-                UIImage *largeimage = [UIImage imageWithCGImage:iref];
+                
                 cell.imageForNote.image = largeimage;
             }
             else
                 cell.imageForNote.image = [UIImage imageNamed:@"v_icon.png"];
+            });
                 
         };
         
@@ -202,6 +207,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         NSURL *imageUrl = [NSURL URLWithString:noteInArray.imageUrlPath];
         NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
         cell.imageForNote.image = [UIImage imageWithData:imageData];
+        });
     }
     
     
