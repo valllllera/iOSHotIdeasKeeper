@@ -286,31 +286,31 @@ static float y;
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
             
-            NSString *subThoroughfare = [NSString string];
+            NSString *subThoroughfare;
             if (placemark.subThoroughfare == nil)
                 subThoroughfare = @"";
             else
                 subThoroughfare = placemark.subThoroughfare;
             
-            NSString *locality = [NSString string];
+            NSString *locality;
             if (placemark.locality == nil)
                 locality = @"";
             else
                 locality = placemark.locality;
             
-            NSString *thoroughfare = [NSString string];
+            NSString *thoroughfare;
             if (placemark.thoroughfare == nil)
                 thoroughfare = @"";
             else
                 thoroughfare = placemark.thoroughfare;
             
-            NSString *administrativeArea = [NSString string];
+            NSString *administrativeArea;
             if (placemark.administrativeArea == nil)
                 administrativeArea = @"";
             else
                 administrativeArea = placemark.administrativeArea;
             
-            NSString *country = [NSString string];
+            NSString *country;
             if (placemark.country == nil)
                 country = @"";
             else
