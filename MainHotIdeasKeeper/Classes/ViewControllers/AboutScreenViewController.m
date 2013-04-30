@@ -93,8 +93,8 @@
     if ([TWTweetComposeViewController canSendTweet])
     {
         TWTweetComposeViewController *vc = [[TWTweetComposeViewController alloc] init];
-        [vc setInitialText:@"Тут сообщение о том, насколько приложение офигенно, бла-бла-бла."];
-        UIImage *image = [UIImage imageNamed:@"v_icon.png"];
+        [vc setInitialText:@"I'm really enjoying Hot Ideas Keeper for iPhone. Save and enjoy all your Remembers!. http://bit.ly/11SsWdK"];
+        UIImage *image = [UIImage imageNamed:@"icon.png"];
         [vc addImage:image];
         NSURL *url = [NSURL URLWithString:@"http://vexadev.com"];
         [vc addURL:url];
@@ -118,9 +118,8 @@
     {
         mySLComposerSheet = [[SLComposeViewController alloc] init]; //initiate the Social Controller
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook]; //Tell him with what social plattform to use it, e.g. facebook or twitter
-        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"Test %@",mySLComposerSheet.serviceType]]; //the message you want to post
-       // [mySLComposerSheet addImage:yourimage]; //an image you could post
-        //for more instance methodes, go here:https://developer.apple.com/library/ios/#documentation/NetworkingInternet/Reference/SLComposeViewController_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40012205
+        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"I'm really enjoying Hot Ideas Keeper for iPhone. Save and enjoy all your Remembers!. http://bit.ly/11SsWdK"]];
+        [mySLComposerSheet addImage:[UIImage imageNamed:@"icon.png"]];
         [self presentViewController:mySLComposerSheet animated:YES completion:nil];
     }
     [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {

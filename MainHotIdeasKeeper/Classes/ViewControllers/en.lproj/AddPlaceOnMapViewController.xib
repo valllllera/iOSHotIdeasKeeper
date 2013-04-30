@@ -82,13 +82,17 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
+								<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="890056453">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">bg_button_pressed.png</string>
+								</object>
 								<object class="NSCustomResource" key="IBUISelectedBackgroundImage" id="1066962328">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">selected_button_bg.png</string>
 								</object>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="243236030">
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="858211129">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">main_button_bg.png</string>
+									<string key="NSResourceName">bg_buttons_unpressed.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="504792294">
 									<int key="type">2</int>
@@ -116,8 +120,9 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
+								<reference key="IBUIHighlightedBackgroundImage" ref="890056453"/>
 								<reference key="IBUISelectedBackgroundImage" ref="1066962328"/>
-								<reference key="IBUINormalBackgroundImage" ref="243236030"/>
+								<reference key="IBUINormalBackgroundImage" ref="858211129"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -137,8 +142,9 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
+								<reference key="IBUIHighlightedBackgroundImage" ref="890056453"/>
 								<reference key="IBUISelectedBackgroundImage" ref="1066962328"/>
-								<reference key="IBUINormalBackgroundImage" ref="243236030"/>
+								<reference key="IBUINormalBackgroundImage" ref="858211129"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -157,10 +163,8 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">button_background.png</string>
-								</object>
+								<reference key="IBUIHighlightedBackgroundImage" ref="890056453"/>
+								<reference key="IBUINormalBackgroundImage" ref="858211129"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -489,6 +493,7 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="12.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -497,11 +502,11 @@
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="8.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="8.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -519,8 +524,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="button_background.png">{320, 303}</string>
-			<string key="main_button_bg.png">{106, 30}</string>
+			<string key="bg_button_pressed.png">{218, 23}</string>
+			<string key="bg_buttons_unpressed.png">{118, 23}</string>
 			<string key="note_bg.png">{152, 110}</string>
 			<string key="selected_button_bg.png">{106, 30}</string>
 		</dictionary>

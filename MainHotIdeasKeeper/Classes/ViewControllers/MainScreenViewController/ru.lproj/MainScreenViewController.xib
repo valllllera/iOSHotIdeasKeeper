@@ -11,7 +11,6 @@
 			<string key="NS.object.0">2083</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
-			<string>IBADBannerView</string>
 			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
 			<string>IBUIImageView</string>
@@ -63,7 +62,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">button_background.png</string>
+							<string key="NSResourceName">add_bg.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="349644251">
@@ -90,9 +89,14 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="432734921">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">camera_photo_button_pressed.png</string>
+						</object>
+						<reference key="IBUISelectedBackgroundImage" ref="432734921"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">photo_menu_bg.png</string>
+							<string key="NSResourceName">camera_photo_button_unpressed.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="291460819">
 							<int key="type">2</int>
@@ -109,7 +113,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{160, 204}, {160, 157}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="215060481"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -119,9 +123,14 @@
 						<reference key="IBUIHighlightedTitleColor" ref="645824031"/>
 						<reference key="IBUINormalTitleColor" ref="951433948"/>
 						<reference key="IBUINormalTitleShadowColor" ref="967521108"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="239890715">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">map_menu_bg.png</string>
+							<string key="NSResourceName">geotagging_button_pressed.png</string>
+						</object>
+						<reference key="IBUISelectedBackgroundImage" ref="239890715"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="332171544">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">camera_video_button_unpressed.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="291460819"/>
 						<reference key="IBUIFont" ref="823111667"/>
@@ -141,9 +150,14 @@
 						<reference key="IBUIHighlightedTitleColor" ref="645824031"/>
 						<reference key="IBUINormalTitleColor" ref="951433948"/>
 						<reference key="IBUINormalTitleShadowColor" ref="967521108"/>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="910809265">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">note_button_pressed.png</string>
+						</object>
+						<reference key="IBUISelectedBackgroundImage" ref="910809265"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">notes_menu_bg.png</string>
+							<string key="NSResourceName">note_button_unpressed.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="291460819"/>
 						<reference key="IBUIFont" ref="823111667"/>
@@ -203,20 +217,6 @@
 							<string key="NSResourceName">buttons_shadow@2x.png</string>
 						</object>
 					</object>
-					<object class="IBADBannerView" id="215060481">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">306</int>
-						<string key="NSFrame">{{0, 366}, {320, 50}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">4</int>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBADAdType">0</int>
-					</object>
 					<object class="IBUIButton" id="693102774">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
@@ -232,10 +232,12 @@
 						<reference key="IBUIHighlightedTitleColor" ref="645824031"/>
 						<reference key="IBUINormalTitleColor" ref="951433948"/>
 						<reference key="IBUINormalTitleShadowColor" ref="967521108"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="676768059">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">video_menu_bg.png</string>
+							<string key="NSResourceName">camera_video_button_pressed.png</string>
 						</object>
+						<reference key="IBUISelectedBackgroundImage" ref="676768059"/>
+						<reference key="IBUINormalBackgroundImage" ref="332171544"/>
 						<reference key="IBUIFontDescription" ref="291460819"/>
 						<reference key="IBUIFont" ref="823111667"/>
 					</object>
@@ -388,7 +390,6 @@
 							<reference ref="118497529"/>
 							<reference ref="570017195"/>
 							<reference ref="426214843"/>
-							<reference ref="215060481"/>
 							<reference ref="349644251"/>
 							<reference ref="693102774"/>
 						</array>
@@ -446,11 +447,6 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="215060481"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
 						<reference key="object" ref="693102774"/>
 						<reference key="parent" ref="191373211"/>
@@ -468,11 +464,14 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="18.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="22.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="4.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -486,14 +485,17 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="add_bg.png">{320, 38}</string>
 			<string key="backgrond.png">{320, 480}</string>
-			<string key="button_background.png">{320, 303}</string>
 			<string key="buttons_shadow@2x.png">{414, 7}</string>
-			<string key="map_menu_bg.png">{160, 158}</string>
-			<string key="notes_menu_bg.png">{160, 158}</string>
-			<string key="photo_menu_bg.png">{160, 158}</string>
+			<string key="camera_photo_button_pressed.png">{150, 150}</string>
+			<string key="camera_photo_button_unpressed.png">{150, 150}</string>
+			<string key="camera_video_button_pressed.png">{150, 150}</string>
+			<string key="camera_video_button_unpressed.png">{150, 150}</string>
+			<string key="geotagging_button_pressed.png">{150, 150}</string>
+			<string key="note_button_pressed.png">{150, 150}</string>
+			<string key="note_button_unpressed.png">{150, 150}</string>
 			<string key="second_shadow@2x.png">{414, 7}</string>
-			<string key="video_menu_bg.png">{160, 158}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>

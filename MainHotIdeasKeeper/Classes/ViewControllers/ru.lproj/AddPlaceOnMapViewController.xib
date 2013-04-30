@@ -50,6 +50,7 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{1, 31}, {320, 166}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="684725109"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -62,6 +63,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{106, 30}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="778804391"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -82,13 +84,17 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
+								<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="964325714">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">bg_button_pressed.png</string>
+								</object>
 								<object class="NSCustomResource" key="IBUISelectedBackgroundImage" id="1066962328">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">selected_button_bg.png</string>
 								</object>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="243236030">
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="1051862295">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">main_button_bg.png</string>
+									<string key="NSResourceName">bg_buttons_unpressed.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="504792294">
 									<int key="type">2</int>
@@ -105,6 +111,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{107, 0}, {106, 30}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="875722500"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -116,8 +123,9 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
+								<reference key="IBUIHighlightedBackgroundImage" ref="964325714"/>
 								<reference key="IBUISelectedBackgroundImage" ref="1066962328"/>
-								<reference key="IBUINormalBackgroundImage" ref="243236030"/>
+								<reference key="IBUINormalBackgroundImage" ref="1051862295"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -126,6 +134,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{214, 0}, {107, 30}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="288113255"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -137,8 +146,9 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
+								<reference key="IBUIHighlightedBackgroundImage" ref="964325714"/>
 								<reference key="IBUISelectedBackgroundImage" ref="1066962328"/>
-								<reference key="IBUINormalBackgroundImage" ref="243236030"/>
+								<reference key="IBUINormalBackgroundImage" ref="1051862295"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -147,6 +157,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{-1, 364}, {321, 44}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -157,10 +168,8 @@
 								<reference key="IBUIHighlightedTitleColor" ref="797662311"/>
 								<reference key="IBUINormalTitleColor" ref="865654442"/>
 								<reference key="IBUINormalTitleShadowColor" ref="999967024"/>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">button_background.png</string>
-								</object>
+								<reference key="IBUIHighlightedBackgroundImage" ref="964325714"/>
+								<reference key="IBUINormalBackgroundImage" ref="1051862295"/>
 								<reference key="IBUIFontDescription" ref="504792294"/>
 								<reference key="IBUIFont" ref="266382640"/>
 							</object>
@@ -169,6 +178,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{6, 209}, {309, 140}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="250523815"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -183,6 +193,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{36, 210}, {274, 137}}</string>
 								<reference key="NSSuperview" ref="1063488325"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="512160428"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -210,6 +221,7 @@
 						</array>
 						<string key="NSFrameSize">{321, 416}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="720869408"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -219,6 +231,7 @@
 				</array>
 				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1063488325"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -489,6 +502,7 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="12.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -497,11 +511,11 @@
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="8.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="1" key="8.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -509,7 +523,107 @@
 			<nil key="sourceID"/>
 			<int key="maxID">52</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">AddPlaceOnMapViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="hybridButtonPressed:">id</string>
+						<string key="mapButtonPressed:">id</string>
+						<string key="mapTapped:">UITapGestureRecognizer</string>
+						<string key="satelliteButtonPressed:">id</string>
+						<string key="savePlaceButtonPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="hybridButtonPressed:">
+							<string key="name">hybridButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="mapButtonPressed:">
+							<string key="name">mapButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="mapTapped:">
+							<string key="name">mapTapped:</string>
+							<string key="candidateClassName">UITapGestureRecognizer</string>
+						</object>
+						<object class="IBActionInfo" key="satelliteButtonPressed:">
+							<string key="name">satelliteButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="savePlaceButtonPressed:">
+							<string key="name">savePlaceButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="geoCoder">CLGeocoder</string>
+						<string key="hibridButton">UIButton</string>
+						<string key="locationManager">CLLocationManager</string>
+						<string key="map">MKMapView</string>
+						<string key="mapButton">UIButton</string>
+						<string key="noteTextView">UITextView</string>
+						<string key="scrollView">UIScrollView</string>
+						<string key="sitButton">UIButton</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="geoCoder">
+							<string key="name">geoCoder</string>
+							<string key="candidateClassName">CLGeocoder</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hibridButton">
+							<string key="name">hibridButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="locationManager">
+							<string key="name">locationManager</string>
+							<string key="candidateClassName">CLLocationManager</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="map">
+							<string key="name">map</string>
+							<string key="candidateClassName">MKMapView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="mapButton">
+							<string key="name">mapButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="noteTextView">
+							<string key="name">noteTextView</string>
+							<string key="candidateClassName">UITextView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="scrollView">
+							<string key="name">scrollView</string>
+							<string key="candidateClassName">UIScrollView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sitButton">
+							<string key="name">sitButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/AddPlaceOnMapViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">CLGeocoder</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CLGeocoder.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">CLLocationManager</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CLLocationManager.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
@@ -519,8 +633,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="button_background.png">{320, 303}</string>
-			<string key="main_button_bg.png">{106, 30}</string>
+			<string key="bg_button_pressed.png">{218, 23}</string>
+			<string key="bg_buttons_unpressed.png">{118, 23}</string>
 			<string key="note_bg.png">{152, 110}</string>
 			<string key="selected_button_bg.png">{106, 30}</string>
 		</dictionary>
