@@ -133,7 +133,7 @@
     _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
         if (!isChoosen)
         {
-            UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+          /*  UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);*/
         }
     NSLog(@"imgage%@",_image);
     

@@ -238,7 +238,13 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
 -(IBAction)homeNaviButton:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    ViewNotesViewController *viewNotesViewController = [[ViewNotesViewController alloc]init];
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [self.navigationController pushViewController:viewNotesViewController animated:NO];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                     }];
 }
 
 @end

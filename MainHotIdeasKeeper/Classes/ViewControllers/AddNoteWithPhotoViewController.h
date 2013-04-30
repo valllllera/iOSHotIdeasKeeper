@@ -11,7 +11,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface AddNoteWithPhotoViewController :  UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextViewDelegate >
+@interface AddNoteWithPhotoViewController :  UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextViewDelegate>
 {
     
     __weak IBOutlet UIButton *saveButton;

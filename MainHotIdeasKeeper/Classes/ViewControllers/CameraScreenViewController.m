@@ -100,7 +100,7 @@
     id item = [self.images objectAtIndex:indexPath.row];
     if ([item isKindOfClass:[UIImage class]]) {
         
-        UIImageWriteToSavedPhotosAlbum(item, nil, nil, nil);
+        //UIImageWriteToSavedPhotosAlbum(item, nil, nil, nil);
     } else {
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:item];
         [self presentMoviePlayerViewControllerAnimated:player];
