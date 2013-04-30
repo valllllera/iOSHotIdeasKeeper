@@ -113,16 +113,18 @@
 
 - (void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    NSLog(@"INFO %@",info);
     [self dismissModalViewControllerAnimated:YES];
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     if (picker.cameraCaptureMode == UIImagePickerControllerCameraCaptureModePhoto)
     {
         
- 
-    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    [library writeImageToSavedPhotosAlbum:((UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage]).CGImage
-                                 metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
-                          completionBlock:^(NSURL *assetURL, NSError *error) {
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        if (isChoosen == NO)
+        {
+            [library writeImageToSavedPhotosAlbum:((UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage]).CGImage
+                                     metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
+                              completionBlock:^(NSURL *assetURL, NSError *error) {
                               NSLog(@"assetURL %@", assetURL);
                               self.imageUrl = assetURL;
                                NSLog(@"assetURL %@", _imageUrl);
@@ -130,14 +132,15 @@
                               [self.navigationController pushViewController:addNoteWithPhoto animated:YES];
                               
                           }];
-    _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-        if (!isChoosen)
-        {
-          /*  UIImageWriteToSavedPhotosAlbum(_image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);*/
+            _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
         }
-    NSLog(@"imgage%@",_image);
-    
-    
+        else
+        {
+            NSLog(@"%@", [info objectForKey:UIImagePickerControllerReferenceURL]);
+            AddNoteWithPhotoViewController *addNoteWithPhoto = [[AddNoteWithPhotoViewController alloc]initWithImageUrl:[info objectForKey:UIImagePickerControllerReferenceURL]];
+            [self.navigationController pushViewController:addNoteWithPhoto animated:YES];
+            _image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        }
     }
     else
     {
