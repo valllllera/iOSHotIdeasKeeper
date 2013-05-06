@@ -58,7 +58,7 @@
     UIBarButtonItem *homeNaviButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_navi_button_bg.png"] style:UIBarButtonItemStylePlain target:self action:@selector(homeNaviButton:)];
     [homeNaviButton setBackgroundImage:[UIImage imageNamed:@"navi_button_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.leftBarButtonItem = homeNaviButton;
-    
+        
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification
@@ -71,6 +71,8 @@
     _scrollView.contentSize = CGSizeMake(320, 408);
     
     self.slideMenuController.panGestureEnabled = NO;
+    
+    [self fixButton:saveButton];
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification
@@ -171,5 +173,11 @@
                          [self.navigationController pushViewController:viewNotesViewController animated:NO];
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
                                 }];
+}
+
+- (void)fixButton:(UIButton *)button
+{
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateHighlighted] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateHighlighted];
 }
 @end

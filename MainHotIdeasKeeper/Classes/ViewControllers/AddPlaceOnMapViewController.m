@@ -77,6 +77,7 @@ static float y;
     [self setSitButton:nil];
     [self setHibridButton:nil];
     [self setScrollView:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
     self.map = nil;
 }
@@ -103,6 +104,11 @@ static float y;
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    [self fixButton:_saveButton];
+    [self fixButton:_mapButton];
+    [self fixButton:_sitButton];
+    [self fixButton:_saveButton];
+    
     
     _scrollView.contentSize = CGSizeMake(320, 408);
     if (_note)
@@ -344,5 +350,11 @@ static float y;
                          [self.navigationController pushViewController:viewNotesWithMapController animated:NO];
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
                      }];}
+
+- (void)fixButton:(UIButton *)button
+{
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateHighlighted] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateHighlighted];
+}
 
 @end

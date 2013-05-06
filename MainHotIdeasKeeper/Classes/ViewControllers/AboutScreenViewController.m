@@ -171,8 +171,8 @@
 
 - (void)fixButton:(UIButton *)button
 {
-    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 15, 20, 15)] forState:UIControlStateNormal];
-    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateHighlighted] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 15, 20, 15)] forState:UIControlStateHighlighted];
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateHighlighted] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 20, 10)] forState:UIControlStateHighlighted];
 }
 
 

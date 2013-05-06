@@ -42,11 +42,12 @@
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
-    edit=[[UIBarButtonItem alloc]initWithTitle:@"Edit"
+    
+    edit = [[UIBarButtonItem alloc]initWithTitle:@"Edit"
                                          style:UIBarButtonItemStylePlain
                                         target:self
                                         action:@selector(editing)];
-    [edit setBackgroundImage:[UIImage imageNamed:@"button_item_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [edit setBackgroundImage:[UIImage imageNamed:@"navi_button_background.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.rightBarButtonItem = edit;
     
   }

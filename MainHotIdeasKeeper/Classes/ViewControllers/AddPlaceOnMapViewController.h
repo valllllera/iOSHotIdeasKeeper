@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;
 @property (weak, nonatomic) IBOutlet UIButton *sitButton;
 @property (weak, nonatomic) IBOutlet UIButton *hibridButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet CLGeocoder *geoCoder;
