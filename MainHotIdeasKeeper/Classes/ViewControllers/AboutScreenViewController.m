@@ -36,6 +36,10 @@
     [menuButton setBackgroundImage:[UIImage imageNamed:@"menu_button_background.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self.slideMenuController action:@selector(toggleMenuAnimated:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
+    
+    [self fixButton:_writeUsBtn];
+    [self fixButton:_fbButton];
+    [self fixButton:_twitterButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +51,7 @@
 {
     [self setSiteLinkBtn:nil];
     [self setWriteUsBtn:nil];
+    [self setTwitterButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)siteLinkBtnClicked:(id)sender
@@ -164,7 +169,11 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-
+- (void)fixButton:(UIButton *)button
+{
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 15, 20, 15)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[[button backgroundImageForState:UIControlStateHighlighted] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 15, 20, 15)] forState:UIControlStateHighlighted];
+}
 
 
 @end

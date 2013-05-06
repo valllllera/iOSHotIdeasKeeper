@@ -356,6 +356,7 @@
 		8CAC943D17212E79006D3621 /* vexadev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vexadev@2x.png"; sourceTree = "<group>"; };
 		8CAC944C172131A9006D3621 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CAC944E172135E5006D3621 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D55DE10F1737CEE300F1A8BC /* Macroses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
 		D79E3A40172E91A300381FA9 /* media_library_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = media_library_background.png; sourceTree = "<group>"; };
 		D79E3A41172E91A300381FA9 /* media_library_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media_library_background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -756,6 +757,7 @@
 		8CAC9409171EBA1C006D3621 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				D55DE10F1737CEE300F1A8BC /* Macroses.h */,
 				1A8ED9B717219A55004DE58D /* SQLiteAccess */,
 				8CAC940A171EBA1C006D3621 /* NVSlideMenuController */,
 			);

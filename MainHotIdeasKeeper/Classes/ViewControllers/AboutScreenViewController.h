@@ -29,5 +29,7 @@
 
 - (IBAction)twitButton:(id)sender;
 - (IBAction)facebookButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *fbButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 
 @end

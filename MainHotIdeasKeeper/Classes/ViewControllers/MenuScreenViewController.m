@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
   
-    _scrollView.contentSize = CGSizeMake(240, 470);
+    _scrollView.contentSize = CGSizeMake(240, IPHONE_HEIGHT - 10);
     
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 40, 40)];
     titleLabel.text = self.navigationItem.title;
