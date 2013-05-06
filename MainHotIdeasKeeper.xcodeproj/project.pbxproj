@@ -1244,12 +1244,16 @@
 		8CAC9401171EB9F7006D3621 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: garry zyrgen (TU28AS33G2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: garry zyrgen (TU28AS33G2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E854F3D3-2405-4B34-AC61-AD00327E43B6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E854F3D3-2405-4B34-AC61-AD00327E43B6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1257,12 +1261,16 @@
 		8CAC9402171EB9F7006D3621 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: garry zyrgen (TU28AS33G2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: garry zyrgen (TU28AS33G2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MainHotIdeasKeeper/MainHotIdeasKeeper-Prefix.pch";
 				INFOPLIST_FILE = "MainHotIdeasKeeper/MainHotIdeasKeeper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E854F3D3-2405-4B34-AC61-AD00327E43B6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E854F3D3-2405-4B34-AC61-AD00327E43B6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
